@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;1,100;1,200&family=PT+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@media (max-width: 639px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 640px) {
+  .container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0px auto;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 976px) {
+  .container {
+    max-width: 976px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  transition: 0.3s;
+  outline: none;
+}
+a:focus, a:hover,
+button:focus,
+button:hover {
+  opacity: 0.6;
+}
+a:disabled,
+button:disabled {
+  opacity: 0.4;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* color */
+/* transition */
+/* border */
+/* box-shadow */
+/* color */
+/* transition */
+/* border */
+/* box-shadow */
+.gn-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0px 20px;
+  font-size: 1rem;
+  color: #486284;
+  cursor: pointer;
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  background-color: #fafafa;
+  transition: all 0.2s ease 0s;
+}
+
+.gn-button:focus,
+.gn-button:hover {
+  opacity: 0.8;
+}
+
+.gn-button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.pm-button {
+  background-color: #486284;
+  color: #fafafa;
+}
+
+.header {
+  background-color: #fafafa;
+  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.32);
+}
+.header .container {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  font-size: 1.75rem;
+  color: #486284;
+}
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.header nav .link {
+  color: #486284;
+}
+.header .menu-button {
+  display: none;
+  font-size: 0px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../assets/menu.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 320px;
+  height: 100vh;
+  background-color: #fafafa;
+  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.32);
+}
+.menu .menu-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 0px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../assets/close.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.menu nav .link {
+  display: block;
+  width: fit-content;
+  color: #486284;
+}
+
+@media (max-width: 768px) {
+  .header nav {
+    display: none;
+  }
+  .header .menu-button {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */

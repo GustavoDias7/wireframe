@@ -1,0 +1,74 @@
+@import "../../../styles/base/global";
+@import "../../../styles/themes/theme";
+@import "../../../styles/utilities/mixins";
+@import "../../../styles/components/buttons";
+
+.header {
+  background-color: $neutral-color-100;
+  box-shadow: $primary-box-shadow;
+
+  .container {
+    height: 64px;
+    @include flex-center-between;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+    color: $primary-color-400;
+  }
+
+  nav {
+    @include flex-center-center;
+    gap: 1rem;
+
+    .link {
+      color: $primary-color-400;
+    }
+  }
+  .menu-button {
+    display: none;
+    font-size: 0px;
+    @include reset-button;
+    @include square(20px);
+    @include background-image("../../assets/menu.svg");
+  }
+}
+.menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  padding: 2rem;
+  @include max-width(320px);
+  height: 100vh;
+  background-color: $neutral-color-100;
+  box-shadow: $primary-box-shadow;
+
+  .menu-button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 0px;
+    @include reset-button;
+    @include square(20px);
+    @include background-image("../../assets/close.svg");
+  }
+
+  nav {
+    .link {
+      display: block;
+      width: fit-content;
+      color: $primary-color-400;
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    nav {
+      display: none;
+    }
+    .menu-button {
+      display: block;
+    }
+  }
+}

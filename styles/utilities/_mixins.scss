@@ -1,0 +1,92 @@
+@mixin monitor-lg {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin monitor {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin media-height($max-height) {
+  @media (max-height: $max-height) {
+    @content;
+  }
+}
+
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-min-height {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@mixin background-image($url, $size: cover) {
+  background-image: url($url);
+  background-size: $size;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin max-width($width, $marginAuto: false) {
+  width: 100%;
+  max-width: $width;
+  @if ($marginAuto == true) {
+    margin: 0px auto;
+  }
+}
+
+@mixin reset-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+@mixin square($dimention) {
+  width: $dimention;
+  height: $dimention;
+}
