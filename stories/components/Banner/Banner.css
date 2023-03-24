@@ -109,49 +109,30 @@ li {
   border: 1px solid #486284;
 }
 
-.menu {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  padding: 2rem;
-  width: 100%;
-  max-width: 320px;
-  height: 100vh;
+.banner {
   background-color: #fafafa;
-  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.32);
 }
-.menu .menu-button {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 0px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  background-image: url("../../assets/close.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 610px;
 }
-.menu nav .link {
-  display: block;
-  width: fit-content;
+.banner .left {
+  width: 100%;
+  max-width: 612px;
+}
+.banner .left h2 {
+  font-weight: 700;
+  font-size: 4rem;
   color: #486284;
   margin-bottom: 1rem;
 }
-.menu nav .link:last-child {
-  margin-bottom: 0;
+.banner .left p {
+  font-size: 1.25rem;
+  color: #8ca2c0;
+  margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .header nav {
-    display: none;
-  }
-  .header .menu-button {
-    display: block;
-  }
-}
-
-/*# sourceMappingURL=Menu.css.map */
+/*# sourceMappingURL=Banner.css.map */

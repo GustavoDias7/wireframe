@@ -76,6 +76,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
   height: 48px;
   padding: 0px 20px;
   font-size: 1rem;
@@ -101,6 +102,11 @@ li {
 .pm-button {
   background-color: #486284;
   color: #fafafa;
+}
+
+.sc-button {
+  background-color: transparent;
+  border: 1px solid #486284;
 }
 
 .header {

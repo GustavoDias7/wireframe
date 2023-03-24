@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "compile:scss": "sass -w ./stories/components/:./stories/components/",
+    "compile:scss": "sass -w --no-source-map ./stories/components/:./stories/components/",
     "watch": "concurrently \"yarn compile:scss\" \"yarn storybook\""
   },
   "keywords": [],
