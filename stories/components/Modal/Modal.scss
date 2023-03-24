@@ -1,0 +1,47 @@
+@import "../../../styles/base/global";
+@import "../../../styles/themes/theme";
+@import "../../../styles/utilities/mixins";
+
+@import "../../../styles/components/buttons";
+
+.modal {
+  position: fixed;
+  @include insert;
+  @include flex-center-center;
+  @include opacity(false);
+  transition: $primary-transition;
+  background-color: $opacity-color-100;
+
+  &.active {
+    @include opacity(true);
+  }
+
+  .close {
+    $dimention: 20px;
+
+    position: absolute;
+    top: $dimention;
+    right: $dimention;
+    @include square($dimention);
+    cursor: pointer;
+    border: none;
+    background-color: $transparent-color;
+    @include background-image("../../assets/close.svg");
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      transition: $primary-transition;
+    }
+  }
+
+  .content {
+    position: relative;
+    @include max-width(352px);
+    min-height: 312px;
+    max-height: 400px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: $neutral-color-100;
+  }
+}

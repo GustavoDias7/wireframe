@@ -109,47 +109,49 @@ li {
   border: 1px solid #486284;
 }
 
-.menu {
+.modal {
   position: fixed;
-  top: 0px;
-  right: 0px;
-  padding: 2rem;
-  width: 100%;
-  max-width: 320px;
-  height: 100vh;
-  background-color: #fafafa;
-  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.32);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease 0s;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-.menu .menu-button {
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal .close {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 0px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  top: 20px;
+  right: 20px;
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
   background-image: url("../../assets/close.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.menu nav .link {
-  display: block;
-  width: fit-content;
-  color: #486284;
-  margin-bottom: 1rem;
+.modal .close:hover, .modal .close:focus {
+  opacity: 0.6;
+  transition: all 0.2s ease 0s;
 }
-.menu nav .link:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .header nav {
-    display: none;
-  }
-  .header .menu-button {
-    display: block;
-  }
+.modal .content {
+  position: relative;
+  width: 100%;
+  max-width: 352px;
+  min-height: 312px;
+  max-height: 400px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #fafafa;
 }

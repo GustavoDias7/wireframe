@@ -90,3 +90,19 @@
   width: $dimention;
   height: $dimention;
 }
+
+@mixin opacity($value) {
+  @if ($value == false) {
+    opacity: 0;
+    pointer-events: none;
+  } @else {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+@mixin insert {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
