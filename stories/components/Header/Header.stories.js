@@ -1,5 +1,4 @@
 import HeaderComponent from "./Header.html";
-import "./Header.css";
 
 export default {
   title: "Components/Header",

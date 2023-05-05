@@ -1,5 +1,4 @@
 import ModalComponent from "./Modal.html";
-import "./Modal.css";
 import initModal from "./modal.js";
 
 export default {

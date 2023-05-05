@@ -1,9 +1,3 @@
-@import "../../../styles/base/global";
-@import "../../../styles/themes/theme";
-@import "../../../styles/utilities/mixins";
-
-@import "../../../styles/components/buttons";
-
 .modal {
   position: fixed;
   @include insert;
@@ -26,7 +20,7 @@
     cursor: pointer;
     border: none;
     background-color: $transparent-color;
-    @include background-image("../../assets/close.svg");
+    @include background-image("../../stories/assets/close.svg");
 
     &:hover,
     &:focus {
