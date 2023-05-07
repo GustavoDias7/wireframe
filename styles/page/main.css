@@ -105,6 +105,251 @@ li {
   border: 1px solid #7b95b7;
 }
 
+.form .row {
+  position: relative;
+  width: 100%;
+  max-width: 312px;
+  margin-bottom: 12px;
+}
+.form .row:last-of-type {
+  margin-bottom: 0px;
+}
+.form .label {
+  display: block;
+  margin-bottom: 4px;
+}
+.form .input {
+  display: block;
+  width: 100%;
+  max-width: 312px;
+  height: 56px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  border-radius: 8px;
+  padding: 16px;
+  outline: none;
+  border: 1px solid;
+  transition: 0.2s ease 0s;
+  border-color: #486284;
+}
+.form .input:focus ~ .label, .form .input:hover ~ .label {
+  top: -16px/2;
+}
+.form .input:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.form .input::placeholder {
+  color: #ced7e4;
+}
+.form .input.transparent {
+  color: transparent;
+  user-select: none;
+}
+.form .input.transparent::placeholder {
+  color: #ced7e4;
+}
+.form .input.error {
+  border-color: #ff2115;
+}
+.form .input.success {
+  border-color: #008000;
+}
+.form .input.outline {
+  border-top: none;
+}
+.form .input.outline ~ .label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  max-width: 312px;
+  display: flex;
+  font-size: 16px;
+  line-height: 16px;
+  transition: font-size 0.2s ease 0s;
+  padding: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+.form .input.outline ~ .label::before, .form .input.outline ~ .label::after {
+  content: "";
+  border-top: 1px solid;
+  height: 8px;
+}
+.form .input.outline ~ .label::before {
+  border-left: 1px solid;
+  border-top-left-radius: 8px;
+  border-color: #486284;
+  width: 11px;
+}
+.form .input.outline ~ .label::after {
+  border-right: 1px solid;
+  border-top-right-radius: 8px;
+  border-color: #486284;
+  flex: 1;
+}
+.form .input.outline ~ .label span {
+  position: absolute;
+  top: calc(56px / 2 - (16px / 2));
+  left: 16px;
+  transition: top 0.2s ease 0s;
+}
+.form .input.outline:disabled:focus ~ .label, .form .input.outline:disabled:hover ~ .label {
+  font-size: 16px;
+  line-height: 16px;
+}
+.form .input.outline:disabled:focus ~ .label span, .form .input.outline:disabled:hover ~ .label span {
+  position: absolute;
+  top: calc(56px / 2 - (16px / 2));
+  left: 16px;
+  transition: top 0.2s ease 0s;
+}
+.form .input.outline.active ~ .label, .form .input.outline:disabled.active ~ .label, .form .input.outline:focus ~ .label, .form .input.outline:hover ~ .label {
+  font-size: 14px;
+  line-height: 14px;
+}
+.form .input.outline.active ~ .label span, .form .input.outline:disabled.active ~ .label span, .form .input.outline:focus ~ .label span, .form .input.outline:hover ~ .label span {
+  position: relative;
+  top: -8px;
+  left: 0px;
+}
+.form .input.outline:disabled:hover ~ .label::before {
+  margin-right: 0px;
+}
+.form .input.outline.active ~ .label::before, .form .input.outline:disabled.active ~ .label::before, .form .input.outline:hover ~ .label::before, .form .input.outline:focus ~ .label::before {
+  margin-right: 4px;
+}
+.form .input.outline:disabled:hover ~ .label::after {
+  margin-left: 0px;
+}
+.form .input.outline.active ~ .label::after, .form .input.outline:disabled.active ~ .label::after, .form .input.outline:hover ~ .label::after, .form .input.outline:focus ~ .label::after {
+  margin-left: 4px;
+}
+.form .input.outline:disabled ~ .label {
+  opacity: 0.4;
+}
+.form .input.outline.error ~ .label::before,
+.form .input.outline.error ~ .label::after {
+  border-color: #ff2115;
+}
+.form .input.outline.success ~ .label::before,
+.form .input.outline.success ~ .label::after {
+  border-color: #008000;
+}
+.form .input.filled {
+  padding: 24px 16px 8px;
+}
+.form .input.filled ~ .label {
+  margin-bottom: 0;
+  position: absolute;
+  top: calc(56px / 2 - (16px / 2));
+  left: 16px;
+  transition: 0.2s ease 0s;
+  width: 100%;
+  max-width: 312px;
+  display: flex;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: transparent;
+  pointer-events: none;
+}
+.form .input.filled:disabled ~ .label {
+  opacity: 0.4;
+}
+.form .input.filled:disabled:hover ~ .label {
+  top: calc(56px / 2 - (16px / 2));
+  font-size: 16px;
+}
+.form .input.filled.active ~ .label, .form .input.filled:disabled.active ~ .label, .form .input.filled:focus ~ .label, .form .input.filled:hover ~ .label {
+  font-size: 14px;
+  top: 8px;
+}
+.form .helper-text {
+  display: block;
+  font-size: 0.75rem;
+  padding: 2px 12px 0px;
+}
+.form .helper-text.error {
+  color: #ff2115;
+}
+.form .helper-text.success {
+  color: #008000;
+}
+.form .input-container {
+  position: relative;
+}
+.form .input-container .right-element {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 16px;
+  margin: auto;
+  height: min-content;
+}
+.form .input-container .right-element p {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  padding: 4px;
+}
+.form .input-container input[name^=right] {
+  padding-right: 64px;
+}
+.form textarea.input {
+  resize: vertical;
+  min-height: 112px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.check .marker {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid #486284;
+  margin-right: 10px;
+}
+.check .marker::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  transform: scale(0);
+  transition: 0.2s ease-in-out;
+  background-color: #486284;
+}
+.check.radio .marker {
+  border-radius: 16px;
+}
+.check.radio .marker::before {
+  border-radius: 16px;
+}
+.check input {
+  display: none;
+}
+.check input:checked ~ .marker::before {
+  transform: scale(1);
+}
+.check input:disabled ~ .marker, .check input:disabled ~ .text {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.check .text {
+  line-height: 14px;
+  user-select: none;
+}
+
 .header {
   position: relative;
   background-color: #fafafa;
