@@ -76,3 +76,6 @@
   left: 0;
   right: 0;
 }
+@function pathImages($filename: "") {
+  @return "../../stories/assets/#{$filename}";
+}

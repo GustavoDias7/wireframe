@@ -2,7 +2,14 @@ function form({ fields = [] }) {
   const $form = document.createElement("form");
 
   fields.forEach((field) => {
-    const $field = document.createElement(field.tag === "textarea" ? "textarea" : "input");
+    let $field;
+    if (field.tag === "textarea") {
+      $field = document.createElement("textarea")
+    } else if (field.tag === "select") {
+      $field = document.createElement("select")
+    } else {
+      $field = document.createElement("input")
+    }
     const $label = document.createElement("label");
     const $row = document.createElement("div");
     const $rightElement = document.createElement("div");
@@ -34,6 +41,21 @@ function form({ fields = [] }) {
       $label.appendChild($marker);
       $label.appendChild($text);
       $row.appendChild($label);
+    } else if (field.tag === "select") {
+      $field.classList.add("select");
+      
+      const $option = document.createElement("option");
+      $option.innerText = field.label;
+      $field.appendChild($option);
+
+      field.options.forEach(option => {
+        const $option = document.createElement("option");
+        $option.value = option.value;
+        $option.innerText = option.text;
+        $field.appendChild($option);
+      })
+      $row.appendChild($field);
+      $form.appendChild($row);
     } else {
       $label.classList.add("label");
       $field.classList.add("input");

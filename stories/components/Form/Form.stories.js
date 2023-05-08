@@ -17,7 +17,7 @@ export const Field = {
   },
   argTypes: { 
     variant: { control: 'select', options: ["default", "filled", "outline"] },
-    type: { control: 'select', options: ["text", "checkbox"] } 
+    type: { control: 'select', options: ["text", "checkbox"] }
   },
   args: { 
     name: "name", 
@@ -30,7 +30,7 @@ export const Field = {
     valid: false,
     errorMessage: "" 
   },
-  play: async ({ canvasElement }) => {
+  play: async () => {
     initInput({ selector: ".form .input" });
   }
 };
@@ -48,7 +48,7 @@ export const BasicForm = {
     return formElement;
   },
   args: {},
-  play: async ({ canvasElement }) => {
+  play: async () => {
     initInput({ selector: ".form .input" });
   }
 };
@@ -65,7 +65,7 @@ export const ErrorForm = {
     return formElement;
   },
   args: {},
-  play: async ({ canvasElement }) => {
+  play: async () => {
     initInput({ selector: ".form .input" });
   }
 };
@@ -82,7 +82,7 @@ export const ValidForm = {
     return formElement;
   },
   args: {},
-  play: async ({ canvasElement }) => {
+  play: async () => {
     initInput({ selector: ".form .input" });
   }
 };
@@ -99,7 +99,7 @@ export const DisabledForm = {
     return formElement;
   },
   args: {},
-  play: async ({ canvasElement }) => {
+  play: async () => {
     initInput({ selector: ".form .input" });
   }
 };
@@ -115,7 +115,7 @@ export const Checkbox = {
     return formElement;
   },
   args: {},
-  play: async ({ canvasElement }) => {
+  play: async () => {
     initInput({ selector: ".form .input" });
   }
 };
@@ -131,7 +131,7 @@ export const Radio = {
     return formElement;
   },
   args: {},
-  play: async ({ canvasElement }) => {
+  play: async () => {
     initInput({ selector: ".form .input" });
   }
 };
@@ -148,7 +148,73 @@ export const Textarea = {
     return formElement;
   },
   args: {},
-  play: async ({ canvasElement }) => {
+  play: async () => {
+    initInput({ selector: ".form .input" });
+  }
+};
+export const Select = {
+  title: "Components/Form/Select",
+  render: (args) => {
+    const formElement = form({
+      fields: [
+        { 
+          name: "name", 
+          id: "name",
+          label: "Select an option",
+          type: "text",
+          tag: "select",
+          options: [
+            { value: "option_1", text: "Option 1" },
+            { value: "option_2", text: "Option 2" },
+            { value: "option_3", text: "Option 3" },
+          ]
+        },
+        { 
+          name: "name", 
+          id: "name",
+          label: "Select an option",
+          type: "text",
+          tag: "select",
+          errorMessage: "Error select",
+          options: [
+            { value: "option_1", text: "Option 1" },
+            { value: "option_2", text: "Option 2" },
+            { value: "option_3", text: "Option 3" },
+          ]
+        },
+        { 
+          name: "name", 
+          id: "name",
+          label: "Select an option",
+          type: "text",
+          tag: "select",
+          valid: true,
+          options: [
+            { value: "option_1", text: "Option 1" },
+            { value: "option_2", text: "Option 2" },
+            { value: "option_3", text: "Option 3" },
+          ]
+        },
+        { 
+          name: "name", 
+          id: "name",
+          label: "Select an option",
+          type: "text",
+          tag: "select",
+          disabled: true,
+          options: [
+            { value: "option_1", text: "Option 1" },
+            { value: "option_2", text: "Option 2" },
+            { value: "option_3", text: "Option 3" },
+          ]
+        },
+      ]
+    });
+    formElement.classList.add("form");
+    return formElement;
+  },
+  args: {},
+  play: async () => {
     initInput({ selector: ".form .input" });
   }
 };

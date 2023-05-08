@@ -20,7 +20,7 @@
     cursor: pointer;
     border: none;
     background-color: $transparent-color;
-    @include background-image("../../stories/assets/close.svg");
+    @include background-image(pathImages("close.svg"));
 
     &:hover,
     &:focus {

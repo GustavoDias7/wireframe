@@ -15,7 +15,7 @@
     font-size: 0px;
     @include reset-button;
     @include square(20px);
-    @include background-image("../../stories/assets/close.svg");
+    @include background-image(pathImages("close.svg"));
   }
 
   nav {

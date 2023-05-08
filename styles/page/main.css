@@ -118,7 +118,7 @@ li {
   display: block;
   margin-bottom: 4px;
 }
-.form .input {
+.form .input, .form .select {
   display: block;
   width: 100%;
   max-width: 312px;
@@ -131,29 +131,30 @@ li {
   outline: none;
   border: 1px solid;
   transition: 0.2s ease 0s;
+  background-color: transparent;
   border-color: #486284;
 }
-.form .input:focus ~ .label, .form .input:hover ~ .label {
+.form .input:focus ~ .label, .form .input:hover ~ .label, .form .select:focus ~ .label, .form .select:hover ~ .label {
   top: -16px/2;
 }
-.form .input:disabled {
+.form .input:disabled, .form .select:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
-.form .input::placeholder {
+.form .input::placeholder, .form .select::placeholder {
   color: #ced7e4;
 }
-.form .input.transparent {
+.form .input.transparent, .form .select.transparent {
   color: transparent;
   user-select: none;
 }
-.form .input.transparent::placeholder {
+.form .input.transparent::placeholder, .form .select.transparent::placeholder {
   color: #ced7e4;
 }
-.form .input.error {
+.form .input.error, .form .select.error {
   border-color: #ff2115;
 }
-.form .input.success {
+.form .input.success, .form .select.success {
   border-color: #008000;
 }
 .form .input.outline {
@@ -295,6 +296,25 @@ li {
 }
 .form .input-container input[name^=right] {
   padding-right: 64px;
+}
+.form .select {
+  appearance: none;
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+  /* For IE10 */
+  cursor: pointer;
+  background-image: url("../../stories/assets/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: calc(100% - 16px) center;
+}
+.form .select::-ms-expand {
+  display: none;
+}
+.form .select option:first-child {
+  display: none;
 }
 .form textarea.input {
   resize: vertical;
