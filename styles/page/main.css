@@ -370,6 +370,80 @@ li {
   user-select: none;
 }
 
+.accordion {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.2s ease 0s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+  background-color: transparent;
+}
+.accordion.primary {
+  margin-bottom: 10px;
+  border: 2px solid #486284;
+}
+.accordion.primary:last-child {
+  margin-bottom: 0px;
+}
+.accordion.secondary {
+  border: none;
+  border-bottom: 1px solid #486284;
+}
+.accordion.secondary:last-child {
+  border-bottom: none;
+}
+.accordion .label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  transition: 0.2s ease 0s;
+}
+.accordion .label h3 {
+  transition: 0.2s ease 0s;
+}
+.accordion .label .arrow {
+  width: 18px;
+  height: 18px;
+  margin-left: 20px;
+  background-image: url("../../stories/assets/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: 0.2s ease 0s;
+}
+.accordion.active .label h3, .accordion:focus .label h3, .accordion:hover .label h3 {
+  color: #486284;
+}
+.accordion.active .arrow {
+  transform: rotate(-180deg);
+}
+.accordion .content {
+  height: 0;
+  overflow: hidden;
+}
+.accordion .content > div {
+  padding: 0 20px 20px;
+}
+.accordion.active .content {
+  height: auto;
+  animation: accordion-anima 0.4s forwards;
+}
+
+@keyframes accordion-anima {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .header {
   position: relative;
   background-color: #fafafa;
