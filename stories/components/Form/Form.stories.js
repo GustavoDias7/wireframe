@@ -35,7 +35,7 @@ export const Field = {
   }
 };
 
-export const BasicForm = {
+export const BasicFields = {
   render: (args) => {
     const formElement = form({
       fields: [
@@ -52,7 +52,7 @@ export const BasicForm = {
     initInput({ selector: ".form .input" });
   }
 };
-export const ErrorForm = {
+export const ErrorFields = {
   render: (args) => {
     const formElement = form({
       fields: [
@@ -69,7 +69,7 @@ export const ErrorForm = {
     initInput({ selector: ".form .input" });
   }
 };
-export const ValidForm = {
+export const ValidFields = {
   render: (args) => {
     const formElement = form({
       fields: [
@@ -86,7 +86,7 @@ export const ValidForm = {
     initInput({ selector: ".form .input" });
   }
 };
-export const DisabledForm = {
+export const DisabledFields = {
   render: (args) => {
     const formElement = form({
       fields: [
