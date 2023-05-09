@@ -467,6 +467,67 @@ li {
   margin-bottom: 16px;
 }
 
+.price.primary {
+  display: flex;
+}
+.price.primary .left span,
+.price.primary .right span {
+  display: block;
+}
+.price.primary .left {
+  font-size: 0.875rem;
+}
+.price.primary strong {
+  font-size: 32px;
+  height: 32px;
+  margin: 0px 3px;
+}
+.price.primary .right {
+  font-size: 0.875rem;
+}
+
+.price.secondary {
+  display: flex;
+}
+.price.secondary .left span,
+.price.secondary .right span {
+  display: block;
+}
+.price.secondary .left {
+  font-size: 0.875rem;
+}
+.price.secondary strong {
+  font-size: 32px;
+  height: 32px;
+  margin: 0px 3px;
+}
+.price.secondary .right {
+  font-size: 0.875rem;
+}
+.price.secondary + small {
+  font-size: 14px;
+}
+
+.price.tertiary {
+  display: flex;
+  align-items: center;
+}
+.price.tertiary .left,
+.price.tertiary .right {
+  padding-top: 6px;
+}
+.price.tertiary .left {
+  font-size: 0.875rem;
+}
+.price.tertiary strong {
+  font-size: 32px;
+  height: 32px;
+  margin: 0px 3px;
+}
+.price.tertiary .right {
+  font-size: 0.875rem;
+}
+
 .header {
   position: relative;
   background-color: #fafafa;
