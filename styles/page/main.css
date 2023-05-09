@@ -444,6 +444,29 @@ li {
     transform: translateY(0px);
   }
 }
+.title-subtitle.primary .title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.title-subtitle.primary .subtitle {
+  font-style: 18px;
+  margin-bottom: 16px;
+}
+
+.title-subtitle.secondary {
+  text-align: center;
+}
+.title-subtitle.secondary .title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.title-subtitle.secondary .subtitle {
+  font-style: 18px;
+  margin-bottom: 16px;
+}
+
 .header {
   position: relative;
   background-color: #fafafa;
