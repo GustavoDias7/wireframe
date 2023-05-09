@@ -1,7 +1,7 @@
 import HeaderComponent from "./Header.html";
 
 export default {
-  title: "Components/Header",
+  title: "Layouts/Header",
 };
 
 export const header = () => HeaderComponent;

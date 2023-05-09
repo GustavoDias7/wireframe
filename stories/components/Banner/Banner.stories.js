@@ -3,9 +3,9 @@ import BannerSecondary from "./BannerSecondary.html";
 import BannerTertiary from "./BannerTertiary.html";
 
 export default {
-  title: "Components/Banner",
+  title: "Layouts/Banner",
 };
 
-export const bannerPrimary = () => BannerPrimary;
-export const bannerSecondary = () => BannerSecondary;
-export const bannerTertiary = () => BannerTertiary;
+export const primary = () => BannerPrimary;
+export const scondary = () => BannerSecondary;
+export const tertiary = () => BannerTertiary;

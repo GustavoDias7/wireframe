@@ -1,7 +1,7 @@
 import MenuComponent from "./Menu.html";
 
 export default {
-  title: "Components/Menu",
+  title: "Layouts/Menu",
 };
 
 export const Menu = () => MenuComponent;
