@@ -8,4 +8,4 @@ export default {
 
 export const primary = () => Primary;
 export const secondary = () => Secondary;
-export const _tertiary = () => Tertiary;
+export const tertiary = () => Tertiary;
