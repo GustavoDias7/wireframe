@@ -1,15 +1,25 @@
-import ModalComponent from "./Modal.html";
+import ModalPrimary from "./Primary.html";
+import ModalSecondary from "./Secondary.html";
 import initModal from "./modal.js";
 
 export default {
   title: "Components/Modal",
 };
 
-export const Modal = () => ModalComponent;
+export const Primary = () => ModalPrimary;
 
-Modal.play = async ({ canvasElement }) => {
+Primary.play = async () => {
   const modal = initModal({
-    selector: "#modal1",
+    selector: "#modal-primary",
+    autoOpen: true,
+  });
+};
+
+export const Secondary =  () => ModalSecondary;
+
+Secondary.play = async () => {
+  const modal = initModal({
+    selector: "#modal-secondary",
     autoOpen: true,
   });
 };

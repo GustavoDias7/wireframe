@@ -868,9 +868,6 @@ li {
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   opacity: 0;
   pointer-events: none;
   transition: 0.2s ease 0s;
@@ -880,7 +877,30 @@ li {
   opacity: 1;
   pointer-events: all;
 }
-.modal .close {
+.modal.primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.primary .modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 352px;
+  min-height: 312px;
+  max-height: 400px;
+  padding: 20px;
+  margin: 16px;
+  border-radius: 16px;
+  background-color: #fafafa;
+  text-align: center;
+}
+.modal.primary .modal-content h2 {
+  margin-bottom: 16px;
+}
+.modal.primary .close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -894,17 +914,47 @@ li {
   background-position: center;
   background-repeat: no-repeat;
 }
-.modal .close:hover, .modal .close:focus {
+.modal.primary .close:hover, .modal.primary .close:focus {
   opacity: 0.6;
   transition: 0.2s ease 0s;
 }
-.modal .content {
-  position: relative;
+.modal.secondary .modal-content {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 352px;
-  min-height: 312px;
-  max-height: 400px;
+  max-width: 480px;
+  margin-right: -100%;
+  margin-left: auto;
+  height: 100vh;
   padding: 20px;
-  border-radius: 16px;
   background-color: #fafafa;
+  transition: margin-right 0.2s ease 0s;
+}
+.modal.secondary.active .modal-content {
+  margin-right: 0px;
+}
+.modal.secondary .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.modal.secondary .modal-header .close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../../stories/assets/close.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.modal.secondary .modal-header .close:hover, .modal.secondary .modal-header .close:focus {
+  opacity: 0.6;
+  transition: 0.2s ease 0s;
+}
+.modal.secondary .modal-body {
+  overflow-y: auto;
+  margin-bottom: 20px;
 }
