@@ -1,0 +1,17 @@
+.list {
+  @include max-width(640px);
+
+  li {
+    $dimention: 16px;
+    padding-left: $dimention + 8px;
+    margin-bottom: 16px;
+    background-image: url(pathImages("check.svg"));
+    background-repeat: no-repeat;
+    background-size: $dimention;
+    background-position: 0px 2px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}

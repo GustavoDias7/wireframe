@@ -528,6 +528,22 @@ li {
   font-size: 0.875rem;
 }
 
+.list {
+  width: 100%;
+  max-width: 640px;
+}
+.list li {
+  padding-left: 24px;
+  margin-bottom: 16px;
+  background-image: url("../../stories/assets/check.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 0px 2px;
+}
+.list li:last-child {
+  margin-bottom: 0px;
+}
+
 .header {
   position: relative;
   background-color: #fafafa;
