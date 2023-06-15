@@ -17,6 +17,7 @@ export const PlusSign = {
   .plus::before,
   .plus::after {
     content: "";
+    display: block;
     position: absolute;
     margin: auto;
     background-color: ${args.backgroundColor};
@@ -46,6 +47,7 @@ export const PlusSign = {
     backgroundColor: { control: { type: 'color', presetColors: ['#ffffff']} }
   },
   args: {
+    className: "plus",
     width: 20, 
     height: 2, 
     backgroundColor: "#000000"
