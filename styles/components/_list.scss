@@ -1,5 +1,4 @@
 .list.primary {
-  @include max-width(640px);
   padding-left: 20px;
 
   li {
@@ -13,8 +12,6 @@
 }
 
 .list.secondary {
-  @include max-width(640px);
-
   li {
     $dimention: 16px;
     padding-left: $dimention + 8px;
@@ -23,6 +20,32 @@
     background-repeat: no-repeat;
     background-size: $dimention;
     background-position: 0px 2px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.list.tertiary {
+  padding-left: 20px;
+
+  li {
+    list-style: decimal outside;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.list.quarternary {
+  padding-left: 20px;
+
+  li {
+    list-style: upper-alpha outside;
+    margin-bottom: 16px;
 
     &:last-child {
       margin-bottom: 0px;

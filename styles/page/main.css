@@ -529,8 +529,6 @@ li {
 }
 
 .list.primary {
-  width: 100%;
-  max-width: 640px;
   padding-left: 20px;
 }
 .list.primary li {
@@ -541,10 +539,6 @@ li {
   margin-bottom: 0px;
 }
 
-.list.secondary {
-  width: 100%;
-  max-width: 640px;
-}
 .list.secondary li {
   padding-left: 24px;
   margin-bottom: 16px;
@@ -554,6 +548,28 @@ li {
   background-position: 0px 2px;
 }
 .list.secondary li:last-child {
+  margin-bottom: 0px;
+}
+
+.list.tertiary {
+  padding-left: 20px;
+}
+.list.tertiary li {
+  list-style: decimal outside;
+  margin-bottom: 16px;
+}
+.list.tertiary li:last-child {
+  margin-bottom: 0px;
+}
+
+.list.quarternary {
+  padding-left: 20px;
+}
+.list.quarternary li {
+  list-style: upper-alpha outside;
+  margin-bottom: 16px;
+}
+.list.quarternary li:last-child {
   margin-bottom: 0px;
 }
 
