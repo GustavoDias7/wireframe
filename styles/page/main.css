@@ -528,11 +528,24 @@ li {
   font-size: 0.875rem;
 }
 
-.list {
+.list.primary {
+  width: 100%;
+  max-width: 640px;
+  padding-left: 20px;
+}
+.list.primary li {
+  list-style: disc outside;
+  margin-bottom: 16px;
+}
+.list.primary li:last-child {
+  margin-bottom: 0px;
+}
+
+.list.secondary {
   width: 100%;
   max-width: 640px;
 }
-.list li {
+.list.secondary li {
   padding-left: 24px;
   margin-bottom: 16px;
   background-image: url("../../stories/assets/check.svg");
@@ -540,7 +553,7 @@ li {
   background-size: 16px;
   background-position: 0px 2px;
 }
-.list li:last-child {
+.list.secondary li:last-child {
   margin-bottom: 0px;
 }
 

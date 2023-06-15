@@ -1,7 +1,9 @@
-import List from "./List.html";
+import Primary from "./Primary.html";
+import Secondary from "./Secondary.html";
 
 export default {
   title: "Components/List",
 };
 
-export const list = () => List;
+export const primary = () => Primary;
+export const secondary = () => Secondary;

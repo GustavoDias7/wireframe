@@ -1,4 +1,18 @@
-.list {
+.list.primary {
+  @include max-width(640px);
+  padding-left: 20px;
+
+  li {
+    list-style: disc outside;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.list.secondary {
   @include max-width(640px);
 
   li {
