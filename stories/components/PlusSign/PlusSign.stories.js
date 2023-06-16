@@ -8,34 +8,34 @@ export const PlusSign = {
     const span = document.createElement("span");
     const style = document.createElement("style");
     const templateStyle = `
-  .plus {
+  .${args.className || "plus"} {
     position: relative;
     display: block;
     width: ${args.width}px;
     height: ${args.width}px;
   }
-  .plus::before,
-  .plus::after {
+  .${args.className || "plus"}::before,
+  .${args.className || "plus"}::after {
     content: "";
     display: block;
     position: absolute;
     margin: auto;
     background-color: ${args.backgroundColor};
   }
-  .plus::before {
+  .${args.className || "plus"}::before {
     width: ${args.width}px;
     height: ${args.height}px;
     top: 0px;
     bottom: 0px;
   }
-  .plus::after {
+  .${args.className || "plus"}::after {
     width: ${args.height}px;
     height: ${args.width}px;
     left: 0px;
     right: 0px;
   }\n`
     style.innerHTML = templateStyle
-    span.classList.add("plus")
+    span.classList.add(args.className || "plus")
     div.append(style)
     div.append("\n")
     div.append(span)
