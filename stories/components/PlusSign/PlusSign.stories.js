@@ -1,5 +1,5 @@
 export default {
-  title: "Components/PlusSign",
+  title: "Components/Plus Sign",
 };
 
 export const PlusSign = {
