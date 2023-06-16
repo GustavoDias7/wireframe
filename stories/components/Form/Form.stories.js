@@ -24,6 +24,7 @@ export const Field = {
     name: "name", 
     id: "name", 
     label: "Field", 
+    placeholder: "", 
     variant: "outline",
     type: "text", 
     errorMessage: "", 

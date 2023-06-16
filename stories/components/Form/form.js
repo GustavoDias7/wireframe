@@ -144,8 +144,10 @@ function form({ fields = [] }) {
           $label.innerText = field.label;
 
           formatHTML($form, 1)
-          formatHTML($row, 2)
-          $row.appendChild($label);
+          if (!field?.placeholder) {
+            formatHTML($row, 2)
+            $row.appendChild($label);
+          }
 
           if (field?.rightElement) {
             formatHTML($row, 2)
@@ -158,6 +160,10 @@ function form({ fields = [] }) {
             formatHTML($row, 1)
           } else {
             formatHTML($row, 2)
+            
+            if (field?.placeholder) {
+              $field.placeholder = field.placeholder
+            }
             $row.appendChild($field);
             formatHTML($row, 1)
           }
