@@ -17,7 +17,8 @@ export const Field = {
   },
   argTypes: { 
     variant: { control: 'select', options: ["default", "filled", "outline"] },
-    type: { control: 'select', options: ["text", "checkbox"] }
+    type: { control: 'select', options: ["text", "tel", "checkbox", "radio"] },
+    tag: { control: 'select', options: ["input", "textarea"] }
   },
   args: { 
     name: "name", 
@@ -25,10 +26,11 @@ export const Field = {
     label: "Field", 
     variant: "outline",
     type: "text", 
+    errorMessage: "", 
+    valid: false,
     disabled: false, 
     active: false,
-    valid: false,
-    errorMessage: "" 
+    rightElement: false,
   },
   play: async () => {
     initInput({ selector: ".form .input" });
@@ -141,7 +143,92 @@ export const Textarea = {
       fields: [
         { name: "name", id: "name", label: "Default", tag: "textarea" },
         { name: "name", id: "name", variant: "filled", label: "Filled", tag: "textarea" },
-        { name: "name", id: "name", variant: "outline", label: "Outline", tag: "textarea" }
+        { name: "name", id: "name", variant: "outline", label: "Outline", tag: "textarea" },
+      ]
+    });
+    formElement.classList.add("form");
+    return formElement;
+  },
+  args: {},
+  play: async () => {
+    initInput({ selector: ".form .input" });
+  }
+};
+export const ErrorTextarea = {
+  render: (args) => {
+    const formElement = form({
+      fields: [
+        { name: "name", id: "name", label: "Default", tag: "textarea", errorMessage:"Error message" },
+        { name: "name", id: "name", variant: "filled", label: "Filled", tag: "textarea", errorMessage:"Error message" },
+        { name: "name", id: "name", variant: "outline", label: "Outline", tag: "textarea", errorMessage:"Error message" },
+      ]
+    });
+    formElement.classList.add("form");
+    return formElement;
+  },
+  args: {},
+  play: async () => {
+    initInput({ selector: ".form .input" });
+  }
+};
+export const ValidTextarea = {
+  render: (args) => {
+    const formElement = form({
+      fields: [
+        { name: "name", id: "name", label: "Default", tag: "textarea",  valid: true },
+        { name: "name", id: "name", variant: "filled", label: "Filled", tag: "textarea",  valid: true },
+        { name: "name", id: "name", variant: "outline", label: "Outline", tag: "textarea",  valid: true },
+      ]
+    });
+    formElement.classList.add("form");
+    return formElement;
+  },
+  args: {},
+  play: async () => {
+    initInput({ selector: ".form .input" });
+  }
+};
+export const DisabledTextarea = {
+  render: (args) => {
+    const formElement = form({
+      fields: [
+        { name: "name", id: "name", label: "Default", tag: "textarea",  disabled: true },
+        { name: "name", id: "name", variant: "filled", label: "Filled", tag: "textarea",  disabled: true },
+        { name: "name", id: "name", variant: "outline", label: "Outline", tag: "textarea",  disabled: true },
+      ]
+    });
+    formElement.classList.add("form");
+    return formElement;
+  },
+  args: {},
+  play: async () => {
+    initInput({ selector: ".form .input" });
+  }
+};
+export const RightElement = {
+  render: (args) => {
+    const formElement = form({
+      fields: [
+        { name: "name", id: "name", label: "Default", type: "text", rightElement: true },
+        { name: "name", id: "name", variant: "filled", label: "Filled", type: "text", rightElement: true },
+        { name: "name", id: "name", variant: "outline", label: "Outline", type: "text", rightElement: true }
+      ]
+    });
+    formElement.classList.add("form");
+    return formElement;
+  },
+  args: {},
+  play: async () => {
+    initInput({ selector: ".form .input" });
+  }
+};
+export const ErrorRightElement = {
+  render: (args) => {
+    const formElement = form({
+      fields: [
+        { name: "name", id: "name", label: "Default", type: "text", rightElement: true, errorMessage: "Error message" },
+        { name: "name", id: "name", variant: "filled", label: "Filled", type: "text", rightElement: true, errorMessage: "Error message" },
+        { name: "name", id: "name", variant: "outline", label: "Outline", type: "text", rightElement: true, errorMessage: "Error message" }
       ]
     });
     formElement.classList.add("form");
