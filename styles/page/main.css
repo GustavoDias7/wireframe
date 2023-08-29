@@ -84,15 +84,18 @@ li {
   background-color: #fafafa;
   transition: all 0.2s ease 0s;
 }
-
-.gn-button:focus,
-.gn-button:hover {
+.gn-button:focus, .gn-button:hover {
   opacity: 0.8;
 }
-
 .gn-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+.gn-button.full {
+  width: 100%;
+}
+.gn-button.center {
+  margin: 0px auto;
 }
 
 .pm-button {
@@ -582,6 +585,35 @@ li {
   margin-bottom: 0px;
 }
 
+.box.primary {
+  width: 100%;
+  max-width: 272px;
+  padding: 32px;
+  text-align: center;
+  color: #2d2d2d;
+  background-color: #fafafa;
+  box-shadow: 1px solid #7b95b7;
+  border-radius: 8px;
+}
+.box.primary .icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+.box.primary .title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.box.primary .gn-button {
+  margin-bottom: 16px;
+}
+.box.primary .subtitle {
+  margin-bottom: 16px;
+}
+.box.primary .link {
+  color: #486284;
+}
+
 .header.primary {
   position: relative;
   background-color: #fafafa;
@@ -936,6 +968,7 @@ li {
 }
 .modal.primary .modal-content h2 {
   margin-bottom: 16px;
+  font-size: 24px;
 }
 .modal.primary .close {
   position: absolute;
