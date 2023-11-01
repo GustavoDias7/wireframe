@@ -4,11 +4,11 @@ function form({ fields = [] }) {
   fields.forEach((field) => {
     let $field;
     if (field.tag === "textarea") {
-      $field = document.createElement("textarea")
+      $field = document.createElement("textarea");
     } else if (field.tag === "select") {
-      $field = document.createElement("select")
+      $field = document.createElement("select");
     } else {
-      $field = document.createElement("input")
+      $field = document.createElement("input");
     }
     const $label = document.createElement("label");
     const $row = document.createElement("div");
@@ -26,7 +26,7 @@ function form({ fields = [] }) {
     if (field.type === "checkbox" || field.type === "radio") {
       $field.setAttribute("type", field?.type);
       $label.classList.add("check");
-      if (field.type === "radio") $label.classList.add("radio")
+      if (field.type === "radio") $label.classList.add("radio");
 
       const $marker = document.createElement("span");
       $marker.classList.add("marker");
@@ -37,38 +37,25 @@ function form({ fields = [] }) {
 
       if ($field?.value) $field.value === field.value;
 
-      formatHTML($form, 1)
-      formatHTML($row, 2)
-      formatHTML($label, 3)
       $label.appendChild($field);
-      formatHTML($label, 3)
       $label.appendChild($marker);
-      formatHTML($label, 3)
       $label.appendChild($text);
-      formatHTML($label, 2)
       $row.appendChild($label);
-      formatHTML($row, 1)
     } else if (field.tag === "select") {
       $field.classList.add("select");
-      
-      formatHTML($form, 1)
-      formatHTML($row, 2)
+
       const $option = document.createElement("option");
       $option.innerText = field.label;
-      formatHTML($field, 3)
       $field.appendChild($option);
 
-      field.options.forEach(option => {
+      field.options.forEach((option) => {
         const $option = document.createElement("option");
         $option.value = option.value;
         $option.innerText = option.text;
-        formatHTML($field, 3)
         $field.appendChild($option);
-      })
-      formatHTML($field, 2)
+      });
 
       $row.appendChild($field);
-      formatHTML($row, 1)
       $form.appendChild($row);
     } else {
       if (field.tag !== "textarea") {
@@ -91,24 +78,14 @@ function form({ fields = [] }) {
           $field.classList.add(field.variant);
           $label.innerText = field.label;
 
-          formatHTML($form, 1)
           if (field?.rightElement) {
-            formatHTML($row, 2)
-            formatHTML($inputContainer, 3)
             $inputContainer.appendChild($field);
-            formatHTML($inputContainer, 3)
             $inputContainer.appendChild($label);
-            formatHTML($inputContainer, 3)
             $inputContainer.appendChild($rightElement);
-            formatHTML($inputContainer, 2)
             $row.appendChild($inputContainer);
-            formatHTML($row, 1)
           } else {
-            formatHTML($row, 2)
             $row.appendChild($field);
-            formatHTML($row, 2)
             $row.appendChild($label);
-            formatHTML($row, 1)
           }
           break;
         case "outline":
@@ -117,55 +94,35 @@ function form({ fields = [] }) {
           const $span = document.createElement("span");
           $span.innerText = field.label;
 
-          formatHTML($form, 1)
           if (field?.rightElement) {
-            formatHTML($row, 2)
-            formatHTML($inputContainer, 3)
             $inputContainer.appendChild($field);
             $label.appendChild($span);
-            formatHTML($inputContainer, 3)
             $inputContainer.appendChild($label);
-            formatHTML($inputContainer, 3)
             $inputContainer.appendChild($rightElement);
-            formatHTML($inputContainer, 2)
             $row.appendChild($inputContainer);
-            formatHTML($row, 1)
           } else {
-            formatHTML($row, 2)
             $row.appendChild($field);
             $label.appendChild($span);
-            formatHTML($row, 2)
             $row.appendChild($label);
-            formatHTML($row, 1)
           }
           break;
 
         default:
           $label.innerText = field.label;
 
-          formatHTML($form, 1)
           if (!field?.placeholder) {
-            formatHTML($row, 2)
             $row.appendChild($label);
           }
 
           if (field?.rightElement) {
-            formatHTML($row, 2)
-            formatHTML($inputContainer, 3)
             $inputContainer.appendChild($field);
-            formatHTML($inputContainer, 3)
             $inputContainer.appendChild($rightElement);
-            formatHTML($inputContainer, 2)
             $row.appendChild($inputContainer);
-            formatHTML($row, 1)
           } else {
-            formatHTML($row, 2)
-            
             if (field?.placeholder) {
-              $field.placeholder = field.placeholder
+              $field.placeholder = field.placeholder;
             }
             $row.appendChild($field);
-            formatHTML($row, 1)
           }
 
           break;
@@ -187,20 +144,11 @@ function form({ fields = [] }) {
       } else {
         $field.after($error);
       }
-      $error.before("\n");
-      $error.before("    ".repeat(2));
-    }
-    else if (field?.valid) $field.classList.add("success")
+    } else if (field?.valid) $field.classList.add("success");
 
     $form.appendChild($row);
-    formatHTML($form)
   });
 
   return $form;
 }
-export default form
-
-function formatHTML($node, spaces = 0) {
-  $node.append("\n");
-  if (spaces !== 0) $node.append("    ".repeat(spaces));
-}
+export default form;

@@ -1,4 +1,7 @@
 import "../styles/page/main.css";
+import { themes } from "@storybook/theming";
+
+console.log({ themes });
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,4 +11,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+  canvas: {
+    theme: themes.dark,
+  },
+};

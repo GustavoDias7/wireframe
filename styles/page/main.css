@@ -1028,3 +1028,17 @@ li {
   overflow-y: auto;
   margin-bottom: 20px;
 }
+
+.hero {
+  width: 100%;
+  max-width: 480px;
+}
+.hero .title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.hero .subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
