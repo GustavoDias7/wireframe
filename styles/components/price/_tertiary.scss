@@ -2,20 +2,22 @@
   display: flex;
   align-items: center;
 
-  .left,
-  .right {
+  .price-left,
+  .price-right {
     padding-top: 6px;
   }
-  
-  .left {
+
+  .price-left {
     font-size: 0.875rem;
   }
+
   strong {
     font-size: 32px;
     height: 32px;
     margin: 0px 3px;
   }
-  .right {
+
+  .price-right {
     font-size: 0.875rem;
   }
 }
