@@ -1,11 +1,19 @@
-<div class="topics">
-  <a class="topic primary" href="/">
-    <div class="left">
-      <img class="icon" src="../../assets/icon-placeholder.svg" alt="Icon">
-    </div>
-    <div class="right">
-      <h3 class="title">Lorem, ipsum dolor.</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-    </div>
-  </a>
+<div class="g-root g-gap-2">
+  <div class="g-row">
+    <% for (let i=0; i < 5; i++) { %>
+      <div class="g-item-12 sm:g-item-6 md:g-item-4">
+        <div class="topics">
+          <a class="topic primary" href="/">
+            <div class="left">
+              <img class="icon" src="../../assets/icon-placeholder.svg" alt="Icon">
+            </div>
+            <div class="right">
+              <h3 class="title">Lorem, ipsum dolor.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <% } %>
+  </div>
 </div>
