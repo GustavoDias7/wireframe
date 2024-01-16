@@ -1,5 +1,9 @@
 function form({ fields = [] }) {
-  const $form = document.createElement("form");
+  const $g_root = document.createElement("div");
+  const $g_row = document.createElement("div");
+  $g_root.classList.add("g-root");
+  $g_root.classList.add("g-gap-4");
+  $g_row.classList.add("g-row");
 
   fields.forEach((field) => {
     let $field;
@@ -10,23 +14,25 @@ function form({ fields = [] }) {
     } else {
       $field = document.createElement("input");
     }
-    const $label = document.createElement("label");
-    const $row = document.createElement("div");
+    const $f_label = document.createElement("label");
+    const $f_row = document.createElement("div");
+    const $g_item = document.createElement("div");
     const $rightElement = document.createElement("div");
     const $inputContainer = document.createElement("div");
 
-    $row.classList.add("row");
+    $f_row.classList.add("f-row");
+    $g_item.classList.add("g-item-12");
 
     $field.setAttribute("id", field?.id || field.name);
     $field.setAttribute("name", field.name);
     if (field.disabled) $field.setAttribute("disabled", field.disabled);
 
-    $label.setAttribute("for", field?.for || field.name);
+    $f_label.setAttribute("for", field?.for || field.name);
 
     if (field.type === "checkbox" || field.type === "radio") {
       $field.setAttribute("type", field?.type);
-      $label.classList.add("check");
-      if (field.type === "radio") $label.classList.add("radio");
+      $f_label.classList.add("check");
+      if (field.type === "radio") $f_label.classList.add("radio");
 
       const $marker = document.createElement("span");
       $marker.classList.add("marker");
@@ -37,12 +43,14 @@ function form({ fields = [] }) {
 
       if ($field?.value) $field.value === field.value;
 
-      $label.appendChild($field);
-      $label.appendChild($marker);
-      $label.appendChild($text);
-      $row.appendChild($label);
+      $f_label.appendChild($field);
+      $f_label.appendChild($marker);
+      $f_label.appendChild($text);
+      $f_row.appendChild($f_label);
+      $g_item.appendChild($f_row);
+      $g_row.appendChild($g_item);
     } else if (field.tag === "select") {
-      $field.classList.add("select");
+      $field.classList.add("f-select");
 
       const $option = document.createElement("option");
       $option.innerText = field.label;
@@ -55,16 +63,17 @@ function form({ fields = [] }) {
         $field.appendChild($option);
       });
 
-      $row.appendChild($field);
-      $form.appendChild($row);
+      $f_row.appendChild($field);
+      $g_item.appendChild($f_row);
+      $g_row.appendChild($g_item);
     } else {
       if (field.tag !== "textarea") {
         $field.setAttribute("type", field?.type || "text");
       }
-      $label.classList.add("label");
-      $field.classList.add("input");
-      $rightElement.classList.add("right-element");
-      $inputContainer.classList.add("input-container");
+      $f_label.classList.add("f-label");
+      $field.classList.add("f-input");
+      $rightElement.classList.add("f-right");
+      $inputContainer.classList.add("f-container");
       if (field.active) $field.classList.add("active");
 
       if (field?.defaultValue?.length) $field.value = field.defaultValue;
@@ -76,16 +85,17 @@ function form({ fields = [] }) {
       switch (field.variant || "") {
         case "filled":
           $field.classList.add(field.variant);
-          $label.innerText = field.label;
+          $f_label.innerText = field.label;
 
           if (field?.rightElement) {
             $inputContainer.appendChild($field);
-            $inputContainer.appendChild($label);
+            $inputContainer.appendChild($f_label);
             $inputContainer.appendChild($rightElement);
-            $row.appendChild($inputContainer);
+            $f_row.appendChild($inputContainer);
           } else {
-            $row.appendChild($field);
-            $row.appendChild($label);
+            $f_row.appendChild($field);
+            $f_row.appendChild($f_label);
+            $g_item.appendChild($f_row);
           }
           break;
         case "outline":
@@ -96,48 +106,53 @@ function form({ fields = [] }) {
 
           if (field?.rightElement) {
             $inputContainer.appendChild($field);
-            $label.appendChild($span);
-            $inputContainer.appendChild($label);
+            $f_label.appendChild($span);
+            $inputContainer.appendChild($f_label);
             $inputContainer.appendChild($rightElement);
-            $row.appendChild($inputContainer);
+            $f_row.appendChild($inputContainer);
+            $g_item.appendChild($f_row);
           } else {
-            $row.appendChild($field);
-            $label.appendChild($span);
-            $row.appendChild($label);
+            $f_row.appendChild($field);
+            $f_label.appendChild($span);
+            $f_row.appendChild($f_label);
+            $g_item.appendChild($f_row);
           }
           break;
 
         default:
-          $label.innerText = field.label;
+          $f_label.innerText = field.label;
 
           if (!field?.placeholder) {
-            $row.appendChild($label);
+            $f_row.appendChild($f_label);
           }
 
           if (field?.rightElement) {
             $inputContainer.appendChild($field);
             $inputContainer.appendChild($rightElement);
-            $row.appendChild($inputContainer);
+            $f_row.appendChild($inputContainer);
+            $g_item.appendChild($f_row);
           } else {
             if (field?.placeholder) {
               $field.placeholder = field.placeholder;
             }
-            $row.appendChild($field);
+            $f_row.appendChild($field);
+            $g_item.appendChild($f_row);
           }
 
           break;
       }
+      $g_row.appendChild($g_item);
     }
 
     if (field.errorMessage) {
       $field.classList.add("error");
       // create error element
       const $error = document.createElement("p");
-      $error.classList.add("helper-text", "error");
+      $error.classList.add("f-helper", "error");
       $error.innerText = field.errorMessage;
 
       // where to create the error element
-      if ($field.parentElement.classList.contains("input-container")) {
+      if ($field.parentElement.classList.contains("f-container")) {
         $field.parentElement.after($error);
       } else if ($field.type === "checkbox") {
         $field.parentElement.after($error);
@@ -146,9 +161,9 @@ function form({ fields = [] }) {
       }
     } else if (field?.valid) $field.classList.add("success");
 
-    $form.appendChild($row);
+    $g_root.appendChild($g_row);
   });
 
-  return $form;
+  return $g_root;
 }
 export default form;

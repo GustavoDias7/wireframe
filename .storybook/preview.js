@@ -1,4 +1,5 @@
 import "../styles/page/main.css";
+import "../styles/page/storybook.css";
 import { themes } from "@storybook/theming";
 
 export const parameters = {

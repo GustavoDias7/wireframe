@@ -13,7 +13,6 @@ export const Field = {
       delete optionsField.active;
     }
     const formElement = form({ fields: [optionsField] });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   argTypes: {
@@ -60,7 +59,6 @@ export const BasicFields = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -97,7 +95,6 @@ export const ErrorFields = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -134,7 +131,6 @@ export const ValidFields = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -171,7 +167,6 @@ export const DisabledFields = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -192,7 +187,6 @@ export const Checkbox = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -222,7 +216,6 @@ export const Radio = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -251,7 +244,6 @@ export const Textarea = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -288,7 +280,6 @@ export const ErrorTextarea = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -325,7 +316,6 @@ export const ValidTextarea = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -362,7 +352,6 @@ export const DisabledTextarea = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -399,7 +388,6 @@ export const RightElement = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -439,7 +427,6 @@ export const ErrorRightElement = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
@@ -505,7 +492,6 @@ export const Select = {
         },
       ],
     });
-    formElement.classList.add("form");
     return formatHTML(formElement.outerHTML);
   },
   args: {},
