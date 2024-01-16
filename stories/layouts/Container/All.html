@@ -1,0 +1,11 @@
+<div class="container">
+  <p class="example">container</p>
+</div>
+<% for(var bp in breakpoints){ %>
+<div class="container <%= bp %>:container">
+  <p class="example"><%= bp %> <%= breakpoints[bp] %>px</p>
+</div>
+<% }; %>
+<div class="container xs:container md:container">
+  <p class="example">xs 320px md 768px</p>
+</div>

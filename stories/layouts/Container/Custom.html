@@ -1,0 +1,9 @@
+<% if(breakpoint==='default' ){ %>
+<div class="container">
+  <p class="example">container</p>
+</div>
+<% } else{ %>
+<div class="container <%= breakpoint %>:container">
+  <p class="example"><%= breakpoint %> <%= px %>px</p>
+</div>
+<% } %>
