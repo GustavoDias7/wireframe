@@ -25,7 +25,7 @@ function form({ fields = [] }) {
 
     $field.setAttribute("id", field?.id || field.name);
     $field.setAttribute("name", field.name);
-    if (field.disabled) $field.setAttribute("disabled", field.disabled);
+    if (field.disabled) $field.setAttribute("disabled", "");
 
     $f_label.setAttribute("for", field?.for || field.name);
 

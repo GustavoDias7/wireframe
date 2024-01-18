@@ -48,3 +48,11 @@ $breakpoints: (
 @function bp ($vl: "") {
   @return map.get($breakpoints, $vl);
 }
+
+// @function bp ($name: "") {
+//   @each $bp, $vl in $breakpoints {
+//     @if ($bp ==$name) {
+//       @return $vl;
+//     }
+//   }
+// }

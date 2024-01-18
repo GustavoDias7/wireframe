@@ -1,6 +1,35 @@
-<section class="title-subtitle primary">
-  <div class="container">
-    <h2 class="title">Lorem ipsum</h2>
-    <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-  </div>
-</section>
+<style>
+  .<%=containerClassName %> {
+    color: <%=color %>;
+  }
+  .<%=containerClassName %> .<%=titleClassName %> {
+    font-size: <%=titleFontSize %>px;
+    font-weight: <%=titleFontWeight %>;
+    margin-bottom: <%=titleMarginBottom %>px;
+  }
+
+  .<%=containerClassName %> .<%=subtitleClassName %> {
+    font-size: <%=subtitleFontSize %>px;
+    font-weight: <%=subtitleFontWeight %>;
+    margin-bottom: <%=subtitleMarginBottom %>px;
+  }
+
+  @media (max-width: 768px) {
+    .<%=containerClassName %> .<%=titleClassName %> {
+      font-size: <%=mTitleFontSize %>px;
+      <% if (titleFontWeight !== mTitleFontWeight) { %>font-weight: <%=mTitleFontWeight %>;<% } %>
+      <% if (titleMarginBottom !== mTitleMarginBottom) { %>margin-bottom: <%=mTitleMarginBottom %>px;<% } %>
+    }
+
+    .<%=containerClassName %> .<%=subtitleClassName %> {
+      font-size: <%=mSubtitleFontSize %>px;
+      <% if (subtitleFontWeight !== mSubtitleFontWeight) { %>font-weight: <%=mSubtitleFontWeight %>;<% } %>
+      <% if (subtitleMarginBottom !== mSubtitleMarginBottom) { %>margin-bottom: <%=mSubtitleMarginBottom %>px;<% } %>
+    }
+  }
+</style>
+
+<div class="<%=containerClassName %>">
+    <h2 class="<%=titleClassName %>">Lorem ipsum</h2>
+    <p class="<%=subtitleClassName %>">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+</div>

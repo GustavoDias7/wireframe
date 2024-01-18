@@ -298,7 +298,7 @@ $f-margin: 4px;
   background-size: 10px;
   background-position: calc(100% - $f-padding) center;
 
-  option:first-child {
+  option:first-of-type {
     display: none;
   }
 }
