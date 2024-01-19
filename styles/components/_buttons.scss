@@ -29,6 +29,11 @@
   &.center {
     margin: 0px auto;
   }
+
+  &.bold {
+    font-weight: 800;
+    border-width: 3px;
+  }
 }
 
 
