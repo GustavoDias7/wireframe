@@ -891,6 +891,20 @@ li {
 .gn-button.center {
   margin: 0px auto;
 }
+.gn-button.bold {
+  font-weight: 800;
+  border-width: 3px;
+}
+.gn-button.large {
+  font-size: 1.25rem;
+  height: 60px;
+  padding: 0px 24px;
+}
+.gn-button.small {
+  font-size: 0.875rem;
+  height: 36px;
+  padding: 0px 16px;
+}
 
 .pm-button {
   background-color: #486284;
@@ -1383,6 +1397,42 @@ textarea.f-input {
   margin-bottom: 16px;
 }
 .box.primary .link {
+  color: #486284;
+}
+
+.card.primary {
+  width: 100%;
+  max-width: 272px;
+  color: #2d2d2d;
+  background-color: #fafafa;
+  box-shadow: 1px solid #7b95b7;
+}
+.card.primary .img {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.card.primary .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card.primary .description {
+  padding: 16px 32px;
+}
+.card.primary .title {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+.card.primary .gn-button,
+.card.primary .subtitle,
+.card.primary .price {
+  margin-bottom: 16px;
+}
+.card.primary .link {
   color: #486284;
 }
 
