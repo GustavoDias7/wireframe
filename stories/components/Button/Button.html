@@ -1,0 +1,5 @@
+<% if (tag === "button") { %>
+<button class="<%= className %>"<%= disabled %>><%= label %></button>
+<% } else { %>
+<a class="<%= className %>"<%= disabled %> href="/"><%= label %></a>
+<% } %>
