@@ -877,6 +877,7 @@ li {
   outline: none;
   background-color: #fafafa;
   transition: all 0.2s ease 0s;
+  user-select: none;
 }
 .gn-button:focus, .gn-button:hover {
   opacity: 0.8;
