@@ -1,6 +1,6 @@
 import Typography from "./Typography.html";
 import Responsive from "./Responsive.html";
-import Custom from "./Custom.html";
+// import Custom from "./Custom.txt";
 import ejs from "../../../utils/ejs.min.js";
 
 const sizes = [
@@ -50,9 +50,9 @@ export default {
   },
 };
 
-export const custom = (args) => {
-  return ejs.render(Custom, args);
-};
+// export const custom = (args) => {
+//   return ejs.render(Custom, args);
+// };
 
 export const typography = () => {
   return ejs.render(Typography);
