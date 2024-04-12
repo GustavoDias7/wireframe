@@ -307,3 +307,28 @@ textarea.f-input {
   resize: vertical;
   min-height: $f-input-height * 2;
 }
+
+.f-search {
+  @include flex-align-center;
+
+  .f-input {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .f-search-btn {
+    @include flex-align-center;
+    @include reset-button;
+    height: $f-input-height;
+    padding: $f-padding;
+    background-color: transparent;
+    border-top-right-radius: $f-border-radius;
+    border-bottom-right-radius: $f-border-radius;
+    background-color: $primary-color-500;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

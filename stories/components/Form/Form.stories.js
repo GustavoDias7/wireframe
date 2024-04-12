@@ -16,7 +16,10 @@ export const Field = {
     return formatHTML(formElement.outerHTML);
   },
   argTypes: {
-    variant: { control: "select", options: ["default", "filled", "outline"] },
+    variant: {
+      control: "select",
+      options: ["default", "filled", "outline", "search"],
+    },
     type: { control: "select", options: ["text", "tel", "checkbox", "radio"] },
     tag: { control: "select", options: ["input", "textarea"] },
   },
@@ -489,6 +492,26 @@ export const Select = {
             { value: "option_2", text: "Option 2" },
             { value: "option_3", text: "Option 3" },
           ],
+        },
+      ],
+    });
+    return formatHTML(formElement.outerHTML);
+  },
+  args: {},
+  play: async () => {
+    initInput({ selector: ".form .input" });
+  },
+};
+export const SearchFields = {
+  render: (args) => {
+    const formElement = form({
+      fields: [
+        {
+          name: "name",
+          id: "name",
+          type: "text",
+          variant: "search",
+          placeholder: "Search",
         },
       ],
     });

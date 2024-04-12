@@ -1143,6 +1143,32 @@ textarea.f-input {
   min-height: 112px;
 }
 
+.f-search {
+  display: flex;
+  align-items: center;
+}
+.f-search .f-input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.f-search .f-search-btn {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 56px;
+  padding: 16px;
+  background-color: transparent;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #486284;
+}
+.f-search .f-search-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
 .check {
   display: flex;
   align-items: center;
