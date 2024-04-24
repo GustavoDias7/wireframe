@@ -332,3 +332,9 @@ textarea.f-input {
     }
   }
 }
+
+.f-file {
+  input[type="file"] {
+    display: none;
+  }
+}

@@ -20,7 +20,10 @@ export const Field = {
       control: "select",
       options: ["default", "filled", "outline", "search"],
     },
-    type: { control: "select", options: ["text", "tel", "checkbox", "radio"] },
+    type: {
+      control: "select",
+      options: ["text", "tel", "checkbox", "radio", "file"],
+    },
     tag: { control: "select", options: ["input", "textarea"] },
   },
   args: {
@@ -507,11 +510,30 @@ export const SearchFields = {
     const formElement = form({
       fields: [
         {
-          name: "name",
-          id: "name",
+          name: "search",
+          id: "search",
           type: "text",
           variant: "search",
           placeholder: "Search",
+        },
+      ],
+    });
+    return formatHTML(formElement.outerHTML);
+  },
+  args: {},
+  play: async () => {
+    initInput({ selector: ".form .input" });
+  },
+};
+export const File = {
+  render: (args) => {
+    const formElement = form({
+      fields: [
+        {
+          name: "myfile",
+          id: "myfile",
+          type: "file",
+          label: "Select file",
         },
       ],
     });

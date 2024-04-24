@@ -14,6 +14,10 @@ export default {
       control: "select",
       options: ["button", "a"],
     },
+    size: {
+      control: "select",
+      options: ["default", "small", "large"],
+    },
   },
 
   args: {
@@ -24,8 +28,7 @@ export default {
     full: false,
     bold: false,
     disabled: false,
-    large: false,
-    small: false,
+    size: "default",
   },
   render: (args) => {
     const classes = ["gn-button"];
@@ -34,8 +37,7 @@ export default {
     if (args.center) classes.push("center");
     if (args.full) classes.push("full");
     if (args.bold) classes.push("bold");
-    if (args.large) classes.push("large");
-    if (args.small) classes.push("small");
+    if (args.size !== "default") classes.push(args.size);
 
     const className = classes.join(" ");
     const disabled = args.disabled && args.tag !== "a" ? " disabled" : "";

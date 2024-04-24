@@ -34,7 +34,17 @@ function form({ fields = [] }) {
     $f_label.setAttribute("for", field?.for || field.name);
     $f_search_button.setAttribute("type", "submit");
 
-    if (field.type === "checkbox" || field.type === "radio") {
+    if (field.type === "file") {
+      $field.setAttribute("type", field?.type);
+
+      $f_label.classList.add("f-file", "gn-button", "pm-button");
+      $f_label.innerText = field?.label;
+
+      $f_label.appendChild($field);
+      $f_row.appendChild($f_label);
+      $g_item.appendChild($f_row);
+      $g_row.appendChild($g_item);
+    } else if (field.type === "checkbox" || field.type === "radio") {
       $field.setAttribute("type", field?.type);
       $f_label.classList.add("check");
       if (field.type === "radio") $f_label.classList.add("radio");
