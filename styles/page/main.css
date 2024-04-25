@@ -920,7 +920,6 @@ li {
 .f-row {
   position: relative;
   width: 100%;
-  max-width: 312px;
 }
 
 .f-label {
@@ -975,6 +974,20 @@ li {
 .f-select.success {
   border-color: #008000;
 }
+.f-input.small,
+.f-select.small {
+  padding: 10px;
+  font-size: 14px;
+  height: 32px;
+  border-radius: 8px;
+}
+.f-input.large,
+.f-select.large {
+  padding: 22px;
+  font-size: 18px;
+  height: 80px;
+  border-radius: 8px;
+}
 
 .f-input.outline {
   border-top: none;
@@ -984,7 +997,6 @@ li {
   top: 0px;
   left: 0px;
   width: 100%;
-  max-width: 312px;
   display: flex;
   font-size: 16px;
   line-height: 16px;
@@ -1058,6 +1070,46 @@ li {
 .f-input.outline.success ~ .f-label::after {
   border-color: #008000;
 }
+.f-input.outline.small ~ .f-label {
+  font-size: 14px;
+  line-height: 14px;
+}
+.f-input.outline.small ~ .f-label::before {
+  width: 6px;
+}
+.f-input.outline.small ~ .f-label span {
+  top: calc(32px / 2 - (14px / 2));
+  left: 11px;
+}
+.f-input.outline.small.active ~ .f-label, .f-input.outline.small:disabled.active ~ .f-label, .f-input.outline.small:focus ~ .f-label, .f-input.outline.small:hover ~ .f-label {
+  font-size: 12px;
+  line-height: 12px;
+}
+.f-input.outline.small.active ~ .f-label span, .f-input.outline.small:disabled.active ~ .f-label span, .f-input.outline.small:focus ~ .f-label span, .f-input.outline.small:hover ~ .f-label span {
+  position: relative;
+  top: -6px;
+  left: 0px;
+}
+.f-input.outline.large ~ .f-label {
+  font-size: 18px;
+  line-height: 18px;
+}
+.f-input.outline.large ~ .f-label::before {
+  width: 18px;
+}
+.f-input.outline.large ~ .f-label span {
+  top: calc(80px / 2 - (18px / 2));
+  left: 23px;
+}
+.f-input.outline.large.active ~ .f-label, .f-input.outline.large:disabled.active ~ .f-label, .f-input.outline.large:focus ~ .f-label, .f-input.outline.large:hover ~ .f-label {
+  font-size: 18px;
+  line-height: 18px;
+}
+.f-input.outline.large.active ~ .f-label span, .f-input.outline.large:disabled.active ~ .f-label span, .f-input.outline.large:focus ~ .f-label span, .f-input.outline.large:hover ~ .f-label span {
+  position: relative;
+  top: -6px;
+  left: 0px;
+}
 
 .f-input.filled {
   padding: 24px 16px 8px;
@@ -1066,7 +1118,7 @@ li {
   margin-bottom: 0;
   position: absolute;
   top: calc(56px / 2 - (16px / 2));
-  left: 16px;
+  left: 17px;
   transition: 0.2s ease 0s;
   display: flex;
   font-size: 16px;
@@ -1084,6 +1136,30 @@ li {
 .f-input.filled.active ~ .f-label, .f-input.filled:disabled.active ~ .f-label, .f-input.filled:focus ~ .f-label, .f-input.filled:hover ~ .f-label {
   font-size: 14px;
   top: 8px;
+}
+.f-input.filled.small {
+  padding: 24px 10px 5px;
+}
+.f-input.filled.small ~ .f-label {
+  top: calc(32px / 2 - (14px / 2));
+  left: 11px;
+  font-size: 14px;
+}
+.f-input.filled.small.active ~ .f-label, .f-input.filled.small:disabled.active ~ .f-label, .f-input.filled.small:focus ~ .f-label, .f-input.filled.small:hover ~ .f-label {
+  font-size: 12px;
+  top: 2px;
+}
+.f-input.filled.large {
+  padding: 24px 22px 11px;
+}
+.f-input.filled.large ~ .f-label {
+  top: calc(80px / 2 - (18px / 2));
+  left: 23px;
+  font-size: 18px;
+}
+.f-input.filled.large.active ~ .f-label, .f-input.filled.large:disabled.active ~ .f-label, .f-input.filled.large:focus ~ .f-label, .f-input.filled.large:hover ~ .f-label {
+  font-size: 18px;
+  top: 11px;
 }
 
 .f-helper {
@@ -1150,6 +1226,22 @@ textarea.f-input {
 .f-search .f-input {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
+}
+.f-search .f-input.small ~ .f-search-btn {
+  padding: 10px;
+  height: 32px;
+}
+.f-search .f-input.small ~ .f-search-btn svg {
+  width: 12px;
+  height: 12px;
+}
+.f-search .f-input.large ~ .f-search-btn {
+  padding: 22px;
+  height: 80px;
+}
+.f-search .f-input.large ~ .f-search-btn svg {
+  width: 24px;
+  height: 24px;
 }
 .f-search .f-search-btn {
   display: flex;

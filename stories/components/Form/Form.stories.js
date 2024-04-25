@@ -18,13 +18,14 @@ export const Field = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["default", "filled", "outline", "search"],
+      options: ["default", "filled", "outline"],
     },
     type: {
       control: "select",
-      options: ["text", "tel", "checkbox", "radio", "file"],
+      options: ["text", "tel", "checkbox", "radio", "file", "search"],
     },
     tag: { control: "select", options: ["input", "textarea"] },
+    size: { control: "select", options: ["default", "small", "large"] },
   },
   args: {
     name: "name",
@@ -512,8 +513,7 @@ export const SearchFields = {
         {
           name: "search",
           id: "search",
-          type: "text",
-          variant: "search",
+          type: "search",
           placeholder: "Search",
         },
       ],

@@ -1,9 +1,17 @@
 // font
 $f-font-size: 16;
+$f-font-size-small: $f-font-size - 2;
+$f-font-size-large: $f-font-size + 2;
+
+// padding
 $f-padding: 16px;
+$f-padding-small: $f-padding - 6px;
+$f-padding-large: $f-padding + 6px;
 
 // dimentions
 $f-input-height: 56px;
+$f-input-height-small: $f-input-height - 24px;
+$f-input-height-large: $f-input-height + 24px;
 $f-width: 312px;
 
 // borders
@@ -11,10 +19,21 @@ $f-border-radius: 8px;
 $f-primary-border-width: 1px;
 $f-primary-border: $f-primary-border-width solid;
 
+// outline width
+$f-margin-gap-label-span: 4px;
+$f-width-left: $f-padding - $f-margin-gap-label-span - $f-primary-border-width;
+$f-width-left-small: $f-padding-small - $f-margin-gap-label-span - $f-primary-border-width;
+$f-width-left-large: $f-padding-large - $f-margin-gap-label-span - $f-primary-border-width;
+
+// svg
+$svg-dimention: 16px;
+$svg-dimention-small: $svg-dimention - 4px;
+$svg-dimention-large: $svg-dimention + 8px;
+
 .f-row {
   position: relative;
   width: 100%;
-  max-width: $f-width;
+  // max-width: $f-width;
 }
 
 .f-label {
@@ -69,6 +88,20 @@ $f-primary-border: $f-primary-border-width solid;
   &.success {
     border-color: $success-color-100;
   }
+
+  &.small {
+    padding: $f-padding-small;
+    font-size: #{$f-font-size-small}px;
+    height: $f-input-height-small;
+    border-radius: $f-border-radius;
+  }
+
+  &.large {
+    padding: $f-padding-large;
+    font-size: #{$f-font-size-large}px;
+    height: $f-input-height-large;
+    border-radius: $f-border-radius;
+  }
 }
 
 // icon on the right side
@@ -100,7 +133,7 @@ $f-margin: 4px;
     top: 0px;
     left: 0px;
     width: 100%;
-    max-width: $f-width;
+    // max-width: $f-width;
     display: flex;
     font-size: #{$f-font-size}px;
     line-height: #{$f-font-size}px;
@@ -121,7 +154,7 @@ $f-margin: 4px;
       border-left: $f-primary-border;
       border-top-left-radius: $f-border-radius;
       border-color: $primary-color-500;
-      width: 11px;
+      width: $f-width-left;
     }
 
     &::after {
@@ -134,7 +167,7 @@ $f-margin: 4px;
     span {
       position: absolute;
       top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-      left: 16px;
+      left: $f-padding;
       transition: top $primary-transition;
     }
   }
@@ -147,7 +180,7 @@ $f-margin: 4px;
     span {
       position: absolute;
       top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-      left: 16px;
+      left: $f-padding;
       transition: top $primary-transition;
     }
   }
@@ -207,16 +240,72 @@ $f-margin: 4px;
       border-color: $success-color-100;
     }
   }
+
+  &.small~.f-label {
+    font-size: #{$f-font-size-small}px;
+    line-height: #{$f-font-size-small}px;
+
+    &::before {
+      width: $f-width-left-small + $f-primary-border-width;
+    }
+
+    span {
+      top: calc(#{$f-input-height-small} / 2 - (#{$f-font-size-small}px / 2));
+      left: $f-padding-small + $f-primary-border-width;
+    }
+  }
+
+  &.small.active~.f-label,
+  &.small:disabled.active~.f-label,
+  &.small:focus~.f-label,
+  &.small:hover~.f-label {
+    font-size: #{$f-font-size-small - 2}px;
+    line-height: #{$f-font-size-small - 2}px;
+
+    span {
+      position: relative;
+      top: -6px;
+      left: 0px;
+    }
+  }
+
+  &.large~.f-label {
+    font-size: #{$f-font-size-large}px;
+    line-height: #{$f-font-size-large}px;
+
+    &::before {
+      width: $f-width-left-large + $f-primary-border-width;
+    }
+
+    span {
+      top: calc(#{$f-input-height-large} / 2 - (#{$f-font-size-large}px / 2));
+      left: $f-padding-large + $f-primary-border-width;
+    }
+  }
+
+  &.large.active~.f-label,
+  &.large:disabled.active~.f-label,
+  &.large:focus~.f-label,
+  &.large:hover~.f-label {
+    font-size: #{$f-font-size-large}px;
+    line-height: #{$f-font-size-large}px;
+
+    span {
+      position: relative;
+      top: -6px;
+      left: 0px;
+    }
+  }
 }
 
 .f-input.filled {
-  padding: 24px 16px 8px;
+  padding: 24px $f-padding $f-padding/2;
 
   &~.f-label {
     margin-bottom: 0;
     position: absolute;
     top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-    left: 16px;
+    left: $f-padding + $f-primary-border-width;
     transition: $primary-transition;
     display: flex;
     font-size: #{$f-font-size}px;
@@ -239,7 +328,43 @@ $f-margin: 4px;
   &:focus~.f-label,
   &:hover~.f-label {
     font-size: #{$f-font-size - 2}px;
-    top: 8px;
+    top: $f-padding / 2;
+  }
+
+  &.small {
+    padding: 24px $f-padding-small $f-padding-small/2;
+  }
+
+  &.small~.f-label {
+    top: calc(#{$f-input-height-small} / 2 - (#{$f-font-size-small}px / 2));
+    left: $f-padding-small + $f-primary-border-width;
+    font-size: #{$f-font-size-small}px;
+  }
+
+  &.small.active~.f-label,
+  &.small:disabled.active~.f-label,
+  &.small:focus~.f-label,
+  &.small:hover~.f-label {
+    font-size: #{$f-font-size-small - 2}px;
+    top: ($f-padding-small - 6px) / 2;
+  }
+
+  &.large {
+    padding: 24px $f-padding-large $f-padding-large/2;
+  }
+
+  &.large~.f-label {
+    top: calc(#{$f-input-height-large} / 2 - (#{$f-font-size-large}px / 2));
+    left: $f-padding-large + $f-primary-border-width;
+    font-size: #{$f-font-size-large}px;
+  }
+
+  &.large.active~.f-label,
+  &.large:disabled.active~.f-label,
+  &.large:focus~.f-label,
+  &.large:hover~.f-label {
+    font-size: #{$f-font-size-large}px;
+    top: ($f-padding-large) / 2;
   }
 }
 
@@ -314,6 +439,26 @@ textarea.f-input {
   .f-input {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+
+    &.small~.f-search-btn {
+      padding: $f-padding-small;
+      height: $f-input-height-small;
+
+      svg {
+        width: $svg-dimention-small;
+        height: $svg-dimention-small;
+      }
+    }
+
+    &.large~.f-search-btn {
+      padding: $f-padding-large;
+      height: $f-input-height-large;
+
+      svg {
+        width: $svg-dimention-large;
+        height: $svg-dimention-large;
+      }
+    }
   }
 
   .f-search-btn {
@@ -327,8 +472,8 @@ textarea.f-input {
     background-color: $primary-color-500;
 
     svg {
-      width: 16px;
-      height: 16px;
+      width: $svg-dimention;
+      height: $svg-dimention;
     }
   }
 }
