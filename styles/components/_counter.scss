@@ -1,0 +1,237 @@
+.counter {
+  @include flex-align-center;
+  $dimention: 48px;
+  $width: 12px;
+  $height: 2px;
+
+  height: $dimention;
+
+  &.color {
+    .counter-button {
+      border: none;
+      background-color: $neutral-color-800;
+
+      .sign {
+
+        &::before,
+        &::after {
+          background-color: $neutral-color-100;
+        }
+      }
+    }
+  }
+
+  @each $bp, $vl in $breakpoints {
+    @media (min-width: $vl) {
+      &.#{$bp}\:color {
+        .counter-button {
+          border: none;
+          background-color: $neutral-color-800;
+
+          .sign {
+
+            &::before,
+            &::after {
+              background-color: $neutral-color-100;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .counter-button {
+    $border-radius: 4px;
+    @include flex-center-center;
+    width: $dimention;
+    border-radius: $border-radius;
+    font-size: 1.5rem;
+    padding: 0;
+    height: 100%;
+    background-color: $transparent-color;
+    border: 1px solid $neutral-color-300;
+    cursor: pointer;
+
+    &:first-of-type {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-right: 0px;
+    }
+
+    &:last-of-type {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-left: 0px;
+    }
+
+    .sign {
+      position: relative;
+      display: block;
+      width: $width;
+      height: $width;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        margin: auto;
+        background-color: $neutral-color-800;
+      }
+
+      &::before {
+        width: $width;
+        height: $height;
+        top: 0px;
+        bottom: 0px;
+      }
+
+      &::after {
+        width: $height;
+        height: $width;
+        left: 0px;
+        right: 0px;
+      }
+
+      &.minus::after {
+        display: none;
+      }
+    }
+  }
+
+  .counter-input {
+    @include flex-center-center;
+    @include reset-button;
+    border: 1px solid $neutral-color-300;
+    outline: none;
+    min-width: 48px;
+    width: 48px;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &.small {
+    $small_dimention: $dimention - 16px;
+    $small_width: $width - 2px;
+    height: $small_dimention;
+
+    .counter-button {
+      width: $small_dimention;
+
+      .sign {
+        width: $small_width;
+        height: $small_width;
+
+        &::before {
+          width: $small_width;
+        }
+
+        &::after {
+          height: $small_width;
+        }
+      }
+    }
+
+    .counter-input {
+      min-width: $small_dimention;
+      width: $small_dimention;
+      font-size: 14px;
+    }
+  }
+
+  @each $bp, $vl in $breakpoints {
+    @media (min-width: $vl) {
+      &.#{$bp}\:small {
+        $small_dimention: $dimention - 16px;
+        $small_width: $width - 2px;
+        height: $small_dimention;
+
+        .counter-button {
+          width: $small_dimention;
+
+          .sign {
+            width: $small_width;
+            height: $small_width;
+
+            &::before {
+              width: $small_width;
+            }
+
+            &::after {
+              height: $small_width;
+            }
+          }
+        }
+
+        .counter-input {
+          min-width: $small_dimention;
+          width: $small_dimention;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &.large {
+    $large_dimention: $dimention + 16px;
+    $large_width: $width + 8px;
+    height: $large_dimention;
+
+    .counter-button {
+      width: $large_dimention;
+
+      .sign {
+        width: $large_width;
+        height: $large_width;
+
+        &::before {
+          width: $large_width;
+        }
+
+        &::after {
+          height: $large_width;
+        }
+      }
+    }
+
+    .counter-input {
+      min-width: $large_dimention;
+      width: $large_dimention;
+      font-size: 32px;
+    }
+  }
+
+  @each $bp, $vl in $breakpoints {
+    @media (min-width: $vl) {
+      &.#{$bp}\:large {
+        $large_dimention: $dimention + 16px;
+        $large_width: $width + 8px;
+        height: $large_dimention;
+
+        .counter-button {
+          width: $large_dimention;
+
+          .sign {
+            width: $large_width;
+            height: $large_width;
+
+            &::before {
+              width: $large_width;
+            }
+
+            &::after {
+              height: $large_width;
+            }
+          }
+        }
+
+        .counter-input {
+          min-width: $large_dimention;
+          width: $large_dimention;
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

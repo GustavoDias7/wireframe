@@ -46,7 +46,8 @@
 @mixin max-width($width, $marginAuto: false) {
   width: 100%;
   max-width: $width;
-  @if ($marginAuto == true) {
+
+  @if ($marginAuto ==true) {
     margin: 0px auto;
   }
 }
@@ -56,26 +57,31 @@
   border: none;
   cursor: pointer;
 }
+
 @mixin square($dimention) {
   width: $dimention;
   height: $dimention;
 }
 
 @mixin opacity($value) {
-  @if ($value == false) {
+  @if ($value ==false) {
     opacity: 0;
     pointer-events: none;
-  } @else {
+  }
+
+  @else {
     opacity: 1;
     pointer-events: all;
   }
 }
+
 @mixin insert {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
+
 @function pathImages($filename: "") {
   @return "../../stories/assets/#{$filename}";
 }

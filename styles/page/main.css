@@ -1982,6 +1982,402 @@ textarea.f-input {
   height: 100%;
 }
 
+.counter {
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+.counter.color .counter-button {
+  border: none;
+  background-color: #151515;
+}
+.counter.color .counter-button .sign::before, .counter.color .counter-button .sign::after {
+  background-color: #fafafa;
+}
+@media (min-width: 320px) {
+  .counter.xs\:color .counter-button {
+    border: none;
+    background-color: #151515;
+  }
+  .counter.xs\:color .counter-button .sign::before, .counter.xs\:color .counter-button .sign::after {
+    background-color: #fafafa;
+  }
+}
+@media (min-width: 640px) {
+  .counter.sm\:color .counter-button {
+    border: none;
+    background-color: #151515;
+  }
+  .counter.sm\:color .counter-button .sign::before, .counter.sm\:color .counter-button .sign::after {
+    background-color: #fafafa;
+  }
+}
+@media (min-width: 768px) {
+  .counter.md\:color .counter-button {
+    border: none;
+    background-color: #151515;
+  }
+  .counter.md\:color .counter-button .sign::before, .counter.md\:color .counter-button .sign::after {
+    background-color: #fafafa;
+  }
+}
+@media (min-width: 1024px) {
+  .counter.lg\:color .counter-button {
+    border: none;
+    background-color: #151515;
+  }
+  .counter.lg\:color .counter-button .sign::before, .counter.lg\:color .counter-button .sign::after {
+    background-color: #fafafa;
+  }
+}
+@media (min-width: 1280px) {
+  .counter.xl\:color .counter-button {
+    border: none;
+    background-color: #151515;
+  }
+  .counter.xl\:color .counter-button .sign::before, .counter.xl\:color .counter-button .sign::after {
+    background-color: #fafafa;
+  }
+}
+.counter .counter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  padding: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #bababa;
+  cursor: pointer;
+}
+.counter .counter-button:first-of-type {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: 0px;
+}
+.counter .counter-button:last-of-type {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: 0px;
+}
+.counter .counter-button .sign {
+  position: relative;
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+.counter .counter-button .sign::before, .counter .counter-button .sign::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  background-color: #151515;
+}
+.counter .counter-button .sign::before {
+  width: 12px;
+  height: 2px;
+  top: 0px;
+  bottom: 0px;
+}
+.counter .counter-button .sign::after {
+  width: 2px;
+  height: 12px;
+  left: 0px;
+  right: 0px;
+}
+.counter .counter-button .sign.minus::after {
+  display: none;
+}
+.counter .counter-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #bababa;
+  outline: none;
+  min-width: 48px;
+  width: 48px;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+.counter.small {
+  height: 32px;
+}
+.counter.small .counter-button {
+  width: 32px;
+}
+.counter.small .counter-button .sign {
+  width: 10px;
+  height: 10px;
+}
+.counter.small .counter-button .sign::before {
+  width: 10px;
+}
+.counter.small .counter-button .sign::after {
+  height: 10px;
+}
+.counter.small .counter-input {
+  min-width: 32px;
+  width: 32px;
+  font-size: 14px;
+}
+@media (min-width: 320px) {
+  .counter.xs\:small {
+    height: 32px;
+  }
+  .counter.xs\:small .counter-button {
+    width: 32px;
+  }
+  .counter.xs\:small .counter-button .sign {
+    width: 10px;
+    height: 10px;
+  }
+  .counter.xs\:small .counter-button .sign::before {
+    width: 10px;
+  }
+  .counter.xs\:small .counter-button .sign::after {
+    height: 10px;
+  }
+  .counter.xs\:small .counter-input {
+    min-width: 32px;
+    width: 32px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 640px) {
+  .counter.sm\:small {
+    height: 32px;
+  }
+  .counter.sm\:small .counter-button {
+    width: 32px;
+  }
+  .counter.sm\:small .counter-button .sign {
+    width: 10px;
+    height: 10px;
+  }
+  .counter.sm\:small .counter-button .sign::before {
+    width: 10px;
+  }
+  .counter.sm\:small .counter-button .sign::after {
+    height: 10px;
+  }
+  .counter.sm\:small .counter-input {
+    min-width: 32px;
+    width: 32px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .counter.md\:small {
+    height: 32px;
+  }
+  .counter.md\:small .counter-button {
+    width: 32px;
+  }
+  .counter.md\:small .counter-button .sign {
+    width: 10px;
+    height: 10px;
+  }
+  .counter.md\:small .counter-button .sign::before {
+    width: 10px;
+  }
+  .counter.md\:small .counter-button .sign::after {
+    height: 10px;
+  }
+  .counter.md\:small .counter-input {
+    min-width: 32px;
+    width: 32px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .counter.lg\:small {
+    height: 32px;
+  }
+  .counter.lg\:small .counter-button {
+    width: 32px;
+  }
+  .counter.lg\:small .counter-button .sign {
+    width: 10px;
+    height: 10px;
+  }
+  .counter.lg\:small .counter-button .sign::before {
+    width: 10px;
+  }
+  .counter.lg\:small .counter-button .sign::after {
+    height: 10px;
+  }
+  .counter.lg\:small .counter-input {
+    min-width: 32px;
+    width: 32px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 1280px) {
+  .counter.xl\:small {
+    height: 32px;
+  }
+  .counter.xl\:small .counter-button {
+    width: 32px;
+  }
+  .counter.xl\:small .counter-button .sign {
+    width: 10px;
+    height: 10px;
+  }
+  .counter.xl\:small .counter-button .sign::before {
+    width: 10px;
+  }
+  .counter.xl\:small .counter-button .sign::after {
+    height: 10px;
+  }
+  .counter.xl\:small .counter-input {
+    min-width: 32px;
+    width: 32px;
+    font-size: 14px;
+  }
+}
+.counter.large {
+  height: 64px;
+}
+.counter.large .counter-button {
+  width: 64px;
+}
+.counter.large .counter-button .sign {
+  width: 20px;
+  height: 20px;
+}
+.counter.large .counter-button .sign::before {
+  width: 20px;
+}
+.counter.large .counter-button .sign::after {
+  height: 20px;
+}
+.counter.large .counter-input {
+  min-width: 64px;
+  width: 64px;
+  font-size: 32px;
+}
+@media (min-width: 320px) {
+  .counter.xs\:large {
+    height: 64px;
+  }
+  .counter.xs\:large .counter-button {
+    width: 64px;
+  }
+  .counter.xs\:large .counter-button .sign {
+    width: 20px;
+    height: 20px;
+  }
+  .counter.xs\:large .counter-button .sign::before {
+    width: 20px;
+  }
+  .counter.xs\:large .counter-button .sign::after {
+    height: 20px;
+  }
+  .counter.xs\:large .counter-input {
+    min-width: 64px;
+    width: 64px;
+    font-size: 32px;
+  }
+}
+@media (min-width: 640px) {
+  .counter.sm\:large {
+    height: 64px;
+  }
+  .counter.sm\:large .counter-button {
+    width: 64px;
+  }
+  .counter.sm\:large .counter-button .sign {
+    width: 20px;
+    height: 20px;
+  }
+  .counter.sm\:large .counter-button .sign::before {
+    width: 20px;
+  }
+  .counter.sm\:large .counter-button .sign::after {
+    height: 20px;
+  }
+  .counter.sm\:large .counter-input {
+    min-width: 64px;
+    width: 64px;
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .counter.md\:large {
+    height: 64px;
+  }
+  .counter.md\:large .counter-button {
+    width: 64px;
+  }
+  .counter.md\:large .counter-button .sign {
+    width: 20px;
+    height: 20px;
+  }
+  .counter.md\:large .counter-button .sign::before {
+    width: 20px;
+  }
+  .counter.md\:large .counter-button .sign::after {
+    height: 20px;
+  }
+  .counter.md\:large .counter-input {
+    min-width: 64px;
+    width: 64px;
+    font-size: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .counter.lg\:large {
+    height: 64px;
+  }
+  .counter.lg\:large .counter-button {
+    width: 64px;
+  }
+  .counter.lg\:large .counter-button .sign {
+    width: 20px;
+    height: 20px;
+  }
+  .counter.lg\:large .counter-button .sign::before {
+    width: 20px;
+  }
+  .counter.lg\:large .counter-button .sign::after {
+    height: 20px;
+  }
+  .counter.lg\:large .counter-input {
+    min-width: 64px;
+    width: 64px;
+    font-size: 32px;
+  }
+}
+@media (min-width: 1280px) {
+  .counter.xl\:large {
+    height: 64px;
+  }
+  .counter.xl\:large .counter-button {
+    width: 64px;
+  }
+  .counter.xl\:large .counter-button .sign {
+    width: 20px;
+    height: 20px;
+  }
+  .counter.xl\:large .counter-button .sign::before {
+    width: 20px;
+  }
+  .counter.xl\:large .counter-button .sign::after {
+    height: 20px;
+  }
+  .counter.xl\:large .counter-input {
+    min-width: 64px;
+    width: 64px;
+    font-size: 32px;
+  }
+}
+
 .header.primary {
   position: relative;
   background-color: #fafafa;
