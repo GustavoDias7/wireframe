@@ -867,9 +867,9 @@ li {
   align-items: center;
   justify-content: center;
   width: fit-content;
+  font-size: 1rem;
   height: 48px;
   padding: 0px 20px;
-  font-size: 1rem;
   color: #486284;
   cursor: pointer;
   border-radius: 32px;
@@ -886,35 +886,417 @@ li {
   opacity: 0.5;
   cursor: not-allowed;
 }
+.gn-button.pm-button {
+  background-color: #486284;
+  color: #fafafa;
+}
+.gn-button.sc-button {
+  background-color: transparent;
+  border: 1px solid #7b95b7;
+}
 .gn-button.full {
   width: 100%;
+}
+.gn-button.fit {
+  width: fit-content;
+}
+.gn-button.left {
+  margin: 0px auto 0px 0px;
 }
 .gn-button.center {
   margin: 0px auto;
 }
+.gn-button.right {
+  margin: 0px 0px 0px auto;
+}
+.gn-button.normal {
+  font-weight: 400;
+  border-width: 1px;
+}
 .gn-button.bold {
   font-weight: 800;
   border-width: 3px;
-}
-.gn-button.large {
-  font-size: 1.25rem;
-  height: 60px;
-  padding: 0px 24px;
 }
 .gn-button.small {
   font-size: 0.875rem;
   height: 36px;
   padding: 0px 16px;
 }
+.gn-button.regular {
+  font-size: 1rem;
+  height: 48px;
+  padding: 0px 20px;
+}
+.gn-button.large {
+  font-size: 1.25rem;
+  height: 60px;
+  padding: 0px 24px;
+}
+@media (min-width: 320px) {
+  .gn-button.xs\:full {
+    width: 100%;
+  }
+  .gn-button.xs\:fit {
+    width: fit-content;
+  }
+  .gn-button.xs\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .gn-button.xs\:center {
+    margin: 0px auto;
+  }
+  .gn-button.xs\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .gn-button.xs\:normal {
+    font-weight: 400;
+    border-width: 1px;
+  }
+  .gn-button.xs\:bold {
+    font-weight: 800;
+    border-width: 3px;
+  }
+  .gn-button.xs\:small {
+    font-size: 0.875rem;
+    height: 36px;
+    padding: 0px 16px;
+  }
+  .gn-button.xs\:regular {
+    font-size: 1rem;
+    height: 48px;
+    padding: 0px 20px;
+  }
+  .gn-button.xs\:large {
+    font-size: 1.25rem;
+    height: 60px;
+    padding: 0px 24px;
+  }
+}
+@media (min-width: 640px) {
+  .gn-button.sm\:full {
+    width: 100%;
+  }
+  .gn-button.sm\:fit {
+    width: fit-content;
+  }
+  .gn-button.sm\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .gn-button.sm\:center {
+    margin: 0px auto;
+  }
+  .gn-button.sm\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .gn-button.sm\:normal {
+    font-weight: 400;
+    border-width: 1px;
+  }
+  .gn-button.sm\:bold {
+    font-weight: 800;
+    border-width: 3px;
+  }
+  .gn-button.sm\:small {
+    font-size: 0.875rem;
+    height: 36px;
+    padding: 0px 16px;
+  }
+  .gn-button.sm\:regular {
+    font-size: 1rem;
+    height: 48px;
+    padding: 0px 20px;
+  }
+  .gn-button.sm\:large {
+    font-size: 1.25rem;
+    height: 60px;
+    padding: 0px 24px;
+  }
+}
+@media (min-width: 768px) {
+  .gn-button.md\:full {
+    width: 100%;
+  }
+  .gn-button.md\:fit {
+    width: fit-content;
+  }
+  .gn-button.md\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .gn-button.md\:center {
+    margin: 0px auto;
+  }
+  .gn-button.md\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .gn-button.md\:normal {
+    font-weight: 400;
+    border-width: 1px;
+  }
+  .gn-button.md\:bold {
+    font-weight: 800;
+    border-width: 3px;
+  }
+  .gn-button.md\:small {
+    font-size: 0.875rem;
+    height: 36px;
+    padding: 0px 16px;
+  }
+  .gn-button.md\:regular {
+    font-size: 1rem;
+    height: 48px;
+    padding: 0px 20px;
+  }
+  .gn-button.md\:large {
+    font-size: 1.25rem;
+    height: 60px;
+    padding: 0px 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .gn-button.lg\:full {
+    width: 100%;
+  }
+  .gn-button.lg\:fit {
+    width: fit-content;
+  }
+  .gn-button.lg\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .gn-button.lg\:center {
+    margin: 0px auto;
+  }
+  .gn-button.lg\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .gn-button.lg\:normal {
+    font-weight: 400;
+    border-width: 1px;
+  }
+  .gn-button.lg\:bold {
+    font-weight: 800;
+    border-width: 3px;
+  }
+  .gn-button.lg\:small {
+    font-size: 0.875rem;
+    height: 36px;
+    padding: 0px 16px;
+  }
+  .gn-button.lg\:regular {
+    font-size: 1rem;
+    height: 48px;
+    padding: 0px 20px;
+  }
+  .gn-button.lg\:large {
+    font-size: 1.25rem;
+    height: 60px;
+    padding: 0px 24px;
+  }
+}
+@media (min-width: 1280px) {
+  .gn-button.xl\:full {
+    width: 100%;
+  }
+  .gn-button.xl\:fit {
+    width: fit-content;
+  }
+  .gn-button.xl\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .gn-button.xl\:center {
+    margin: 0px auto;
+  }
+  .gn-button.xl\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .gn-button.xl\:normal {
+    font-weight: 400;
+    border-width: 1px;
+  }
+  .gn-button.xl\:bold {
+    font-weight: 800;
+    border-width: 3px;
+  }
+  .gn-button.xl\:small {
+    font-size: 0.875rem;
+    height: 36px;
+    padding: 0px 16px;
+  }
+  .gn-button.xl\:regular {
+    font-size: 1rem;
+    height: 48px;
+    padding: 0px 20px;
+  }
+  .gn-button.xl\:large {
+    font-size: 1.25rem;
+    height: 60px;
+    padding: 0px 24px;
+  }
+}
 
-.pm-button {
+.circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #fafafa;
+  transition: all 0.2s ease 0s;
+  user-select: none;
+}
+.circle-button:focus, .circle-button:hover {
+  opacity: 0.8;
+}
+.circle-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.circle-button.pm-button {
   background-color: #486284;
   color: #fafafa;
 }
-
-.sc-button {
+.circle-button.sc-button {
   background-color: transparent;
   border: 1px solid #7b95b7;
+}
+.circle-button.left {
+  margin: 0px auto 0px 0px;
+}
+.circle-button.center {
+  margin: 0px auto;
+}
+.circle-button.right {
+  margin: 0px 0px 0px auto;
+}
+.circle-button.small {
+  width: 32px;
+  height: 32px;
+}
+.circle-button.regular {
+  width: 48px;
+  height: 48px;
+}
+.circle-button.large {
+  width: 64px;
+  height: 64px;
+}
+@media (min-width: 320px) {
+  .circle-button.xs\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .circle-button.xs\:center {
+    margin: 0px auto;
+  }
+  .circle-button.xs\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .circle-button.xs\:small {
+    width: 32px;
+    height: 32px;
+  }
+  .circle-button.xs\:regular {
+    width: 48px;
+    height: 48px;
+  }
+  .circle-button.xs\:large {
+    width: 64px;
+    height: 64px;
+  }
+}
+@media (min-width: 640px) {
+  .circle-button.sm\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .circle-button.sm\:center {
+    margin: 0px auto;
+  }
+  .circle-button.sm\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .circle-button.sm\:small {
+    width: 32px;
+    height: 32px;
+  }
+  .circle-button.sm\:regular {
+    width: 48px;
+    height: 48px;
+  }
+  .circle-button.sm\:large {
+    width: 64px;
+    height: 64px;
+  }
+}
+@media (min-width: 768px) {
+  .circle-button.md\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .circle-button.md\:center {
+    margin: 0px auto;
+  }
+  .circle-button.md\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .circle-button.md\:small {
+    width: 32px;
+    height: 32px;
+  }
+  .circle-button.md\:regular {
+    width: 48px;
+    height: 48px;
+  }
+  .circle-button.md\:large {
+    width: 64px;
+    height: 64px;
+  }
+}
+@media (min-width: 1024px) {
+  .circle-button.lg\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .circle-button.lg\:center {
+    margin: 0px auto;
+  }
+  .circle-button.lg\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .circle-button.lg\:small {
+    width: 32px;
+    height: 32px;
+  }
+  .circle-button.lg\:regular {
+    width: 48px;
+    height: 48px;
+  }
+  .circle-button.lg\:large {
+    width: 64px;
+    height: 64px;
+  }
+}
+@media (min-width: 1280px) {
+  .circle-button.xl\:left {
+    margin: 0px auto 0px 0px;
+  }
+  .circle-button.xl\:center {
+    margin: 0px auto;
+  }
+  .circle-button.xl\:right {
+    margin: 0px 0px 0px auto;
+  }
+  .circle-button.xl\:small {
+    width: 32px;
+    height: 32px;
+  }
+  .circle-button.xl\:regular {
+    width: 48px;
+    height: 48px;
+  }
+  .circle-button.xl\:large {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .f-row {
