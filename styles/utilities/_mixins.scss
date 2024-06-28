@@ -85,3 +85,35 @@
 @function pathImages($filename: "") {
   @return "../../stories/assets/#{$filename}";
 }
+
+@mixin responsive($classnames...) {
+  @each $classname in $classnames {
+    &.#{$classname} {
+      @content($classname);
+    }
+  }
+
+  @each $bp, $vl in $breakpoints {
+    @media (min-width: $vl) {
+      @each $classname in $classnames {
+        &.#{$bp}\:#{$classname} {
+          @content($classname);
+        }
+      }
+    }
+  }
+}
+
+// @include responsive("square", "rectangle") using ($class) {
+//   @if $class =="square" {
+//     width: 64px;
+//     height: 64px;
+//     background: red;
+//   }
+
+//   @else if $class =="rectangle" {
+//     width: 64px;
+//     height: 64px;
+//     background: green;
+//   }
+// }
