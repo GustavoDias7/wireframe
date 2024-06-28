@@ -1,7 +1,7 @@
 import Button from "./Button.html";
-import Link from "./LinkButton.html";
-import Disabled from "./Disabled.html";
 import ejs from "../../../utils/ejs.min.js";
+
+const breakpoints = ["null", "xs", "sm", "md", "lg", "xl"];
 
 export default {
   title: "Components/Button",
@@ -16,7 +16,46 @@ export default {
     },
     size: {
       control: "select",
-      options: ["default", "small", "large"],
+      options: ["default", "small", "regular", "large"],
+    },
+    responsive_size: {
+      control: "select",
+      options: [...breakpoints],
+    },
+    width: {
+      control: "select",
+      options: ["default", "full", "fit"],
+    },
+    responsive_width: {
+      control: "select",
+      options: [...breakpoints],
+    },
+    align: {
+      control: "select",
+      options: ["default", "left", "center", "right"],
+    },
+    responsive_align: {
+      control: "select",
+      options: [...breakpoints],
+    },
+    weight: {
+      control: "select",
+      options: ["default", "normal", "bold"],
+    },
+    responsive_weight: {
+      control: "select",
+      options: [...breakpoints],
+    },
+    circle: {
+      control: "select",
+      options: ["circle-small", "circle-regular", "circle-large"],
+    },
+    responsive_circle: {
+      control: "select",
+      options: [...breakpoints],
+    },
+    disabled: {
+      control: "boolean",
     },
   },
 
@@ -24,20 +63,49 @@ export default {
     variant: "pm-button",
     label: "Generic Button",
     tag: "button",
-    center: false,
-    full: false,
-    bold: false,
-    disabled: false,
+    width: "default",
+    responsive_width: "null",
+    align: "default",
+    responsive_align: "null",
+    weight: "default",
+    responsive_weight: "null",
     size: "default",
+    responsive_size: "null",
+    disabled: false,
   },
   render: (args) => {
     const classes = ["gn-button"];
 
     if (args.variant !== "default") classes.push(args.variant);
-    if (args.center) classes.push("center");
-    if (args.full) classes.push("full");
-    if (args.bold) classes.push("bold");
-    if (args.size !== "default") classes.push(args.size);
+
+    if (args.width !== "default") {
+      if (args.responsive_width !== "null") {
+        classes.push(`${args.responsive_width}:${args.width}`);
+      } else {
+        classes.push(args.width);
+      }
+    }
+    if (args.align !== "default") {
+      if (args.responsive_align !== "null") {
+        classes.push(`${args.responsive_align}:${args.align}`);
+      } else {
+        classes.push(args.align);
+      }
+    }
+    if (args.weight !== "default") {
+      if (args.responsive_weight !== "null") {
+        classes.push(`${args.responsive_weight}:${args.weight}`);
+      } else {
+        classes.push(args.weight);
+      }
+    }
+    if (args.size !== "default") {
+      if (args.responsive_size !== "null") {
+        classes.push(`${args.responsive_size}:${args.size}`);
+      } else {
+        classes.push(args.size);
+      }
+    }
 
     const className = classes.join(" ");
     const disabled = args.disabled && args.tag !== "a" ? " disabled" : "";
@@ -68,12 +136,16 @@ export const Secondary = {
 };
 
 export const LinkButton = {
-  render: (args) => {
-    return ejs.render(Link);
+  args: {
+    variant: "pm-button",
+    label: "Link Button",
+    tag: "a",
   },
 };
 export const DisabledButton = {
-  render: (args) => {
-    return ejs.render(Disabled);
+  args: {
+    variant: "pm-button",
+    label: "Disabled Button",
+    disabled: true,
   },
 };
