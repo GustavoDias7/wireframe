@@ -8,11 +8,7 @@ export default {
   argTypes: {
     size: {
       control: "select",
-      options: ["default", "small", "large"],
-    },
-    responsive_color: {
-      control: "select",
-      options: [...breakpoints],
+      options: ["default", "small", "regular", "large"],
     },
     responsive_size: {
       control: "select",
@@ -23,7 +19,6 @@ export default {
     size: "default",
     responsive_size: "null",
     color: false,
-    responsive_color: "null",
   },
   render: (args) => {
     const classes = ["counter"];
@@ -35,13 +30,8 @@ export default {
       classes.push(size);
     }
 
-    if (args.color) {
-      let color = "color";
-      if (args.responsive_color !== "null") {
-        color = `${args.responsive_color}:` + color;
-      }
-      classes.push(color);
-    }
+    if (args.color) classes.push("color");
+
     const className = classes.join(" ");
     return ejs.render(Counter, { ...args, className });
   },
