@@ -2,6 +2,8 @@ import { formatHTML } from "../../../utils/string";
 import form from "./form";
 import initInput from "./initInput";
 
+const breakpoints = ["null", "xs", "sm", "md", "lg", "xl"];
+
 export default {
   title: "Components/Form",
 };
@@ -12,6 +14,15 @@ export const Field = {
       delete optionsField.variant;
       delete optionsField.active;
     }
+
+    if (args.size !== "default") {
+      if (args.responsive_size !== "null") {
+        optionsField.size = `${args.responsive_size}:${args.size}`;
+      } else {
+        optionsField.size = args.size;
+      }
+    }
+
     const formElement = form({ fields: [optionsField] });
     return formatHTML(formElement.outerHTML);
   },
@@ -25,20 +36,29 @@ export const Field = {
       options: ["text", "tel", "checkbox", "radio", "file", "search"],
     },
     tag: { control: "select", options: ["input", "textarea"] },
-    size: { control: "select", options: ["default", "small", "large"] },
+    size: {
+      control: "select",
+      options: ["default", "small", "regular", "large"],
+    },
+    responsive_size: {
+      control: "select",
+      options: [...breakpoints],
+    },
   },
   args: {
     name: "name",
     id: "name",
     label: "Field",
     placeholder: "",
-    variant: "outline",
+    variant: "filled",
     type: "text",
     errorMessage: "",
     valid: false,
     disabled: false,
     active: false,
     rightElement: false,
+    size: "default",
+    responsive_size: "null",
   },
   play: async () => {
     initInput({ selector: ".form .input" });
