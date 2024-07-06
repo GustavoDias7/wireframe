@@ -1,18 +1,46 @@
+@use 'sass:math';
+
 // font
-$f-font-size: 16;
-$f-font-size-small: $f-font-size - 2;
-$f-font-size-large: $f-font-size + 2;
+$f-font-size: 16px;
+$f-font-size-small: $f-font-size - 2px;
+$f-font-size-large: $f-font-size + 2px;
+
+$f-line-height: $f-font-size;
+$f-line-height-small: $f-line-height - 2px;
+$f-line-height-large: $f-line-height + 2px;
 
 // padding
 $f-padding: 16px;
 $f-padding-small: $f-padding - 6px;
 $f-padding-large: $f-padding + 4px;
 
+$f-padding-half: math.div($f-padding, 2);
+$f-padding-half-small: math.div($f-padding-small, 2);
+$f-padding-half-large: math.div($f-padding-large, 2);
+
+$f-padding-filled: (
+  $f-padding + $f-padding-half) $f-padding (
+  $f-padding - $f-padding-half
+);
+$f-padding-filled-small: (
+  $f-padding-small + $f-padding-half-small) $f-padding-small (
+  $f-padding-small - $f-padding-half-small
+);
+$f-padding-filled-large: (
+  $f-padding-large + $f-padding-half-large) $f-padding-large (
+  $f-padding-large - $f-padding-half-large
+);
+
 // dimentions
 $f-input-height: 48px;
 $f-input-height-small: $f-input-height - 8px;
 $f-input-height-large: $f-input-height + 8px;
 $f-width: 312px;
+
+// label
+$align-label: math.div($f-input-height, 2) - math.div($f-line-height, 2);
+$align-label-small: math.div($f-input-height-small, 2) - math.div($f-line-height-small, 2);
+$align-label-large: math.div($f-input-height-large, 2) - math.div($f-line-height-large, 2);
 
 // borders
 $f-border-radius: 8px;
@@ -22,6 +50,7 @@ $f-primary-border-width: 1px;
 $f-primary-border: $f-primary-border-width solid;
 
 // outline width
+$f-margin: 4px; // fix in outline variant
 $f-margin-gap-label-span: 4px;
 $f-width-left: $f-padding - $f-margin-gap-label-span - $f-primary-border-width;
 $f-width-left-small: $f-padding-small - $f-margin-gap-label-span - $f-primary-border-width;
@@ -45,15 +74,15 @@ $svg-dimention-large: $svg-dimention + 4px;
   // use when f-input doesn't have outline and filled class (default variant)
   @include responsive("small", "regular", "large") using ($class) {
     @if $class =="small" {
-      font-size: #{$f-font-size-small}px;
+      font-size: $f-font-size-small;
     }
 
     @else if $class =="regular" {
-      font-size: #{$f-font-size}px;
+      font-size: $f-font-size;
     }
 
     @else if $class =="large" {
-      font-size: #{$f-font-size-large}px;
+      font-size: $f-font-size-large;
     }
   }
 }
@@ -73,11 +102,6 @@ $svg-dimention-large: $svg-dimention + 4px;
   transition: border $primary-transition;
   background-color: transparent;
   border-color: $primary-color-500;
-
-  &:focus~.f-label,
-  &:hover~.f-label {
-    top: -(#{$f-font-size}px / 2);
-  }
 
   &:disabled {
     opacity: 0.4;
@@ -108,7 +132,7 @@ $svg-dimention-large: $svg-dimention + 4px;
   @include responsive("small", "regular", "large") using ($class) {
     @if $class =="small" {
       padding: $f-padding-small;
-      font-size: #{$f-font-size-small}px;
+      font-size: $f-font-size-small;
       height: $f-input-height-small;
       border-radius: $f-border-radius-small;
     }
@@ -122,7 +146,7 @@ $svg-dimention-large: $svg-dimention + 4px;
 
     @else if $class =="large" {
       padding: $f-padding-large;
-      font-size: #{$f-font-size-large}px;
+      font-size: $f-font-size-large;
       height: $f-input-height-large;
       border-radius: $f-border-radius-large;
     }
@@ -130,7 +154,7 @@ $svg-dimention-large: $svg-dimention + 4px;
 }
 
 // icon on the right side
-// input.input {
+// .f-input.f-icon {
 
 //   &.error,
 //   &.success {
@@ -148,7 +172,7 @@ $svg-dimention-large: $svg-dimention + 4px;
 //   }
 // }
 
-$f-margin: 4px;
+
 
 .f-input.outline {
   border-top: none;
@@ -160,8 +184,8 @@ $f-margin: 4px;
     width: 100%;
     // max-width: $f-width;
     display: flex;
-    font-size: #{$f-font-size}px;
-    line-height: #{$f-font-size}px;
+    font-size: $f-font-size;
+    line-height: $f-line-height;
     transition: font-size $primary-transition;
 
     padding: 0;
@@ -191,7 +215,7 @@ $f-margin: 4px;
 
     span {
       position: absolute;
-      top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
+      top: $align-label;
       left: $f-padding;
       transition: top $primary-transition;
     }
@@ -199,12 +223,12 @@ $f-margin: 4px;
 
   // hover does not activate the label when disabled
   &:disabled:hover~.f-label {
-    font-size: #{$f-font-size}px;
-    line-height: #{$f-font-size}px;
+    font-size: $f-font-size;
+    line-height: $f-line-height;
 
     span {
       position: absolute;
-      top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
+      top: $align-label;
       left: $f-padding;
       transition: top $primary-transition;
     }
@@ -215,8 +239,8 @@ $f-margin: 4px;
   &:disabled.active~.f-label,
   &:focus~.f-label,
   &:hover~.f-label {
-    font-size: #{$f-font-size - 2}px;
-    line-height: #{$f-font-size - 2}px;
+    font-size: $f-font-size - 2px;
+    line-height: $f-line-height - 2px;
 
     span {
       position: relative;
@@ -270,27 +294,27 @@ $f-margin: 4px;
   @include responsive("small", "regular", "large") using ($class) {
     @if $class =="small" {
       &~.f-label {
-        font-size: #{$f-font-size-small}px;
-        line-height: #{$f-font-size-small}px;
+        font-size: $f-font-size-small;
+        line-height: $f-line-height-small;
 
         &::before {
-          width: $f-width-left-small + $f-primary-border-width;
+          width: $f-width-left-small;
         }
 
         span {
-          top: calc(#{$f-input-height-small} / 2 - (#{$f-font-size-small}px / 2));
-          left: $f-padding-small + $f-primary-border-width;
+          top: $align-label-small;
+          left: $f-padding-small;
         }
       }
 
       &:disabled:hover~.f-label {
-        font-size: #{$f-font-size-small}px;
-        line-height: #{$f-font-size-small}px;
+        font-size: $f-font-size-small;
+        line-height: $f-line-height-small;
 
         span {
           position: absolute;
-          top: calc(#{$f-input-height-small} / 2 - (#{$f-font-size-small}px / 2));
-          left: $f-padding-small + $f-primary-border-width;
+          top: $align-label-small;
+          left: $f-padding-small;
         }
       }
 
@@ -298,8 +322,8 @@ $f-margin: 4px;
       &:disabled.active~.f-label,
       &:focus~.f-label,
       &:hover~.f-label {
-        font-size: #{$f-font-size-small - 2}px;
-        line-height: #{$f-font-size-small - 2}px;
+        font-size: $f-font-size-small - 2px;
+        line-height: $f-line-height-small - 2px;
 
         span {
           position: relative;
@@ -311,27 +335,27 @@ $f-margin: 4px;
 
     @if $class =="regular" {
       &~.f-label {
-        font-size: #{$f-font-size}px;
-        line-height: #{$f-font-size}px;
+        font-size: $f-font-size;
+        line-height: $f-line-height;
 
         &::before {
-          width: $f-width-left + $f-primary-border-width;
+          width: $f-width-left;
         }
 
         span {
-          top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-          left: $f-padding + $f-primary-border-width;
+          top: $align-label;
+          left: $f-padding;
         }
       }
 
       &:disabled:hover~.f-label {
-        font-size: #{$f-font-size}px;
-        line-height: #{$f-font-size}px;
+        font-size: $f-font-size;
+        line-height: $f-line-height;
 
         span {
           position: absolute;
-          top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-          left: $f-padding + $f-primary-border-width;
+          top: $align-label;
+          left: $f-padding;
         }
       }
 
@@ -339,8 +363,8 @@ $f-margin: 4px;
       &:disabled.active~.f-label,
       &:focus~.f-label,
       &:hover~.f-label {
-        font-size: #{$f-font-size - 2}px;
-        line-height: #{$f-font-size - 2}px;
+        font-size: $f-font-size - 2px;
+        line-height: $f-line-height - 2px;
 
         span {
           position: relative;
@@ -352,28 +376,28 @@ $f-margin: 4px;
 
     @else if $class =="large" {
       &~.f-label {
-        font-size: #{$f-font-size-large}px;
-        line-height: #{$f-font-size-large}px;
+        font-size: $f-font-size-large;
+        line-height: $f-line-height-large;
 
         &::before {
-          width: $f-width-left-large + $f-primary-border-width;
+          width: $f-width-left-large;
         }
 
         span {
-          top: calc(#{$f-input-height-large} / 2 - (#{$f-font-size-large}px / 2));
-          left: $f-padding-large + $f-primary-border-width;
+          top: $align-label-large;
+          left: $f-padding-large;
         }
       }
 
 
       &:disabled:hover~.f-label {
-        font-size: #{$f-font-size-large}px;
-        line-height: #{$f-font-size-large}px;
+        font-size: $f-font-size-large;
+        line-height: $f-line-height-large;
 
         span {
           position: absolute;
-          top: calc(#{$f-input-height-large} / 2 - (#{$f-font-size-large}px / 2));
-          left: $f-padding-large + $f-primary-border-width;
+          top: $align-label-large;
+          left: $f-padding-large;
         }
       }
 
@@ -381,8 +405,8 @@ $f-margin: 4px;
       &:disabled.active~.f-label,
       &:focus~.f-label,
       &:hover~.f-label {
-        font-size: #{$f-font-size-large}px;
-        line-height: #{$f-font-size-large}px;
+        font-size: $f-font-size-large - 2px;
+        line-height: $f-line-height-large - 2px;
 
         span {
           position: relative;
@@ -395,18 +419,17 @@ $f-margin: 4px;
 }
 
 .f-input.filled {
-  padding: 24px $f-padding $f-padding/2;
+  padding: $f-padding-filled;
 
   &~.f-label {
     margin-bottom: 0;
     position: absolute;
-    top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-    left: $f-padding + $f-primary-border-width;
+    top: $align-label;
+    left: $f-padding;
     transition: $primary-transition;
-    display: flex;
-    font-size: #{$f-font-size}px;
-    line-height: #{$f-font-size}px;
-    background-color: transparent;
+    font-size: $f-font-size;
+    line-height: $f-line-height;
+    background-color: $transparent-color;
     pointer-events: none;
   }
 
@@ -415,85 +438,85 @@ $f-margin: 4px;
   }
 
   &:disabled:hover~.f-label {
-    top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-    font-size: #{$f-font-size}px;
+    top: $align-label;
+    font-size: $f-font-size;
   }
 
   &.active~.f-label,
   &:disabled.active~.f-label,
   &:focus~.f-label,
   &:hover~.f-label {
-    font-size: #{$f-font-size - 2}px;
-    top: $f-padding / 2;
+    font-size: $f-font-size - 2px;
+    top: math.div($f-padding, 2);
   }
 
   @include responsive("small", "regular", "large") using ($class) {
     @if $class =="small" {
-      padding: $f-padding $f-padding-small $f-padding-small/2;
+      padding: $f-padding-filled-small;
 
       &~.f-label {
-        top: calc(#{$f-input-height-small} / 2 - (#{$f-font-size-small}px / 2));
-        left: $f-padding-small + $f-primary-border-width;
-        font-size: #{$f-font-size-small}px;
+        top: $align-label-small;
+        left: $f-padding-small;
+        font-size: $f-font-size-small;
       }
 
       &:disabled:hover~.f-label {
-        top: calc(#{$f-input-height-small} / 2 - (#{$f-font-size-small}px / 2));
-        font-size: #{$f-font-size-small}px;
+        top: $align-label-small;
+        font-size: $f-font-size-small;
       }
 
       &.active~.f-label,
       &:disabled.active~.f-label,
       &:focus~.f-label,
       &:hover~.f-label {
-        font-size: #{$f-font-size-small - 2}px;
-        top: ($f-padding-small - 6px) / 2;
+        font-size: $f-font-size-small - 2px;
+        top: math.div($f-padding-small - 6px, 2);
       }
     }
 
     @else if $class =="regular" {
-      padding: #{$f-padding + 8px} $f-padding $f-padding/2;
+      padding: $f-padding-filled;
 
       &~.f-label {
-        top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-        left: $f-padding + $f-primary-border-width;
-        font-size: #{$f-font-size}px;
+        top: $align-label;
+        left: $f-padding;
+        font-size: $f-font-size;
       }
 
       &:disabled:hover~.f-label {
-        top: calc(#{$f-input-height} / 2 - (#{$f-font-size}px / 2));
-        font-size: #{$f-font-size}px;
+        top: $align-label;
+        font-size: $f-font-size;
       }
 
       &.active~.f-label,
       &:disabled.active~.f-label,
       &:focus~.f-label,
       &:hover~.f-label {
-        font-size: #{$f-font-size - 2}px;
-        top: $f-padding / 2;
+        font-size: $f-font-size - 2px;
+        top: math.div($f-padding, 2);
       }
     }
 
     @else if $class =="large" {
-      padding: #{$f-padding + 16px} $f-padding-large $f-padding-large/2;
+      padding: $f-padding-filled-large;
 
       &~.f-label {
-        top: calc(#{$f-input-height-large} / 2 - (#{$f-font-size-large}px / 2));
-        left: $f-padding-large + $f-primary-border-width;
-        font-size: #{$f-font-size-large}px;
+        top: $align-label-large;
+        left: $f-padding-large;
+        font-size: $f-font-size-large;
       }
 
       &:disabled:hover~.f-label {
-        top: calc(#{$f-input-height-large} / 2 - (#{$f-font-size-large}px / 2));
-        font-size: #{$f-font-size-large}px;
+        top: $align-label-large;
+        font-size: $f-font-size-large;
       }
 
       &.active~.f-label,
       &:disabled.active~.f-label,
       &:focus~.f-label,
       &:hover~.f-label {
-        font-size: #{$f-font-size-large - 2}px;
-        top: ($f-padding-large) / 2;
+        font-size: $f-font-size-large - 2px;
+        top: math.div($f-padding-large, 2);
       }
     }
   }
