@@ -120,6 +120,7 @@ function form({ fields = [] }) {
             $inputContainer.appendChild($f_label);
             $inputContainer.appendChild($rightElement);
             $f_row.appendChild($inputContainer);
+            $g_item.appendChild($f_row);
           } else {
             $f_row.appendChild($field);
             $f_row.appendChild($f_label);
