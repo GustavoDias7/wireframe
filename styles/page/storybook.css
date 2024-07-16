@@ -7,6 +7,10 @@ p.example {
   margin-bottom: 16px;
 }
 
+.css-10skpf4 .modal {
+  position: relative;
+}
+
 [id*="layouts-grid"] [class*="g-item"] > div {
   font-size: 20px;
   text-align: center;

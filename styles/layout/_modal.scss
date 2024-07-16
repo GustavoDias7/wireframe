@@ -31,7 +31,7 @@
       }
     }
 
-    .close {
+    .modal-close {
       $dimention: 20px;
 
       position: absolute;
@@ -75,7 +75,7 @@
       @include flex-center-between;
       margin-bottom: $section-margin-bottom;
 
-      .close {
+      .modal-close {
         @include square(20px);
         cursor: pointer;
         border: none;
@@ -93,6 +93,75 @@
     .modal-body {
       overflow-y: auto;
       margin-bottom: $section-margin-bottom;
+    }
+  }
+
+  &.cart-modal {
+    .modal-content {
+      padding: 32px;
+
+      @include sm {
+        padding: 20px;
+      }
+    }
+
+    .cart-item {
+      display: flex;
+      min-height: 64px;
+      gap: 8px;
+
+      .img {
+        @include square(64px);
+        border-radius: 8px;
+        overflow: hidden;
+        align-self: flex-start;
+        flex-shrink: 0;
+      }
+
+      .cart-item-center {
+
+        h3,
+        .counter {
+          margin-bottom: 8px;
+        }
+      }
+
+      .delete {
+        @include reset-button;
+        @include square(24px);
+        @include background-image(pathImages("circle-close.svg"));
+        flex-shrink: 0;
+      }
+    }
+
+    .modal-footer {
+      margin-top: auto;
+    }
+
+    .cart-total {
+      .cart-total-item {
+        @include flex-center-between;
+
+        .price.tertiary {
+          strong {
+            font-size: 24px;
+            height: auto;
+            font-weight: 500;
+          }
+
+          @include sm {
+            .left span {
+              font-size: 12px;
+              position: relative;
+              top: -2px;
+            }
+
+            strong {
+              font-size: 20px;
+            }
+          }
+        }
+      }
     }
   }
 }

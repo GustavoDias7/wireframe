@@ -1,5 +1,7 @@
 .g-root {
-  // overflow: hidden;
+  &.g-hidden {
+    overflow: hidden;
+  }
 }
 
 .g-row {
