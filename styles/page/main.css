@@ -2161,61 +2161,6 @@ li {
   }
 }
 
-.f-input-base {
-  position: relative;
-  height: 48px;
-}
-.f-input-base fieldset {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  height: 48px;
-  border: 1px solid;
-  padding: 0px 16px;
-  border-radius: 8px;
-}
-.f-input-base fieldset legend {
-  margin-top: -8px;
-  line-height: 16px;
-}
-.f-input-base fieldset legend span {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  display: inline-block;
-  font-size: 16px;
-  line-height: 16px;
-  transition: top 0.2s ease 0s, font-size 0.2s ease 0s;
-}
-.f-input-base input.active ~ fieldset legend span,
-.f-input-base input:disabled.active ~ fieldset legend span,
-.f-input-base input:focus ~ fieldset legend span,
-.f-input-base input:hover ~ fieldset legend span {
-  font-size: 14px;
-  line-height: 14px;
-  position: relative;
-  top: 0px;
-  left: 0px;
-}
-.f-input-base input {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  height: 48px;
-  padding: 0px 16px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  line-height: 16px;
-}
-
 .f-input.filled {
   padding: 24px 16px 8px;
 }
