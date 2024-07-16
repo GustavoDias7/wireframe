@@ -1,4 +1,5 @@
 import CardPrimary from "./Primary.html";
+import CardSecondary from "./Secondary.html";
 import ejs from "../../../utils/ejs.min.js";
 import { currency } from "../../../utils/currency.js";
 
@@ -15,5 +16,15 @@ export const Primary = {
   },
   render: (args) => {
     return ejs.render(CardPrimary, { ...args, price: currency(args.price) });
+  },
+};
+export const Secondary = {
+  args: {
+    title: "Card Title",
+    price: 1550,
+    linkLabel: "Add to cart",
+  },
+  render: (args) => {
+    return ejs.render(CardSecondary, { ...args, price: currency(args.price) });
   },
 };

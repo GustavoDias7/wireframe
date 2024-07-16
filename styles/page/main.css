@@ -3037,7 +3037,7 @@ textarea.f-input {
   max-width: 272px;
   color: #2d2d2d;
   background-color: #fafafa;
-  box-shadow: 1px solid #7b95b7;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
 }
 .card.primary .img {
   position: relative;
@@ -3065,6 +3065,31 @@ textarea.f-input {
   margin-bottom: 16px;
 }
 .card.primary .link {
+  color: #486284;
+}
+
+.card.secondary {
+  width: 100%;
+  max-width: 272px;
+  color: #2d2d2d;
+  background-color: #fafafa;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
+}
+.card.secondary a {
+  font-size: 0;
+}
+.card.secondary .description {
+  padding: 16px;
+}
+.card.secondary .title {
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+.card.secondary .subtitle,
+.card.secondary .price {
+  margin-bottom: 4px;
+}
+.card.secondary .link {
   color: #486284;
 }
 
