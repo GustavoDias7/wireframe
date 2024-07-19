@@ -3003,6 +3003,32 @@ textarea.f-input {
   margin-bottom: 0px;
 }
 
+.badge {
+  position: relative;
+  width: fit-content;
+  display: inline-flex;
+}
+.badge .badge-item {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 1;
+  min-width: 20px;
+  height: 20px;
+  color: #fafafa;
+  background-color: #ff2115;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 0px 5px;
+  transform: scale(0);
+  transition: transform 0.2s ease 0s;
+}
+.badge.active .badge-item {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .box.primary {
   width: 100%;
   max-width: 272px;
