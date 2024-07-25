@@ -3125,22 +3125,58 @@ textarea.f-input {
   border-radius: 16px;
   padding: 16px;
 }
-.topic.primary .left {
+.topic.primary .topic-left {
   margin-right: 12px;
 }
-.topic.primary .left .icon {
+.topic.primary .topic-left .icon {
   width: 64px;
   height: 64px;
 }
-.topic.primary .right {
+.topic.primary .topic-right {
   color: #151515;
 }
-.topic.primary .right .title {
+.topic.primary .topic-right .title {
   font-size: 16px;
   margin-bottom: 8px;
 }
-.topic.primary .right p {
+.topic.primary .topic-right p {
   font-size: 14px;
+}
+
+.topic.secondary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 16px 32px;
+  min-height: 96px;
+  background-color: #d9d9d9;
+}
+.topic.secondary h3,
+.topic.secondary p,
+.topic.secondary a {
+  font-size: 20px;
+  color: #151515;
+}
+.topic.secondary h3 {
+  margin-bottom: 8px;
+}
+.topic.secondary a {
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .topic.secondary {
+    padding: 12px 20px;
+    min-height: 72px;
+  }
+  .topic.secondary h3,
+  .topic.secondary p,
+  .topic.secondary a {
+    font-size: 16px;
+  }
+  .topic.secondary h3 {
+    margin-bottom: 4px;
+  }
 }
 
 .text-xs {
