@@ -4845,3 +4845,93 @@ textarea.f-input {
     font-size: 20px;
   }
 }
+
+.order-item {
+  display: flex;
+  padding: 24px;
+  background-color: #EFEFEF;
+  border-radius: 8px;
+}
+.order-item .img {
+  min-width: 64px;
+  margin-right: 16px;
+}
+.order-item .img a {
+  font-size: 0;
+}
+.order-item .img .aspect-ratio {
+  border-radius: 8px;
+}
+.order-item .order-item-info {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.order-item .order-item-info .order-item-info-left h3,
+.order-item .order-item-info .order-item-info-left p {
+  margin-bottom: 8px;
+}
+.order-item .order-item-info .order-item-info-left h3:last-child,
+.order-item .order-item-info .order-item-info-left p:last-child {
+  margin-bottom: 0px;
+}
+.order-item .order-item-info .order-item-info-left h3 {
+  width: 100%;
+  max-width: 240px;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-item .order-item-info .order-item-info-left p .wating {
+  color: #F8BD00;
+}
+.order-item .order-item-info .order-item-info-left p .preparing {
+  color: #00C595;
+}
+.order-item .order-item-info .order-item-info-left p .on-the-way {
+  color: #007AEA;
+}
+.order-item .order-item-info .order-item-info-left p .delivered {
+  color: #00C52B;
+}
+.order-item .order-item-info .order-item-info-left p .canceled {
+  color: #C51800;
+}
+.order-item .order-item-info .order-item-info-right {
+  text-align: right;
+}
+.order-item .order-item-info .order-item-info-right p {
+  margin-bottom: 8px;
+}
+.order-item .order-item-info .order-item-info-right p:last-child {
+  margin-bottom: 0px;
+}
+@media (max-width: 480px) {
+  .order-item {
+    padding: 20px;
+  }
+  .order-item .img {
+    margin-right: 8px;
+  }
+  .order-item .order-item-info {
+    flex-direction: column;
+  }
+  .order-item .order-item-info .order-item-info-left {
+    margin-bottom: 8px;
+  }
+  .order-item .order-item-info .order-item-info-left h3 {
+    font-size: 18px;
+    width: auto;
+    max-width: unset;
+    white-space: unset;
+  }
+  .order-item .order-item-info .order-item-info-right {
+    text-align-last: left;
+  }
+}
+@media (max-width: 320px) {
+  .order-item {
+    padding: 16px;
+  }
+}
