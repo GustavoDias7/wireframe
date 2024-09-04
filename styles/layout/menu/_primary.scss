@@ -5,7 +5,7 @@
   padding: 2rem;
   @include max-width(320px);
   height: 100vh;
-  background-color: $neutral-color-100;
+  background-color: $neutral-color-50;
   box-shadow: $primary-box-shadow;
 
   .menu-button {
@@ -22,7 +22,7 @@
     .link {
       display: block;
       width: fit-content;
-      color: $primary-color-500;
+      color: $slate-color-500;
       margin-bottom: 1rem;
 
       &:last-child {
@@ -37,6 +37,7 @@
     nav {
       display: none;
     }
+
     .menu-button {
       display: block;
     }

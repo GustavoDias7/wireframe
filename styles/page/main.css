@@ -1,4 +1,3 @@
-/* color */
 /* transition */
 /* border */
 /* box-shadow */
@@ -924,7 +923,7 @@ li {
   font-size: 1rem;
   height: 48px;
   padding: 0px 20px;
-  color: #486284;
+  color: #64748b;
   cursor: pointer;
   border-radius: 32px;
   border: none;
@@ -941,12 +940,12 @@ li {
   cursor: not-allowed;
 }
 .gn-button.pm-button {
-  background-color: #486284;
+  background-color: #64748b;
   color: #fafafa;
 }
 .gn-button.sc-button {
   background-color: transparent;
-  border: 1px solid #7b95b7;
+  border: 1px solid #64748b;
 }
 .gn-button.full {
   width: 100%;
@@ -1209,12 +1208,12 @@ li {
   cursor: not-allowed;
 }
 .circle-button.pm-button {
-  background-color: #486284;
+  background-color: #64748b;
   color: #fafafa;
 }
 .circle-button.sc-button {
   background-color: transparent;
-  border: 1px solid #7b95b7;
+  border: 1px solid #64748b;
 }
 .circle-button.left {
   margin: 0px auto 0px 0px;
@@ -1441,7 +1440,7 @@ li {
   border: 1px solid;
   transition: border 0.2s ease 0s;
   background-color: transparent;
-  border-color: #486284;
+  border-color: #64748b;
 }
 .f-input:disabled,
 .f-select:disabled {
@@ -1450,7 +1449,7 @@ li {
 }
 .f-input::placeholder,
 .f-select::placeholder {
-  color: #ced7e4;
+  color: #bfdbfe;
 }
 .f-input.transparent,
 .f-select.transparent {
@@ -1459,15 +1458,15 @@ li {
 }
 .f-input.transparent::placeholder,
 .f-select.transparent::placeholder {
-  color: #ced7e4;
+  color: #bfdbfe;
 }
 .f-input.error,
 .f-select.error {
-  border-color: #ff2115;
+  border-color: #dc2626;
 }
 .f-input.success,
 .f-select.success {
-  border-color: #008000;
+  border-color: #15803d;
 }
 .f-input.small,
 .f-select.small {
@@ -1630,13 +1629,13 @@ li {
 .f-input.outline ~ .f-label::before {
   border-left: 1px solid;
   border-top-left-radius: 8px;
-  border-color: #486284;
+  border-color: #64748b;
   width: 11px;
 }
 .f-input.outline ~ .f-label::after {
   border-right: 1px solid;
   border-top-right-radius: 8px;
-  border-color: #486284;
+  border-color: #64748b;
   flex: 1;
 }
 .f-input.outline ~ .f-label span {
@@ -1681,11 +1680,11 @@ li {
 }
 .f-input.outline.error ~ .f-label::before,
 .f-input.outline.error ~ .f-label::after {
-  border-color: #ff2115;
+  border-color: #dc2626;
 }
 .f-input.outline.success ~ .f-label::before,
 .f-input.outline.success ~ .f-label::after {
-  border-color: #008000;
+  border-color: #15803d;
 }
 .f-input.outline.small ~ .f-label {
   font-size: 14px;
@@ -2550,10 +2549,10 @@ li {
   padding: 2px 12px 0px;
 }
 .f-helper.error {
-  color: #ff2115;
+  color: #dc2626;
 }
 .f-helper.success {
-  color: #008000;
+  color: #15803d;
 }
 
 .f-container {
@@ -2617,7 +2616,7 @@ textarea.f-input {
   height: 48px;
   border: 1px solid;
   border-left: none;
-  border-color: #486284;
+  border-color: #64748b;
   transition: border 0.2s ease 0s, opacity 0.2s ease 0s;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -2629,11 +2628,11 @@ textarea.f-input {
   height: 16px;
 }
 .f-search .f-input ~ .f-search-btn svg path {
-  fill: #486284;
+  fill: #64748b;
 }
 .f-search .f-input ~ .f-search-btn.color {
   border: none;
-  background-color: #486284;
+  background-color: #64748b;
 }
 .f-search .f-input ~ .f-search-btn.color svg path {
   fill: #fafafa;
@@ -2843,7 +2842,7 @@ textarea.f-input {
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  border: 1px solid #486284;
+  border: 1px solid #64748b;
   margin-right: 10px;
 }
 .check .marker::before {
@@ -2859,7 +2858,7 @@ textarea.f-input {
   border-radius: 2px;
   transform: scale(0);
   transition: 0.2s ease-in-out;
-  background-color: #486284;
+  background-color: #64748b;
 }
 .check.radio .marker {
   border-radius: 16px;
@@ -2896,14 +2895,14 @@ textarea.f-input {
 }
 .accordion.primary {
   margin-bottom: 10px;
-  border: 2px solid #486284;
+  border: 2px solid #64748b;
 }
 .accordion.primary:last-child {
   margin-bottom: 0px;
 }
 .accordion.secondary {
   border: none;
-  border-bottom: 1px solid #486284;
+  border-bottom: 1px solid #64748b;
 }
 .accordion.secondary:last-child {
   border-bottom: none;
@@ -2929,7 +2928,7 @@ textarea.f-input {
   transition: 0.2s ease 0s;
 }
 .accordion.active .label h3, .accordion:focus .label h3, .accordion:hover .label h3 {
-  color: #486284;
+  color: #64748b;
 }
 .accordion.active .arrow {
   transform: rotate(-180deg);
@@ -3075,7 +3074,7 @@ textarea.f-input {
   min-width: 20px;
   height: 20px;
   color: #fafafa;
-  background-color: #ff2115;
+  background-color: #dc2626;
   text-align: center;
   font-size: 16px;
   border-radius: 20px;
@@ -3093,9 +3092,9 @@ textarea.f-input {
   max-width: 272px;
   padding: 32px;
   text-align: center;
-  color: #2d2d2d;
+  color: #404040;
   background-color: #fafafa;
-  box-shadow: 1px solid #7b95b7;
+  box-shadow: 1px solid #64748b;
   border-radius: 8px;
 }
 .box.primary .icon {
@@ -3114,13 +3113,13 @@ textarea.f-input {
   margin-bottom: 16px;
 }
 .box.primary .link {
-  color: #486284;
+  color: #64748b;
 }
 
 .card.primary {
   width: 100%;
   max-width: 272px;
-  color: #2d2d2d;
+  color: #404040;
   background-color: #fafafa;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
 }
@@ -3150,13 +3149,13 @@ textarea.f-input {
   margin-bottom: 16px;
 }
 .card.primary .link {
-  color: #486284;
+  color: #64748b;
 }
 
 .card.secondary {
   width: 100%;
   max-width: 272px;
-  color: #2d2d2d;
+  color: #404040;
   background-color: #fafafa;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
 }
@@ -3175,12 +3174,12 @@ textarea.f-input {
   margin-bottom: 4px;
 }
 .card.secondary .link {
-  color: #486284;
+  color: #64748b;
 }
 
 .topic.primary {
   display: flex;
-  border: 1px solid #7b95b7;
+  border: 1px solid #64748b;
   border-radius: 16px;
   padding: 16px;
 }
@@ -3192,7 +3191,7 @@ textarea.f-input {
   height: 64px;
 }
 .topic.primary .topic-right {
-  color: #151515;
+  color: #262626;
 }
 .topic.primary .topic-right .title {
   font-size: 16px;
@@ -3209,13 +3208,13 @@ textarea.f-input {
   border-radius: 8px;
   padding: 16px 32px;
   min-height: 96px;
-  background-color: #d9d9d9;
+  background-color: #e5e5e5;
 }
 .topic.secondary h3,
 .topic.secondary p,
 .topic.secondary a {
   font-size: 20px;
-  color: #151515;
+  color: #262626;
 }
 .topic.secondary h3 {
   margin-bottom: 8px;
@@ -3643,7 +3642,7 @@ textarea.f-input {
 }
 .counter.color .counter-button {
   border: none;
-  background-color: #151515;
+  background-color: #262626;
 }
 .counter.color .counter-button .sign::before, .counter.color .counter-button .sign::after {
   background-color: #fafafa;
@@ -3658,7 +3657,7 @@ textarea.f-input {
   padding: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #bababa;
+  border: 1px solid #a3a3a3;
   cursor: pointer;
 }
 .counter .counter-button:first-of-type {
@@ -3682,7 +3681,7 @@ textarea.f-input {
   display: block;
   position: absolute;
   margin: auto;
-  background-color: #151515;
+  background-color: #262626;
 }
 .counter .counter-button .sign::before {
   width: 12px;
@@ -3706,7 +3705,7 @@ textarea.f-input {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  border: 1px solid #bababa;
+  border: 1px solid #a3a3a3;
   outline: none;
   width: 48px;
   height: 100%;
@@ -4298,10 +4297,10 @@ textarea.f-input {
   border-radius: 4px;
 }
 .notification .notif-content .notif-line.error {
-  background-color: #ff2115;
+  background-color: #dc2626;
 }
 .notification .notif-content .notif-line.success {
-  color: #008000;
+  color: #15803d;
 }
 
 .social-links {
@@ -4335,7 +4334,7 @@ textarea.f-input {
 }
 .header.primary .logo {
   font-size: 1.75rem;
-  color: #486284;
+  color: #64748b;
 }
 
 .header.secondary {
@@ -4351,7 +4350,7 @@ textarea.f-input {
 }
 .header.secondary .logo {
   font-size: 1.75rem;
-  color: #486284;
+  color: #64748b;
 }
 .header.secondary nav {
   display: flex;
@@ -4360,7 +4359,7 @@ textarea.f-input {
   gap: 1rem;
 }
 .header.secondary nav .link {
-  color: #486284;
+  color: #64748b;
 }
 .header.secondary .menu-button {
   display: none;
@@ -4385,7 +4384,7 @@ textarea.f-input {
   }
 }
 .footer {
-  background-color: #486284;
+  background-color: #64748b;
 }
 .footer .container {
   padding: 20px 0px;
@@ -4425,13 +4424,13 @@ textarea.f-input {
 .primary-banner .left h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #486284;
+  color: #64748b;
   margin-bottom: 1rem;
 }
 .primary-banner .left p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #8ca2c0;
+  color: #94a3b8;
   margin-bottom: 1.5rem;
 }
 .primary-banner .right img {
@@ -4493,13 +4492,13 @@ textarea.f-input {
 .secondary-banner .right h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #486284;
+  color: #64748b;
   margin-bottom: 1rem;
 }
 .secondary-banner .right p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #8ca2c0;
+  color: #94a3b8;
   margin-bottom: 1.5rem;
 }
 
@@ -4559,13 +4558,13 @@ textarea.f-input {
 .tertiary-banner h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #486284;
+  color: #64748b;
   margin-bottom: 1rem;
 }
 .tertiary-banner p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #8ca2c0;
+  color: #94a3b8;
   margin-bottom: 1.5rem;
 }
 .tertiary-banner .buttons {
@@ -4614,13 +4613,13 @@ textarea.f-input {
 .section.primary .left h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #486284;
+  color: #64748b;
   margin-bottom: 1rem;
 }
 .section.primary .left p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #8ca2c0;
+  color: #94a3b8;
   margin-bottom: 1.5rem;
 }
 .section.primary .right img {
@@ -4680,13 +4679,13 @@ textarea.f-input {
 .section.secondary .right h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #486284;
+  color: #64748b;
   margin-bottom: 1rem;
 }
 .section.secondary .right p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #8ca2c0;
+  color: #94a3b8;
   margin-bottom: 1.5rem;
 }
 .section.secondary .left img {
@@ -4757,7 +4756,7 @@ textarea.f-input {
 .menu nav .link {
   display: block;
   width: fit-content;
-  color: #486284;
+  color: #64748b;
   margin-bottom: 1rem;
 }
 .menu nav .link:last-child {
@@ -4945,7 +4944,7 @@ textarea.f-input {
 }
 .cart hr {
   border: none;
-  border-bottom: 1px solid #9b9b9b;
+  border-bottom: 1px solid #a3a3a3;
 }
 .cart .cart-total .cart-total-item {
   display: flex;
@@ -5144,7 +5143,7 @@ textarea.f-input {
   padding: 40px 0;
 }
 .simple-cta.color {
-  background-color: #486284;
+  background-color: #64748b;
   color: #fafafa;
 }
 .simple-cta.color .gn-button {

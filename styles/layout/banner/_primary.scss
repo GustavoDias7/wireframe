@@ -1,5 +1,5 @@
 .primary-banner {
-  background-color: $neutral-color-100;
+  background-color: $neutral-color-50;
 
   .container {
     @include flex-center-between;
@@ -16,23 +16,25 @@
     h2 {
       font-weight: 700;
       font-size: 4rem;
-      color: $primary-color-500;
+      color: $slate-color-500;
       margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.25rem;
       line-height: 2rem;
-      color: $primary-color-300;
+      color: $slate-color-400;
       margin-bottom: 1.5rem;
     }
   }
+
   .right {
     img {
       width: 100%;
     }
   }
 }
+
 @include xl {
   .primary-banner {
     .left {
@@ -42,6 +44,7 @@
     }
   }
 }
+
 @include lg {
   .primary-banner {
     .left {
@@ -51,6 +54,7 @@
     }
   }
 }
+
 @include md {
   .primary-banner {
     .container {
@@ -71,6 +75,7 @@
         font-weight: 500;
         font-size: 2rem;
       }
+
       .gn-button {
         width: 100%;
       }

@@ -1,5 +1,5 @@
 .tertiary-banner {
-  background-color: $neutral-color-100;
+  background-color: $neutral-color-50;
 
   .container {
     @include flex-center-center;
@@ -17,14 +17,14 @@
   h2 {
     font-weight: 700;
     font-size: 4rem;
-    color: $primary-color-500;
+    color: $slate-color-500;
     margin-bottom: 1rem;
   }
-  
+
   p {
     font-size: 1.25rem;
     line-height: 2rem;
-    color:  $primary-color-300;
+    color: $slate-color-400;
     margin-bottom: 1.5rem;
   }
 
@@ -33,6 +33,7 @@
     gap: 1rem;
   }
 }
+
 @include md {
   .tertiary-banner {
     .container {
@@ -40,17 +41,21 @@
       padding-top: 3rem;
       padding-bottom: 3rem;
     }
+
     h2 {
       font-weight: 500;
       font-size: 2rem;
     }
+
     p {
       font-size: 1.25rem;
       margin-bottom: 1.5rem;
     }
+
     .gn-button {
       width: 100%;
     }
+
     .buttons {
       flex-direction: column;
     }
