@@ -3,7 +3,7 @@ import ejs from "../../../utils/ejs.min.js";
 import { removeAllNonNumericChars } from "../../../utils/string.js";
 
 export default {
-  title: "Components/ContactBar",
+  title: "Layouts/ContactBar",
   args: {
     email: true,
     email_address: "email@email.com",
