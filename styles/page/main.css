@@ -5077,3 +5077,34 @@ textarea.f-input {
     margin-top: 20px;
   }
 }
+
+.simple-cta {
+  padding: 40px 0;
+}
+.simple-cta.color {
+  background-color: #486284;
+  color: #fafafa;
+}
+.simple-cta.color .gn-button {
+  color: #fafafa;
+}
+.simple-cta .title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.simple-cta .subtitle {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .simple-cta .title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  .simple-cta .subtitle {
+    margin-bottom: 20px;
+  }
+}
