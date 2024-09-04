@@ -1,13 +1,13 @@
 <section class="contact-bar">
   <div class="container md:container">
     <div class="contact-bar-left">
-      <% if (email && phone === false) { %>
+      <% if (email) { %>
         <a href="mailto:<%= email_address %>" target="_blank">
           <img src="../../assets/mail.svg" alt="E-mail">
           <p><%= email_address %></p>
         </a>
       <% } %>
-      <% if (phone && email === false) { %>
+      <% if (phone) { %>
         <a href="tel:<%= phone_only_number %>" target="_blank">
           <img src="../../assets/phone.svg" alt="Telephone">
           <p><%= phone_number %></p>

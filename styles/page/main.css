@@ -5017,8 +5017,10 @@ textarea.f-input {
 .contact-bar .contact-bar-left {
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 16px;
   row-gap: 4px;
+  flex-wrap: wrap;
 }
 .contact-bar .contact-bar-left a {
   display: flex;

@@ -12,9 +12,10 @@
   }
 
   .contact-bar-left {
-    @include flex-align-center;
+    @include flex-center-center;
     column-gap: 16px;
     row-gap: 4px;
+    flex-wrap: wrap;
 
     a {
       @include flex-align-center;
