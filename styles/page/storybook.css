@@ -19,3 +19,13 @@ p.example {
   border: 1px solid #7d7d7d;
   height: 100%;
 }
+
+[class^="col"] {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 1px solid #7d7d7d;
+  height: 100%;
+}

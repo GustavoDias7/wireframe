@@ -99,10 +99,69 @@ li {
   justify-content: center;
 }
 
+.g-left {
+  justify-content: left;
+}
+
 .g-right {
   justify-content: right;
 }
 
+@media (min-width: 320px) {
+  .xs\:g-center {
+    justify-content: center;
+  }
+  .xs\:g-left {
+    justify-content: left;
+  }
+  .xs\:g-right {
+    justify-content: right;
+  }
+}
+@media (min-width: 480px) {
+  .sm\:g-center {
+    justify-content: center;
+  }
+  .sm\:g-left {
+    justify-content: left;
+  }
+  .sm\:g-right {
+    justify-content: right;
+  }
+}
+@media (min-width: 768px) {
+  .md\:g-center {
+    justify-content: center;
+  }
+  .md\:g-left {
+    justify-content: left;
+  }
+  .md\:g-right {
+    justify-content: right;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:g-center {
+    justify-content: center;
+  }
+  .lg\:g-left {
+    justify-content: left;
+  }
+  .lg\:g-right {
+    justify-content: right;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:g-center {
+    justify-content: center;
+  }
+  .xl\:g-left {
+    justify-content: left;
+  }
+  .xl\:g-right {
+    justify-content: right;
+  }
+}
 .g-item-1 {
   width: calc(100% * 1 / 12);
 }

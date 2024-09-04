@@ -13,8 +13,28 @@
   justify-content: center;
 }
 
+.g-left {
+  justify-content: left;
+}
+
 .g-right {
   justify-content: right;
+}
+
+@each $bp, $vl in $breakpoints {
+  @media (min-width: $vl) {
+    .#{$bp}\:g-center {
+      justify-content: center;
+    }
+
+    .#{$bp}\:g-left {
+      justify-content: left;
+    }
+
+    .#{$bp}\:g-right {
+      justify-content: right;
+    }
+  }
 }
 
 @for $i from 1 through 12 {
