@@ -3003,6 +3003,56 @@ textarea.f-input {
   margin-bottom: 0px;
 }
 
+.contact-bar {
+  background-color: #fafafa;
+  padding: 8px;
+}
+.contact-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 480px) {
+  .contact-bar .container {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+}
+.contact-bar img {
+  width: 20px;
+  height: 20px;
+}
+.contact-bar a {
+  color: black;
+}
+.contact-bar .contact-bar-left {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 4px;
+}
+.contact-bar .contact-bar-left a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-bar .contact-bar-right {
+  display: flex;
+  align-items: center;
+}
+.contact-bar .contact-bar-right a {
+  font-size: 0px;
+}
+.contact-bar .contact-bar-right img {
+  font-size: 12px;
+}
+.contact-bar .contact-bar-right .line {
+  width: 1px;
+  height: 16px;
+  background-color: black;
+  margin: 0px 12px;
+}
+
 .badge {
   position: relative;
   width: fit-content;

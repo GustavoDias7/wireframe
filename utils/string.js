@@ -29,4 +29,8 @@ function format(node, level) {
   return node;
 }
 
-export { isEmptyString, formatHTML };
+function removeAllNonNumericChars(str = "") {
+  return str.replace(/\D/g, "");
+}
+
+export { isEmptyString, formatHTML, removeAllNonNumericChars };

@@ -1,0 +1,53 @@
+.contact-bar {
+  background-color: $neutral-color-100;
+  padding: 8px;
+
+  .container {
+    @include flex-center-between;
+
+    @include sm {
+      flex-direction: column;
+      row-gap: 8px;
+    }
+  }
+
+  img {
+    $area: 20px;
+    width: $area;
+    height: $area;
+  }
+
+  a {
+    color: black;
+  }
+
+  .contact-bar-left {
+    @include flex-align-center;
+    column-gap: 16px;
+    row-gap: 4px;
+
+    a {
+      @include flex-align-center;
+      gap: 8px;
+    }
+  }
+
+  .contact-bar-right {
+    @include flex-align-center;
+
+    a {
+      font-size: 0px;
+    }
+
+    img {
+      font-size: 12px;
+    }
+
+    .line {
+      width: 1px;
+      height: 16px;
+      background-color: black;
+      margin: 0px 12px;
+    }
+  }
+}
