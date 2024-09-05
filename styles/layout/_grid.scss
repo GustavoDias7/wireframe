@@ -69,6 +69,26 @@
       }
     }
   }
+
+  &.g-wrap {
+    flex-wrap: wrap;
+  }
+
+  &.g-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  @each $bp, $vl in $breakpoints {
+    @media (min-width: $vl) {
+      &.#{$bp}\:g-wrap {
+        flex-wrap: wrap;
+      }
+
+      &.#{$bp}\:g-wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+    }
+  }
 }
 
 @for $i from 1 through 12 {
