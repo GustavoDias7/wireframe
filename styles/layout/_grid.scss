@@ -1,6 +1,8 @@
 .g-root {
-  &.g-hidden {
-    overflow: hidden;
+  overflow: hidden;
+
+  &.g-no-hidden {
+    overflow: unset;
   }
 }
 

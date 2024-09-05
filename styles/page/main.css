@@ -85,8 +85,11 @@ li {
     max-width: 1280px;
   }
 }
-.g-root.g-hidden {
+.g-root {
   overflow: hidden;
+}
+.g-root.g-no-hidden {
+  overflow: unset;
 }
 
 .g-row {
