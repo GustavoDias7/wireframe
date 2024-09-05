@@ -1,7 +1,8 @@
 import GridPrimary from "./Primary.html";
 import GridThreeItems from "./ThreeItems.html";
 import GridNoGap from "./NoGap.html";
-import GridAlign from "./Align.html";
+import GridHorizontalAlign from "./HorizontalAlign.html";
+import GridVerticalAlign from "./VerticalAlign.html";
 import GridAuto from "./Auto.html";
 import ejs from "../../../utils/ejs.min.js";
 
@@ -12,5 +13,6 @@ export default {
 export const Primary = () => ejs.render(GridPrimary);
 export const ThreeItems = () => ejs.render(GridThreeItems);
 export const NoGap = () => ejs.render(GridNoGap);
-export const Align = () => ejs.render(GridAlign);
+export const HorizontalAlign = () => ejs.render(GridHorizontalAlign);
+export const VerticalAlign = () => ejs.render(GridVerticalAlign);
 export const Auto = () => ejs.render(GridAuto);

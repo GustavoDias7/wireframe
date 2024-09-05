@@ -7,32 +7,66 @@
 .g-row {
   display: flex;
   flex-wrap: wrap;
-}
 
-.g-center {
-  justify-content: center;
-}
+  &.gx-center {
+    justify-content: center;
+  }
 
-.g-left {
-  justify-content: left;
-}
+  &.gx-left {
+    justify-content: left;
+  }
 
-.g-right {
-  justify-content: right;
-}
+  &.gx-right {
+    justify-content: right;
+  }
 
-@each $bp, $vl in $breakpoints {
-  @media (min-width: $vl) {
-    .#{$bp}\:g-center {
-      justify-content: center;
+  @each $bp, $vl in $breakpoints {
+    @media (min-width: $vl) {
+      &.#{$bp}\:gx-center {
+        justify-content: center;
+      }
+
+      &.#{$bp}\:gx-left {
+        justify-content: left;
+      }
+
+      &.#{$bp}\:gx-right {
+        justify-content: right;
+      }
     }
+  }
 
-    .#{$bp}\:g-left {
-      justify-content: left;
-    }
+  &.gy-center>[class*="g-item"] {
+    display: flex;
+    align-items: center;
+  }
 
-    .#{$bp}\:g-right {
-      justify-content: right;
+  &.gy-start>[class*="g-item"] {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &.gy-end>[class*="g-item"] {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  @each $bp, $vl in $breakpoints {
+    @media (min-width: $vl) {
+      &.#{$bp}\:gy-center>[class*="g-item"] {
+        display: flex;
+        align-items: center;
+      }
+
+      &.#{$bp}\:gy-start>[class*="g-item"] {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      &.#{$bp}\:gy-end>[class*="g-item"] {
+        display: flex;
+        align-items: flex-end;
+      }
     }
   }
 }
