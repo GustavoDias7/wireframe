@@ -3177,6 +3177,35 @@ textarea.f-input {
   color: #64748b;
 }
 
+.card.tertiary {
+  width: 100%;
+  max-width: 272px;
+  padding: 32px;
+  text-align: center;
+  color: #404040;
+  background-color: #fafafa;
+  box-shadow: 1px solid #64748b;
+  border-radius: 8px;
+}
+.card.tertiary .icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+.card.tertiary .title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.card.tertiary .gn-button {
+  margin-bottom: 16px;
+}
+.card.tertiary .subtitle {
+  margin-bottom: 16px;
+}
+.card.tertiary .link {
+  color: #64748b;
+}
+
 .topic.primary {
   display: flex;
   border: 1px solid #64748b;
