@@ -3889,12 +3889,20 @@ textarea.f-input {
   font-size: 0.875rem;
 }
 
+.list li {
+  margin-bottom: 16px;
+}
+@media (max-width: 480px) {
+  .list li {
+    margin-bottom: 8px;
+  }
+}
+
 .list.primary {
   padding-left: 20px;
 }
 .list.primary li {
   list-style: disc outside;
-  margin-bottom: 16px;
 }
 .list.primary li:last-child {
   margin-bottom: 0px;
@@ -3902,11 +3910,10 @@ textarea.f-input {
 
 .list.secondary li {
   padding-left: 24px;
-  margin-bottom: 16px;
   background-image: url("../../stories/assets/check.svg");
   background-repeat: no-repeat;
   background-size: 16px;
-  background-position: 0px 2px;
+  background-position: 0px 4px;
 }
 .list.secondary li:last-child {
   margin-bottom: 0px;
@@ -3917,7 +3924,6 @@ textarea.f-input {
 }
 .list.tertiary li {
   list-style: decimal outside;
-  margin-bottom: 16px;
 }
 .list.tertiary li:last-child {
   margin-bottom: 0px;
@@ -3928,7 +3934,6 @@ textarea.f-input {
 }
 .list.quarternary li {
   list-style: upper-alpha outside;
-  margin-bottom: 16px;
 }
 .list.quarternary li:last-child {
   margin-bottom: 0px;
@@ -5790,4 +5795,21 @@ textarea.f-input {
   .simple-cta .subtitle {
     margin-bottom: 20px;
   }
+}
+
+.about.primary img {
+  width: 100%;
+}
+
+.about.secondary .img {
+  display: block;
+  width: 100%;
+  min-height: 360px;
+  background-image: url("../../stories/assets/placeholder-2.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about.secondary .about-right {
+  padding: 32px;
 }
