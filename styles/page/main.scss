@@ -4,6 +4,7 @@
 @import "../utilities/mixins";
 @import "../base/container";
 @import "../layout/grid";
+@import "../components/typography";
 
 @import "../components/button";
 @import "../components/circle-button";
@@ -22,7 +23,6 @@
 @import "../components/card/tertiary";
 @import "../components/topic/primary";
 @import "../components/topic/secondary";
-@import "../components/typography";
 @import "../components/see-more";
 @import "../components/aspect-ratio";
 @import "../components/counter";

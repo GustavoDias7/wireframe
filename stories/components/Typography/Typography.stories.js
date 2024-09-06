@@ -1,6 +1,8 @@
-import Typography from "./Typography.html";
-import Responsive from "./Responsive.html";
+// import TypographyHTML from "./Typography.html";
 import ejs from "../../../utils/ejs.min.js";
+
+const TypographyHTML =
+  "<<%= tag %> class='<%= className %>'><%= textContent %></<%= tag %>>";
 
 const sizes = [
   "text-xs",
@@ -18,6 +20,22 @@ const sizes = [
   "text-9xl",
 ];
 
+const marginBottom = [
+  "text-mb-0",
+  "text-mb-1",
+  "text-mb-2",
+  "text-mb-3",
+  "text-mb-4",
+  "text-mb-5",
+  "text-mb-6",
+  "text-mb-7",
+  "text-mb-8",
+  "text-mb-9",
+  "text-mb-10",
+  "text-mb-11",
+  "text-mb-12",
+];
+
 export default {
   title: "Components/Typography",
   argTypes: {
@@ -28,7 +46,12 @@ export default {
     },
     tag: {
       control: "select",
-      options: ["p", "h1", "h2", "h3", "h4", "h5", "h6", "small"],
+      options: ["h1", "h2", "h3", "h4", "h5", "h6", "p", "span", "small"],
+    },
+    sm: {
+      control: "select",
+      options: ["null", ...sizes],
+      name: "sm:text-size",
     },
     md: {
       control: "select",
@@ -40,20 +63,92 @@ export default {
       options: ["null", ...sizes],
       name: "lg:text-size",
     },
+    color: {
+      control: "select",
+      options: [
+        "null",
+        "text-color-light",
+        "text-color-dark",
+        "text-color-primary",
+        "text-color-secondary",
+      ],
+    },
+    align: {
+      control: "select",
+      options: [
+        "null",
+        "text-align-center",
+        "text-align-left",
+        "text-align-right",
+      ],
+    },
+    marginBottom: {
+      control: "select",
+      options: ["null", ...marginBottom],
+    },
+    smMarginBottom: {
+      control: "select",
+      options: ["null", ...marginBottom],
+    },
+    mdMarginBottom: {
+      control: "select",
+      options: ["null", ...marginBottom],
+    },
   },
   args: {
-    textSize: "text-base",
     textContent: "My typography",
+    textSize: "text-base",
+    sm: "null",
     md: "null",
     lg: "null",
     tag: "p",
+    color: "null",
+    align: "null",
+    marginBottom: "null",
+    smMarginBottom: "null",
+    mdMarginBottom: "null",
+  },
+
+  render(args) {
+    const classes = [];
+    classes.push(args.textSize);
+    if (args.sm !== "null") classes.push(`sm:${args.sm}`);
+    if (args.md !== "null") classes.push(`md:${args.md}`);
+    if (args.lg !== "null") classes.push(`lg:${args.lg}`);
+    if (args.color !== "null") classes.push(args.color);
+    if (args.align !== "null") classes.push(args.align);
+    if (args.marginBottom !== "null") classes.push(args.marginBottom);
+    if (args.smMarginBottom !== "null") classes.push(args.smMarginBottom);
+    if (args.mdMarginBottom !== "null") classes.push(args.mdMarginBottom);
+    const className = classes.join(" ");
+    return ejs.render(TypographyHTML, { ...args, className });
   },
 };
 
-export const allTypography = () => {
-  return ejs.render(Typography);
+export const typography = {
+  args: {},
 };
-
-export const responsive = () => {
-  return ejs.render(Responsive);
+export const Title1 = {
+  args: {
+    textContent: "Lorem ipsum dolor sit.",
+    textSize: "text-3xl",
+    sm: "text-5xl",
+    md: "text-6xl",
+    tag: "h1",
+  },
+};
+export const Title2 = {
+  args: {
+    textContent: "Lorem ipsum dolor sit.",
+    textSize: "text-2xl",
+    sm: "text-3xl",
+    tag: "h2",
+  },
+};
+export const Title3 = {
+  args: {
+    textContent: "Lorem ipsum dolor sit.",
+    textSize: "text-xl",
+    tag: "h3",
+  },
 };
