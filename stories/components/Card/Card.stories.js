@@ -1,6 +1,7 @@
 import PrimaryHTML from "./Primary.html";
 import SecondaryHTML from "./Secondary.html";
 import TertiaryHTML from "./Tertiary.html";
+import QuaternaryHTML from "./Quaternary.html";
 import ejs from "../../../utils/ejs.min.js";
 import { currency } from "../../../utils/currency.js";
 
@@ -29,9 +30,6 @@ export const Secondary = {
     return ejs.render(SecondaryHTML, { ...args, price: currency(args.price) });
   },
 };
-export const Tertiary = {
-  args: {},
-  render: () => {
-    return ejs.render(TertiaryHTML, {});
-  },
-};
+
+export const Tertiary = () => TertiaryHTML;
+export const Quaternary = () => QuaternaryHTML;
