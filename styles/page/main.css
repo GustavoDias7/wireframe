@@ -4139,6 +4139,48 @@ textarea.f-input {
   }
 }
 
+.topic.tertiary {
+  display: flex;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
+  border-radius: 4px;
+  padding: 40px;
+  height: 100%;
+}
+.topic.tertiary .topic-left {
+  margin-right: 12px;
+}
+.topic.tertiary .topic-left .icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+.topic.tertiary .topic-right {
+  color: #262626;
+}
+@media (max-width: 768px) {
+  .topic.tertiary {
+    flex-direction: column;
+    padding: 32px;
+  }
+  .topic.tertiary .topic-left {
+    margin-right: 0px;
+    margin-bottom: 4px;
+  }
+  .topic.tertiary .topic-left .icon {
+    margin: 0px auto;
+  }
+}
+
+.topic.quaternary {
+  color: #262626;
+}
+.topic.quaternary .icon {
+  display: block;
+  margin: 0px auto 4px;
+  width: 64px;
+  height: 64px;
+}
+
 .see-more {
   width: 100%;
   max-width: 240px;
