@@ -17,7 +17,6 @@
 @import "../components/list";
 
 @import "../components/badge";
-@import "../components/box/primary";
 @import "../components/card/primary";
 @import "../components/card/secondary";
 @import "../components/card/tertiary";
@@ -35,15 +34,15 @@
 
 @import "../layouts/header/primary";
 @import "../layouts/header/secondary";
-@import "../layouts/footer/primary";
+@import "../layouts/footer";
 @import "../layouts/banner/primary";
 @import "../layouts/banner/secondary";
 @import "../layouts/banner/tertiary";
 @import "../layouts/section/primary";
 @import "../layouts/section/secondary";
-@import "../layouts/menu/primary";
-@import "../layouts/hero/primary";
-@import "../layouts/details/";
+@import "../layouts/menu";
+@import "../layouts/hero";
+@import "../layouts/details";
 @import "../layouts/cart";
 @import "../layouts/order-item";
 @import "../layouts/contact-bar";
