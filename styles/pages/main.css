@@ -3965,35 +3965,6 @@ textarea.f-input {
   transform: scale(1);
 }
 
-.box.primary {
-  width: 100%;
-  max-width: 272px;
-  padding: 32px;
-  text-align: center;
-  color: #404040;
-  background-color: #fafafa;
-  box-shadow: 1px solid #64748b;
-  border-radius: 8px;
-}
-.box.primary .icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 16px;
-}
-.box.primary .title {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-.box.primary .gn-button {
-  margin-bottom: 16px;
-}
-.box.primary .subtitle {
-  margin-bottom: 16px;
-}
-.box.primary .link {
-  color: #64748b;
-}
-
 .card.primary {
   width: 100%;
   max-width: 272px;
@@ -5357,13 +5328,18 @@ textarea.f-input {
 .menu {
   position: fixed;
   top: 0px;
-  right: 0px;
+  right: -320px;
+  z-index: 2;
   padding: 2rem;
   width: 100%;
   max-width: 320px;
   height: 100vh;
   background-color: #fafafa;
   box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.32);
+}
+.menu.active {
+  top: 0px;
+  right: 0px;
 }
 .menu .menu-button {
   position: absolute;
@@ -5390,14 +5366,6 @@ textarea.f-input {
   margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
-  .header nav {
-    display: none;
-  }
-  .header .menu-button {
-    display: block;
-  }
-}
 .hero {
   width: 100%;
   max-width: 480px;

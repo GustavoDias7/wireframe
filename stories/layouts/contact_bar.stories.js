@@ -28,6 +28,6 @@ export default {
   },
 };
 
-// export const contactBar = {
-//   args: {},
-// };
+export const contactBar = {
+  args: {},
+};

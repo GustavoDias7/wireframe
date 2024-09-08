@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "compile:scss": "sass -w --no-source-map ./styles/page/:./styles/page/",
+    "compile:scss": "sass -w --no-source-map ./styles/pages/:./styles/pages/",
     "watch:scss": "nodemon -e scss -x \"yarn compile:scss\"",
     "watch": "concurrently \"yarn watch:scss\" \"yarn storybook\""
   },

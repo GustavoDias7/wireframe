@@ -16,6 +16,6 @@ export default {
   },
 };
 
-// export const contacts = {
-//   args: {},
-// };
+export const contacts = {
+  args: {},
+};

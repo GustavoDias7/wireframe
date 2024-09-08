@@ -14,6 +14,6 @@ export default {
   },
 };
 
-// export const simpleCTA = {
-//   args: {},
-// };
+export const simpleCTA = {
+  args: {},
+};

@@ -1,12 +1,19 @@
 .menu {
+  $width: 320px;
   position: fixed;
   top: 0px;
-  right: 0px;
+  right: -$width;
+  z-index: 2;
   padding: 2rem;
-  @include max-width(320px);
+  @include max-width($width);
   height: 100vh;
   background-color: $neutral-color-50;
   box-shadow: $primary-box-shadow;
+
+  &.active {
+    top: 0px;
+    right: 0px;
+  }
 
   .menu-button {
     position: absolute;
@@ -28,18 +35,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
-}
-
-@include md {
-  .header {
-    nav {
-      display: none;
-    }
-
-    .menu-button {
-      display: block;
     }
   }
 }
