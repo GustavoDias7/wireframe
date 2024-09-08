@@ -1,0 +1,50 @@
+<section class="contact-bar">
+  <div class="container md:container">
+    <div class="contact-bar-left">
+      <% if (email) { %>
+        <a href="mailto:<%= email_address %>" target="_blank">
+          <img src="../../stories/assets/mail.svg" alt="E-mail">
+          <p><%= email_address %></p>
+        </a>
+      <% } %>
+      <% if (phone) { %>
+        <a href="tel:<%= phone_only_number %>" target="_blank">
+          <img src="../../stories/assets/phone.svg" alt="Telephone">
+          <p><%= phone_number %></p>
+        </a>
+      <% } %>
+    </div>
+
+    <div class="social-links">
+      <% if (whatsapp) { %>
+        <a href="<%= whatsapp_link %>" target="_blank" title="WhatsApp">
+          <img src="../../stories/assets/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <span class="line"></span>
+      <% } %>
+      <% if (facebook) { %>
+        <a href="<%= facebook_link %>" target="_blank" title="Facebook">
+          <img src="../../stories/assets/facebook.svg" alt="Facebook">
+        </a>
+        <span class="line"></span>
+      <% } %>
+      <% if (instagram) { %>
+        <a href="<%= instagram_link %>" target="_blank" title="Instagram">
+          <img src="../../stories/assets/instagram.svg" alt="Instagram">
+        </a>
+        <span class="line"></span>
+      <% } %>
+      <% if (linkedin) { %>
+      <a href="<%= linkedin_link %>" target="_blank" title="LinkedIn">
+        <img src="../../stories/assets/linkedin.svg" alt="LinkedIn">
+      </a>
+      <span class="line"></span>
+      <% } %>
+      <% if (x) { %>
+      <a href="<%= x_link %>" target="_blank" title="X">
+        <img src="../../stories/assets/x.svg" alt="X">
+      </a>
+      <% } %>
+    </div>
+  </div>
+</section>
