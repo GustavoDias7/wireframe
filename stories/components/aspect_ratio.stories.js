@@ -1,5 +1,6 @@
 import AspectRatioHTML from "../../templates/components/aspect_ratio.html";
-import ejs from "../../utils/ejs.min.js";
+import nunjucks from "nunjucks";
+nunjucks.configure({ autoescape: true });
 
 export default {
   title: "Components/AspectRatio",
@@ -30,8 +31,19 @@ export const AspectRatio = {
     aspect_ratio: "aspect-16-9",
     dimentions: "fit",
     image_tipes: "horizontal",
+    invert: false,
   },
   render: (args) => {
-    return ejs.render(AspectRatioHTML, { ...args });
+    const classes = ["aspect-ratio"];
+
+    classes.push(args.aspect_ratio);
+    if (args.invert) classes.push("invert");
+    classes.push(args.dimentions);
+    const className = classes.join(" ");
+
+    return nunjucks.renderString(AspectRatioHTML, {
+      image_tipes: args.image_tipes,
+      className,
+    });
   },
 };

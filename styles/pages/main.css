@@ -4204,14 +4204,26 @@ textarea.f-input {
 .aspect-ratio.aspect-3-2 {
   padding-top: 66.66%;
 }
+.aspect-ratio.aspect-3-2.invert {
+  padding-top: 150%;
+}
 .aspect-ratio.aspect-4-3 {
   padding-top: 75%;
+}
+.aspect-ratio.aspect-4-3.invert {
+  padding-top: 133.33%;
 }
 .aspect-ratio.aspect-8-5 {
   padding-top: 62.5%;
 }
+.aspect-ratio.aspect-8-5.invert {
+  padding-top: 160%;
+}
 .aspect-ratio.aspect-16-9 {
   padding-top: 56.25%;
+}
+.aspect-ratio.aspect-16-9.invert {
+  padding-top: 177.77%;
 }
 .aspect-ratio > * {
   position: absolute;
