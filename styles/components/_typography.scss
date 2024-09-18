@@ -141,7 +141,7 @@
 }
 
 .text-color-primary {
-  color: $sky-color-500;
+  color: $primary-color-500;
 }
 
 .text-color-secondary {
@@ -159,7 +159,7 @@
     }
 
     .#{$bp}\:text-color-primary {
-      color: $sky-color-600;
+      color: $primary-color-500;
     }
 
     .#{$bp}\:text-color-secondary {
