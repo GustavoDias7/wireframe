@@ -1,5 +1,6 @@
 import BadgeHTML from "../../templates/components/badge.html";
-import ejs from "../../utils/ejs.min.js";
+import nunjucks from "nunjucks";
+nunjucks.configure({ autoescape: true });
 
 export default {
   title: "Components/Badge",
@@ -11,7 +12,7 @@ export default {
     const classes = ["badge"];
     if (args.active) classes.push("active");
     const className = classes.join(" ");
-    return ejs.render(BadgeHTML, { ...args, className });
+    return nunjucks.renderString(BadgeHTML, { ...args, className });
   },
 };
 

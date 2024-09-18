@@ -1,5 +1,6 @@
 import Button from "../../templates/components/button.html";
-import ejs from "../../utils/ejs.min.js";
+import nunjucks from "nunjucks";
+nunjucks.configure({ autoescape: true });
 
 const breakpoints = ["null", "xs", "sm", "md", "lg", "xl"];
 
@@ -108,9 +109,9 @@ export default {
     }
 
     const className = classes.join(" ");
-    const disabled = args.disabled && args.tag !== "a" ? " disabled" : "";
+    const disabled = args.disabled && args.tag !== "a" ? "disabled" : "";
 
-    return ejs.render(Button, { ...args, className, disabled });
+    return nunjucks.renderString(Button, { ...args, className, disabled });
   },
 };
 

@@ -20,6 +20,7 @@
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-styling": "^1.0.6",
     "@storybook/builder-webpack4": "^6.5.16",
     "@storybook/html": "^6.5.16",
@@ -27,6 +28,9 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
     "nodemon": "^2.0.22",
+    "nunjucks": "^3.2.4",
+    "nunjucks-html-loader": "^1.1.0",
+    "nunjucks-loader": "^3.0.0",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
@@ -35,7 +39,7 @@
   "dependencies": {
     "concurrently": "^8.2.0",
     "ejs": "^3.1.9",
-    "node-sass": "^8.0.0",
+    "node-sass": "^9.0.0",
     "remove": "^0.1.5",
     "yup": "^1.2.0"
   }

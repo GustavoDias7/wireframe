@@ -101,7 +101,7 @@ $svg-dimention-large: $svg-dimention + 4px;
   border: $f-primary-border;
   transition: border $primary-transition;
   background-color: transparent;
-  border-color: $slate-color-500;
+  border-color: $primary-color-500;
 
   &:disabled {
     opacity: 0.4;
@@ -202,14 +202,14 @@ $svg-dimention-large: $svg-dimention + 4px;
     &::before {
       border-left: $f-primary-border;
       border-top-left-radius: $f-border-radius;
-      border-color: $slate-color-500;
+      border-color: $primary-color-500;
       width: $f-width-left;
     }
 
     &::after {
       border-right: $f-primary-border;
       border-top-right-radius: $f-border-radius;
-      border-color: $slate-color-500;
+      border-color: $primary-color-500;
       flex: 1;
     }
 
@@ -600,7 +600,7 @@ textarea.f-input {
       height: $f-input-height;
       border: $f-primary-border;
       border-left: none;
-      border-color: $slate-color-500;
+      border-color: $primary-color-500;
       transition: border $primary-transition, opacity $primary-transition;
       border-top-right-radius: $f-border-radius;
       border-bottom-right-radius: $f-border-radius;
@@ -612,13 +612,13 @@ textarea.f-input {
         height: $svg-dimention;
 
         path {
-          fill: $slate-color-500;
+          fill: $primary-color-500;
         }
       }
 
       &.color {
         border: none;
-        background-color: $slate-color-500;
+        background-color: $primary-color-500;
 
         svg {
           path {

@@ -1387,11 +1387,11 @@ li {
 }
 
 .text-color-primary {
-  color: #0284c7;
+  color: #0ea5e9;
 }
 
 .text-color-secondary {
-  color: #4f46e5;
+  color: #6366f1;
 }
 
 @media (min-width: 320px) {
@@ -1796,7 +1796,7 @@ li {
   font-size: 1rem;
   height: 48px;
   padding: 0px 20px;
-  color: #64748b;
+  color: #0ea5e9;
   cursor: pointer;
   border-radius: 32px;
   border: none;
@@ -1813,12 +1813,12 @@ li {
   cursor: not-allowed;
 }
 .gn-button.pm-button {
-  background-color: #64748b;
+  background-color: #0ea5e9;
   color: #fafafa;
 }
 .gn-button.sc-button {
   background-color: transparent;
-  border: 1px solid #64748b;
+  border: 1px solid #0ea5e9;
 }
 .gn-button.full {
   width: 100%;
@@ -2081,7 +2081,7 @@ li {
   cursor: not-allowed;
 }
 .circle-button.pm-button {
-  background-color: #64748b;
+  background-color: #0ea5e9;
   color: #fafafa;
 }
 .circle-button.sc-button {
@@ -2313,7 +2313,7 @@ li {
   border: 1px solid;
   transition: border 0.2s ease 0s;
   background-color: transparent;
-  border-color: #64748b;
+  border-color: #0ea5e9;
 }
 .f-input:disabled,
 .f-select:disabled {
@@ -2502,13 +2502,13 @@ li {
 .f-input.outline ~ .f-label::before {
   border-left: 1px solid;
   border-top-left-radius: 8px;
-  border-color: #64748b;
+  border-color: #0ea5e9;
   width: 11px;
 }
 .f-input.outline ~ .f-label::after {
   border-right: 1px solid;
   border-top-right-radius: 8px;
-  border-color: #64748b;
+  border-color: #0ea5e9;
   flex: 1;
 }
 .f-input.outline ~ .f-label span {
@@ -3489,7 +3489,7 @@ textarea.f-input {
   height: 48px;
   border: 1px solid;
   border-left: none;
-  border-color: #64748b;
+  border-color: #0ea5e9;
   transition: border 0.2s ease 0s, opacity 0.2s ease 0s;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -3501,11 +3501,11 @@ textarea.f-input {
   height: 16px;
 }
 .f-search .f-input ~ .f-search-btn svg path {
-  fill: #64748b;
+  fill: #0ea5e9;
 }
 .f-search .f-input ~ .f-search-btn.color {
   border: none;
-  background-color: #64748b;
+  background-color: #0ea5e9;
 }
 .f-search .f-input ~ .f-search-btn.color svg path {
   fill: #fafafa;
@@ -3715,7 +3715,7 @@ textarea.f-input {
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  border: 1px solid #64748b;
+  border: 1px solid #0ea5e9;
   margin-right: 10px;
 }
 .check .marker::before {
@@ -3731,7 +3731,7 @@ textarea.f-input {
   border-radius: 2px;
   transform: scale(0);
   transition: 0.2s ease-in-out;
-  background-color: #64748b;
+  background-color: #0ea5e9;
 }
 .check.radio .marker {
   border-radius: 16px;
@@ -3768,14 +3768,14 @@ textarea.f-input {
 }
 .accordion.primary {
   margin-bottom: 10px;
-  border: 2px solid #64748b;
+  border: 2px solid #0ea5e9;
 }
 .accordion.primary:last-child {
   margin-bottom: 0px;
 }
 .accordion.secondary {
   border: none;
-  border-bottom: 1px solid #64748b;
+  border-bottom: 1px solid #0ea5e9;
 }
 .accordion.secondary:last-child {
   border-bottom: none;
@@ -3801,7 +3801,7 @@ textarea.f-input {
   transition: 0.2s ease 0s;
 }
 .accordion.active .label h3, .accordion:focus .label h3, .accordion:hover .label h3 {
-  color: #64748b;
+  color: #0ea5e9;
 }
 .accordion.active .arrow {
   transform: rotate(-180deg);
@@ -3998,7 +3998,7 @@ textarea.f-input {
   margin-bottom: 16px;
 }
 .card.primary .link {
-  color: #64748b;
+  color: #0ea5e9;
 }
 
 .card.secondary {
@@ -4023,7 +4023,7 @@ textarea.f-input {
   margin-bottom: 4px;
 }
 .card.secondary .link {
-  color: #64748b;
+  color: #0ea5e9;
 }
 
 .card.tertiary {
@@ -4051,7 +4051,7 @@ textarea.f-input {
   margin-bottom: 16px;
 }
 .card.tertiary .link {
-  color: #64748b;
+  color: #0ea5e9;
 }
 
 .card.quaternary {
@@ -4944,7 +4944,7 @@ textarea.f-input {
 }
 .header.primary .logo {
   font-size: 1.75rem;
-  color: #64748b;
+  color: #0ea5e9;
 }
 
 .header.secondary {
@@ -4960,7 +4960,7 @@ textarea.f-input {
 }
 .header.secondary .logo {
   font-size: 1.75rem;
-  color: #64748b;
+  color: #0ea5e9;
 }
 .header.secondary nav {
   display: flex;
@@ -4969,7 +4969,7 @@ textarea.f-input {
   gap: 1rem;
 }
 .header.secondary nav .link {
-  color: #64748b;
+  color: #0ea5e9;
 }
 .header.secondary .menu-button {
   display: none;
@@ -4994,7 +4994,7 @@ textarea.f-input {
   }
 }
 .footer {
-  background-color: #64748b;
+  background-color: #0ea5e9;
 }
 .footer .container {
   padding: 20px 0px;
@@ -5034,13 +5034,13 @@ textarea.f-input {
 .primary-banner .left h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #64748b;
+  color: #0ea5e9;
   margin-bottom: 1rem;
 }
 .primary-banner .left p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #94a3b8;
+  color: #38bdf8;
   margin-bottom: 1.5rem;
 }
 .primary-banner .right img {
@@ -5102,13 +5102,13 @@ textarea.f-input {
 .secondary-banner .right h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #64748b;
+  color: #0ea5e9;
   margin-bottom: 1rem;
 }
 .secondary-banner .right p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #94a3b8;
+  color: #38bdf8;
   margin-bottom: 1.5rem;
 }
 
@@ -5168,13 +5168,13 @@ textarea.f-input {
 .tertiary-banner h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #64748b;
+  color: #0ea5e9;
   margin-bottom: 1rem;
 }
 .tertiary-banner p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #94a3b8;
+  color: #38bdf8;
   margin-bottom: 1.5rem;
 }
 .tertiary-banner .buttons {
@@ -5223,13 +5223,13 @@ textarea.f-input {
 .section.primary .left h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #64748b;
+  color: #0ea5e9;
   margin-bottom: 1rem;
 }
 .section.primary .left p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #94a3b8;
+  color: #38bdf8;
   margin-bottom: 1.5rem;
 }
 .section.primary .right img {
@@ -5289,13 +5289,13 @@ textarea.f-input {
 .section.secondary .right h2 {
   font-weight: 700;
   font-size: 4rem;
-  color: #64748b;
+  color: #0ea5e9;
   margin-bottom: 1rem;
 }
 .section.secondary .right p {
   font-size: 1.25rem;
   line-height: 2rem;
-  color: #94a3b8;
+  color: #38bdf8;
   margin-bottom: 1.5rem;
 }
 .section.secondary .left img {
@@ -5371,7 +5371,7 @@ textarea.f-input {
 .menu nav .link {
   display: block;
   width: fit-content;
-  color: #64748b;
+  color: #0ea5e9;
   margin-bottom: 1rem;
 }
 .menu nav .link:last-child {
@@ -5750,7 +5750,7 @@ textarea.f-input {
   padding: 40px 0;
 }
 .simple-cta.color {
-  background-color: #64748b;
+  background-color: #0ea5e9;
   color: #fafafa;
 }
 .simple-cta.color .gn-button {
@@ -5792,4 +5792,93 @@ textarea.f-input {
 }
 .about.secondary .about-right {
   padding: 32px;
+}
+
+.about.tertiary {
+  padding: 64px 0px;
+}
+.about.tertiary .img {
+  z-index: 1;
+  display: block;
+  margin-bottom: 64px;
+  width: 100%;
+  background-color: #f5f5f5;
+  background-image: url("../../stories/assets/placeholder-2.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about.tertiary .about-content {
+  position: relative;
+  z-index: 1;
+  left: -64px;
+  padding: 48px 32px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
+  background-color: #fafafa;
+}
+.about.tertiary .g-root {
+  position: relative;
+}
+.about.tertiary .about-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 224px;
+  height: 224px;
+  background-color: #0ea5e9;
+  border-radius: 224px;
+}
+.about.tertiary .about-rect {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
+  height: 224px;
+  width: calc(50% + 64px);
+  background-color: #0ea5e9;
+}
+@media (max-width: 768px) {
+  .about.tertiary {
+    padding: 32px 0px;
+  }
+  .about.tertiary .img {
+    margin-bottom: 32px;
+  }
+  .about.tertiary .about-content {
+    left: -32px;
+    padding: 24px 16px;
+  }
+  .about.tertiary .about-circle {
+    width: 150px;
+    height: 150px;
+  }
+  .about.tertiary .about-rect {
+    height: 150px;
+    width: calc(50% + 32px);
+  }
+}
+@media (max-width: 480px) {
+  .about.tertiary .img {
+    margin-bottom: unset;
+  }
+  .about.tertiary .about-content {
+    left: unset;
+    margin-right: 32px;
+    margin-bottom: 32px;
+  }
+  .about.tertiary .g-item-12.sm\:g-item-5 {
+    position: relative;
+  }
+  .about.tertiary .about-circle {
+    width: 100px;
+    height: 100px;
+    top: -8px;
+    right: 24px;
+  }
+  .about.tertiary .about-rect {
+    right: 24px;
+    bottom: 24px;
+    height: 100px;
+    width: calc(50% + 32px);
+  }
 }

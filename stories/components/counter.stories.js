@@ -37,7 +37,7 @@ export default {
   },
 };
 
-export const Default = {
+export const Counter = {
   args: {
     size: "default",
   },

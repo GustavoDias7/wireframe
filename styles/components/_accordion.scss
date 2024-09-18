@@ -12,7 +12,7 @@
 
   &.primary {
     margin-bottom: 10px;
-    border: 2px solid $slate-color-500;
+    border: 2px solid $primary-color-500;
 
     &:last-child {
       margin-bottom: 0px;
@@ -21,7 +21,7 @@
 
   &.secondary {
     border: none;
-    border-bottom: 1px solid $slate-color-500;
+    border-bottom: 1px solid $primary-color-500;
 
     &:last-child {
       border-bottom: none;
@@ -53,7 +53,7 @@
   &.active .label h3,
   &:focus .label h3,
   &:hover .label h3 {
-    color: $slate-color-500
+    color: $primary-color-500
   }
 
   &.active .arrow {
