@@ -1,6 +1,7 @@
 import PrimaryHTML from "../../templates/layouts/about/primary.html";
 import SecondaryHTML from "../../templates/layouts/about/secondary.html";
 import TertiaryHTML from "../../templates/layouts/about/tertiary.html";
+import QuaternaryHTML from "../../templates/layouts/about/quaternary.html";
 
 export default {
   title: "Layouts/About",
@@ -44,5 +45,16 @@ export const Tertiary = {
   },
   render(args) {
     return ejs.render(TertiaryHTML, args);
+  },
+};
+export const Quaternary = {
+  args: {
+    title: "Lorem",
+    subtitle:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, minus Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, minus Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, minus.",
+    button: "See more",
+  },
+  render(args) {
+    return ejs.render(QuaternaryHTML, args);
   },
 };
