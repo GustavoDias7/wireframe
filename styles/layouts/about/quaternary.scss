@@ -25,15 +25,5 @@
 
   @include md {
     padding: 32px 0px;
-
-    .img {}
-
-    .about-content {}
-  }
-
-  @include sm {
-    .img {}
-
-    .about-content {}
   }
 }
