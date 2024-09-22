@@ -2086,7 +2086,7 @@ li {
 }
 .circle-button.sc-button {
   background-color: transparent;
-  border: 1px solid #64748b;
+  border: 1px solid #0ea5e9;
 }
 .circle-button.left {
   margin: 0px auto 0px 0px;
@@ -3970,7 +3970,7 @@ textarea.f-input {
   max-width: 272px;
   color: #404040;
   background-color: #fafafa;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 6px 0px #a3a3a3;
 }
 .card.primary .img {
   position: relative;
@@ -4006,7 +4006,7 @@ textarea.f-input {
   max-width: 272px;
   color: #404040;
   background-color: #fafafa;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 6px 0px #a3a3a3;
 }
 .card.secondary a {
   font-size: 0;
@@ -4060,7 +4060,7 @@ textarea.f-input {
   padding: 32px;
   text-align: center;
   color: #404040;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 6px 0px #a3a3a3;
   border-radius: 8px;
 }
 .card.quaternary .icon {
@@ -4070,7 +4070,7 @@ textarea.f-input {
 
 .topic.primary {
   display: flex;
-  border: 1px solid #64748b;
+  border: 1px solid #0ea5e9;
   border-radius: 16px;
   padding: 16px;
 }
@@ -4130,7 +4130,7 @@ textarea.f-input {
 
 .topic.tertiary {
   display: flex;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 6px 0px #a3a3a3;
   border-radius: 4px;
   padding: 40px;
   height: 100%;
@@ -4935,7 +4935,7 @@ textarea.f-input {
 .header.primary {
   position: relative;
   background-color: #fafafa;
-  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 6px 0px #a3a3a3;
 }
 .header.primary .container {
   height: 64px;
@@ -4950,7 +4950,7 @@ textarea.f-input {
 .header.secondary {
   position: relative;
   background-color: #fafafa;
-  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 6px 0px #a3a3a3;
 }
 .header.secondary .container {
   height: 64px;
@@ -5347,7 +5347,7 @@ textarea.f-input {
   max-width: 320px;
   height: 100vh;
   background-color: #fafafa;
-  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 6px 0px #a3a3a3;
 }
 .menu.active {
   top: 0px;
@@ -5818,7 +5818,7 @@ textarea.f-input {
   z-index: 1;
   left: -64px;
   padding: 48px 32px;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 6px 0px #a3a3a3;
   background-color: #fafafa;
 }
 .about.tertiary .g-root {

@@ -1,6 +1,5 @@
-/* transition */
-/* border */
-/* box-shadow */
+@import "../themes/theme";
+
 p.example {
   display: flex;
   align-items: center;
@@ -14,7 +13,7 @@ p.example {
   position: relative;
 }
 
-[id*=layouts-grid] [class*=g-item] > div {
+[id*="layouts-grid"] [class*="g-item"]>div {
   font-size: 20px;
   text-align: center;
   display: block;
@@ -24,7 +23,7 @@ p.example {
   /* height: 100%; */
 }
 
-[class^=col] {
+[class^="col"] {
   font-size: 20px;
   text-align: center;
   display: block;
@@ -39,29 +38,30 @@ p.example {
   align-items: center;
   gap: 32px;
   flex-wrap: wrap;
-}
-.box-shadow > * {
-  width: 100px;
-  height: 100px;
-  border-radius: 4px;
+
+  >* {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+  }
 }
 
 .box-shadow-100 {
-  box-shadow: 0px 0px 4px 0px #a3a3a3;
+  box-shadow: $box-shadow-100;
 }
 
 .box-shadow-200 {
-  box-shadow: 0px 0px 6px 0px #a3a3a3;
+  box-shadow: $box-shadow-200;
 }
 
 .box-shadow-300 {
-  box-shadow: 0px 0px 10px 0px #a3a3a3;
+  box-shadow: $box-shadow-300;
 }
 
 .box-shadow-400 {
-  box-shadow: 0px 0px 16px 0px #a3a3a3;
+  box-shadow: $box-shadow-400;
 }
 
 .box-shadow-500 {
-  box-shadow: 0px 0px 20px 0px #a3a3a3;
+  box-shadow: $box-shadow-500;
 }
