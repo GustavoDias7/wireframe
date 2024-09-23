@@ -1,0 +1,12 @@
+.floating-link {
+  $area: 48px;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  @include square($area);
+  border-radius: 50px;
+  background-color: $primary-color-500;
+
+  @include background-image(pathImages("whatsapp-white.svg"));
+  background-size: $area / 1.8;
+}

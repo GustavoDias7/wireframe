@@ -4932,6 +4932,21 @@ textarea.f-input {
   margin: 0px 12px;
 }
 
+.floating-link {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  background-color: #0ea5e9;
+  background-image: url("../../stories/assets/whatsapp-white.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 26.6666666667px;
+}
+
 .header.primary {
   position: relative;
   background-color: #fafafa;
