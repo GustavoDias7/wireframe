@@ -4946,6 +4946,10 @@ textarea.f-input {
   background-repeat: no-repeat;
   background-size: 26.6666666667px;
 }
+.floating-link:focus, .floating-link:hover {
+  opacity: 1;
+  background-color: #7dd3fc;
+}
 
 .header.primary {
   position: relative;
