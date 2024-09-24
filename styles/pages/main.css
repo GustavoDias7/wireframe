@@ -5008,30 +5008,56 @@ textarea.f-input {
     display: block;
   }
 }
-.footer {
+.footer.primary {
   background-color: #0ea5e9;
 }
-.footer .container {
+.footer.primary .container {
   padding: 20px 0px;
 }
-.footer p {
+.footer.primary p {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: #fafafa;
 }
-
 @media (max-width: 768px) {
-  .footer .container {
+  .footer.primary .container {
     padding: 14px 0px;
   }
-  .footer p {
+  .footer.primary p {
     font-size: 14px;
     line-height: 20px;
     text-align: center;
     color: #fafafa;
   }
 }
+
+.footer.secondary {
+  background-color: #0ea5e9;
+  color: #fafafa;
+}
+.footer.secondary .container {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.footer.secondary .footer-top .line {
+  background-color: #ffffff;
+}
+.footer.secondary hr {
+  border: none;
+  border-bottom: 1px solid #fafafa;
+  margin: 32px 0px;
+}
+.footer.secondary .footer-bottom {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .footer.secondary .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
 .primary-banner {
   background-color: #fafafa;
 }
