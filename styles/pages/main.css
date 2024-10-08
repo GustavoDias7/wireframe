@@ -4002,28 +4002,60 @@ textarea.f-input {
 }
 
 .card.secondary {
+  position: relative;
   width: 100%;
   max-width: 272px;
   color: #404040;
   background-color: #fafafa;
   box-shadow: 0px 0px 6px 0px #a3a3a3;
 }
-.card.secondary a {
+.card.secondary > a {
   font-size: 0;
+}
+.card.secondary .cart-count {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  height: 24px;
+  line-height: 24px;
+  min-width: 24px;
+  font-size: 16px;
+  background-color: #0ea5e9;
+  color: #fafafa;
+  border: 1px solid #fafafa;
+  border-radius: 24px;
+  padding: 0px 6px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
+  text-align: center;
+}
+.card.secondary .cart-count.active {
+  opacity: 1;
+  transform: scale(1);
 }
 .card.secondary .description {
   padding: 16px;
 }
-.card.secondary .title {
-  font-weight: 400;
-  margin-bottom: 4px;
-}
-.card.secondary .subtitle,
 .card.secondary .price {
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-.card.secondary .link {
-  color: #0ea5e9;
+.card.secondary .price .discount {
+  user-select: none;
+  padding: 2px 4px;
+  color: #fafafa;
+  background-color: #0ea5e9;
+  border-radius: 4px;
+}
+.card.secondary .gn-button.sc-button {
+  margin-top: 8px;
 }
 
 .card.tertiary {

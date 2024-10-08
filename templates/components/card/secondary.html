@@ -1,18 +1,25 @@
 <article class="card secondary">
+  <p class="cart-count active">0</p>
   <a href="/">
     <figure class="aspect-ratio aspect-1-1 fit">
       <img src="../../../stories/assets/placeholder-1.svg" alt="Card Image">
     </figure>
   </a>
   <div class="description">
-    <h3 class="title text-lg">
-      <%= title %>
+    <h3 class="text-xl text-mb-1">
+      <a href="" class="text-color-primary">
+        {{title}}
+      </a>
     </h3>
-    <p class="price text-lg">
-      R$ <%= price %>
+    <p class="price text-lg text-mb-2">
+      {{fprice}}
+      {% if discount %}<span class="discount text-sm">{{fdiscount}}</span>{% endif %}
     </p>
     <button class="gn-button pm-button small full" type="button">
-      <%= linkLabel %>
+      {{link_label}}
+    </button>
+    <button class="gn-button sc-button small full" type="button">
+      Open cart
     </button>
   </div>
 </article>

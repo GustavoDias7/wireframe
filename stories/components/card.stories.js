@@ -4,6 +4,8 @@ import TertiaryHTML from "../../templates/components/card/tertiary.html";
 import QuaternaryHTML from "../../templates/components/card/quaternary.html";
 import ejs from "../../utils/ejs.min.js";
 import { currency } from "../../utils/currency.js";
+import nunjucks from "nunjucks";
+nunjucks.configure({ autoescape: true });
 
 export default {
   title: "Components/Card",
@@ -17,17 +19,25 @@ export const Primary = {
     linkLabel: "Buy now",
   },
   render: (args) => {
-    return ejs.render(PrimaryHTML, { ...args, price: currency(args.price) });
+    return nunjucks.renderString(PrimaryHTML, {
+      ...args,
+      price: currency(args.price),
+    });
   },
 };
 export const Secondary = {
   args: {
     title: "Card Title",
     price: 1550,
-    linkLabel: "Add to cart",
+    discount: 0.1,
+    link_label: "Add to cart",
   },
   render: (args) => {
-    return ejs.render(SecondaryHTML, { ...args, price: currency(args.price) });
+    return nunjucks.renderString(SecondaryHTML, {
+      ...args,
+      fprice: `R$ ${currency(args.price - args.price * args.discount)}`,
+      fdiscount: `-${args.discount * 100}%`,
+    });
   },
 };
 
