@@ -2,7 +2,6 @@ import PrimaryHTML from "../../templates/components/card/primary.html";
 import SecondaryHTML from "../../templates/components/card/secondary.html";
 import TertiaryHTML from "../../templates/components/card/tertiary.html";
 import QuaternaryHTML from "../../templates/components/card/quaternary.html";
-import ejs from "../../utils/ejs.min.js";
 import { currency } from "../../utils/currency.js";
 import nunjucks from "nunjucks";
 nunjucks.configure({ autoescape: true });

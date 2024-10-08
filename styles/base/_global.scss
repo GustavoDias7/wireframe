@@ -7,6 +7,7 @@
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $neutral-color-800;
 }
 
 body,
@@ -27,6 +28,7 @@ button {
   &:hover {
     opacity: 0.6;
   }
+
   &:disabled {
     opacity: 0.4;
   }
