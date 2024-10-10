@@ -4746,13 +4746,14 @@ textarea.f-input {
 
 .modal {
   position: fixed;
+  z-index: 3;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   opacity: 0;
   pointer-events: none;
-  transition: 0.2s ease 0s;
+  transition: opacity 0.2s ease 0s;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .modal.active {
@@ -4802,19 +4803,21 @@ textarea.f-input {
   transition: 0.2s ease 0s;
 }
 .modal.secondary .modal-content {
+  position: absolute;
+  top: 0px;
+  right: -480px;
+  transform: translateX(0);
+  transition: transform 0.5s ease 0s;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 480px;
-  margin-right: -100%;
-  margin-left: auto;
   height: 100vh;
   padding: 20px;
   background-color: #fafafa;
-  transition: margin-right 0.2s ease 0s;
 }
 .modal.secondary.active .modal-content {
-  margin-right: 0px;
+  transform: translateX(-480px);
 }
 .modal.secondary .modal-header {
   display: flex;
@@ -4835,7 +4838,7 @@ textarea.f-input {
 }
 .modal.secondary .modal-header .modal-close:hover, .modal.secondary .modal-header .modal-close:focus {
   opacity: 0.6;
-  transition: 0.2s ease 0s;
+  transition: opacity 0.2s ease 0s;
 }
 .modal.secondary .modal-body {
   overflow-y: auto;
@@ -5809,50 +5812,41 @@ textarea.f-input {
   height: 20px;
 }
 
-.contacts .title {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 24px;
-}
-.contacts .subtitle {
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 32px;
-}
 .contacts .contact-item {
   text-align: center;
   padding: 32px;
 }
 .contacts .contact-item.dividers {
-  border-right: 2px solid rgba(73, 78, 92, 0.2);
-  border-left: 2px solid rgba(73, 78, 92, 0.2);
+  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
 }
 .contacts .contact-item .icon {
   width: 40px;
   height: 40px;
   margin-bottom: 8px;
 }
+.contacts .contact-item a {
+  text-decoration: underline;
+  font-style: italic;
+  color: #404040;
+}
+.contacts .map {
+  margin-top: 32px;
+  background-color: #fafafa;
+}
 .contacts .map iframe {
   width: 100%;
   height: 312px;
-  margin-top: 32px;
+  box-shadow: 0px 0px 10px 0px #a3a3a3;
 }
 @media (max-width: 767px) {
-  .contacts .title {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
-  }
-  .contacts .subtitle {
-    margin-bottom: 20px;
-  }
   .contacts .contact-item {
     padding: 16px;
   }
   .contacts .contact-item.dividers {
     border: none;
   }
-  .contacts .map iframe {
+  .contacts .map {
     margin-top: 20px;
   }
 }

@@ -1,5 +1,6 @@
 import ContactsHTML from "../../templates/layouts/contacts.html";
-import ejs from "../../utils/ejs.min.js";
+import nunjucks from "nunjucks";
+nunjucks.configure({ autoescape: true });
 
 export default {
   title: "Layouts/Contacts",
@@ -12,7 +13,7 @@ export default {
     email_subtitle: "email@email.com",
   },
   render(args) {
-    return ejs.render(ContactsHTML, { ...args });
+    return nunjucks.renderString(ContactsHTML, { ...args });
   },
 };
 
