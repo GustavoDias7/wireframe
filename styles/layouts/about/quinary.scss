@@ -1,5 +1,5 @@
 .about.quinary {
-  padding: 64px 0px;
+  padding: 32px 0px;
 
   .img {
     display: block;
@@ -10,15 +10,15 @@
 
   .about-content {
     .about-title {
-      background-color: $primary-color-500;
-      @include max-width(350px);
-      padding: 64px 24px;
+      @include max-width(220px);
+      padding: 32px 16px;
       color: $neutral-color-50;
+      background-color: $primary-color-500;
     }
 
     .about-subtext {
-      padding-top: 40px;
-      padding-left: 32px;
+      padding-top: 24px;
+      padding-left: 20px;
       text-align: justify;
 
       p:nth-of-type(1) {
@@ -26,23 +26,7 @@
       }
 
       p:nth-of-type(2) {
-        max-width: 280px;
-      }
-    }
-  }
-
-  @include md {
-    padding: 32px 0px;
-
-    .about-content {
-      .about-title {
-        @include max-width(220px);
-        padding: 32px 16px;
-      }
-
-      .about-subtext {
-        padding-top: 32px;
-        padding-left: 24px;
+        max-width: 250px;
       }
     }
   }
@@ -50,12 +34,28 @@
   @include sm {
     .about-content {
       .about-subtext {
-        padding-top: 24px;
-        padding-left: 20px;
+        padding-top: 32px;
+        padding-left: 24px;
+      }
+    }
+  }
 
-        p:nth-of-type(2) {
-          max-width: 250px;
-        }
+  @include md {
+    padding: 64px 0px;
+
+    .about-content {
+      .about-title {
+        @include max-width(350px);
+        padding: 64px 24px;
+      }
+
+      .about-subtext {
+        padding-top: 40px;
+        padding-left: 32px;
+      }
+
+      p:nth-of-type(2) {
+        max-width: 280px;
       }
     }
   }

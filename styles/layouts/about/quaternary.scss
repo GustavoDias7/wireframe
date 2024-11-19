@@ -1,5 +1,5 @@
 .about.quaternary {
-  padding: 64px 0px;
+  padding: 32px 0px;
 
   .img {
     display: block;
@@ -24,6 +24,6 @@
   }
 
   @include md {
-    padding: 32px 0px;
+    padding: 64px 0px;
   }
 }
