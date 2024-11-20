@@ -4,18 +4,17 @@
   box-shadow: $box-shadow-200;
 
   .container {
-    height: 64px;
+    height: 48px;
     @include flex-center-between;
   }
 
   .logo {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: $primary-color-500;
   }
 
   nav {
-    @include flex-center-center;
-    gap: 1rem;
+    display: none;
 
     .link {
       color: $primary-color-500;
@@ -23,22 +22,28 @@
   }
 
   .menu-button {
-    display: none;
     font-size: 0px;
     @include reset-button;
     @include square(20px);
     @include background-image(pathImages("menu.svg"));
   }
-}
 
-@include md {
-  .header.secondary {
+  @include md {
+    .container {
+      height: 64px;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+    }
+
     nav {
-      display: none;
+      @include flex-center-center;
+      gap: 1rem;
     }
 
     .menu-button {
-      display: block;
+      display: none;
     }
   }
 }

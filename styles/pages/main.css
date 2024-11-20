@@ -5070,13 +5070,31 @@ textarea.f-input {
   box-shadow: 0px 0px 6px 0px #a3a3a3;
 }
 .header.primary .container {
-  height: 64px;
+  height: 48px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .header.primary .logo {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #0ea5e9;
+}
+@media (min-width: 768px) {
+  .header.primary .container {
+    height: 64px;
+  }
+  .header.primary .logo {
+    font-size: 1.75rem;
+  }
+  .header.primary nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .header.primary .menu-button {
+    display: none;
+  }
 }
 
 .header.secondary {
@@ -5085,26 +5103,22 @@ textarea.f-input {
   box-shadow: 0px 0px 6px 0px #a3a3a3;
 }
 .header.secondary .container {
-  height: 64px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .header.secondary .logo {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #0ea5e9;
 }
 .header.secondary nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  display: none;
 }
 .header.secondary nav .link {
   color: #0ea5e9;
 }
 .header.secondary .menu-button {
-  display: none;
   font-size: 0px;
   background-color: transparent;
   border: none;
@@ -5116,15 +5130,24 @@ textarea.f-input {
   background-position: center;
   background-repeat: no-repeat;
 }
-
 @media (min-width: 768px) {
+  .header.secondary .container {
+    height: 64px;
+  }
+  .header.secondary .logo {
+    font-size: 1.75rem;
+  }
   .header.secondary nav {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
   .header.secondary .menu-button {
-    display: block;
+    display: none;
   }
 }
+
 .footer.primary {
   background-color: #075985;
   color: #fafafa;
