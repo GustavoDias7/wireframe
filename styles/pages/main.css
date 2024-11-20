@@ -5126,52 +5126,42 @@ textarea.f-input {
   }
 }
 .footer.primary {
-  background-color: #0ea5e9;
+  background-color: #075985;
+  color: #fafafa;
 }
 .footer.primary .container {
-  padding: 20px 0px;
-}
-.footer.primary p {
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: #fafafa;
+  padding: 16px 0px;
 }
 @media (min-width: 768px) {
   .footer.primary .container {
-    padding: 14px 0px;
-  }
-  .footer.primary p {
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    color: #fafafa;
+    padding: 20px 0px;
   }
 }
 
 .footer.secondary {
-  background-color: #0ea5e9;
+  background-color: #075985;
   color: #fafafa;
 }
 .footer.secondary .container {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .footer.secondary .footer-top .line {
-  background-color: #ffffff;
+  background-color: #fafafa;
+}
+.footer.secondary .footer-top a {
+  text-decoration: underline;
+  color: #fafafa;
 }
 .footer.secondary hr {
   border: none;
   border-bottom: 1px solid #fafafa;
   margin: 32px 0px;
 }
-.footer.secondary .footer-bottom {
-  text-align: center;
-}
 @media (min-width: 768px) {
   .footer.secondary .container {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
 
