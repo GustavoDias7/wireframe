@@ -2,20 +2,35 @@
   @include flex-align-center;
 
   a {
-    font-size: 0px;
+    @include flex-align-center;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 16px;
+      background-color: $primary-color-500;
+      margin: 0px 8px;
+    }
+
+    &:last-of-type::after {
+      display: none;
+    }
   }
 
   img {
-    $area: 20px;
-    width: $area;
-    height: $area;
+    @include square(20px);
     font-size: 12px;
-  }
+    transition: 0.3s;
 
-  .line {
-    width: 1px;
-    height: 16px;
-    background-color: black;
-    margin: 0px 12px;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 }
