@@ -5264,20 +5264,6 @@ textarea.f-input {
   margin-bottom: 0;
 }
 
-.hero {
-  width: 100%;
-  max-width: 480px;
-}
-.hero .title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-.hero .subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 16px;
-}
-
 .details.primary .gn-button {
   margin-top: 1rem;
 }
@@ -5386,24 +5372,22 @@ textarea.f-input {
 
 .order-item {
   display: flex;
-  padding: 24px;
-  background-color: #EFEFEF;
+  padding: 16px;
+  gap: 8px;
+  background-color: #e5e5e5;
   border-radius: 8px;
 }
 .order-item .img {
-  min-width: 64px;
-  margin-right: 16px;
+  min-width: 48px;
 }
 .order-item .img a {
   font-size: 0;
 }
 .order-item .img .aspect-ratio {
-  border-radius: 8px;
+  border-radius: 4px;
 }
-.order-item .order-item-info {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
+.order-item .order-item-info .order-item-info-left {
+  margin-bottom: 8px;
 }
 .order-item .order-item-info .order-item-info-left h3,
 .order-item .order-item-info .order-item-info-left p {
@@ -5412,14 +5396,6 @@ textarea.f-input {
 .order-item .order-item-info .order-item-info-left h3:last-child,
 .order-item .order-item-info .order-item-info-left p:last-child {
   margin-bottom: 0px;
-}
-.order-item .order-item-info .order-item-info-left h3 {
-  width: 100%;
-  max-width: 240px;
-  font-size: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .order-item .order-item-info .order-item-info-left p .wating {
   color: #F8BD00;
@@ -5436,41 +5412,45 @@ textarea.f-input {
 .order-item .order-item-info .order-item-info-left p .canceled {
   color: #C51800;
 }
-.order-item .order-item-info .order-item-info-right {
-  text-align: right;
-}
 .order-item .order-item-info .order-item-info-right p {
   margin-bottom: 8px;
 }
 .order-item .order-item-info .order-item-info-right p:last-child {
   margin-bottom: 0px;
 }
-@media (min-width: 480px) {
+@media (min-width: 360px) {
   .order-item {
     padding: 20px;
   }
+}
+@media (min-width: 480px) {
+  .order-item {
+    padding: 24px;
+    gap: 16px;
+  }
   .order-item .img {
-    margin-right: 8px;
+    min-width: 64px;
+  }
+  .order-item .img .aspect-ratio {
+    border-radius: 8px;
   }
   .order-item .order-item-info {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
   }
   .order-item .order-item-info .order-item-info-left {
-    margin-bottom: 8px;
+    margin-bottom: 0px;
   }
   .order-item .order-item-info .order-item-info-left h3 {
-    font-size: 18px;
-    width: auto;
-    max-width: unset;
-    white-space: unset;
+    width: 100%;
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .order-item .order-item-info .order-item-info-right {
-    text-align-last: left;
-  }
-}
-@media (min-width: 360px) {
-  .order-item {
-    padding: 16px;
+    text-align: right;
   }
 }
 
