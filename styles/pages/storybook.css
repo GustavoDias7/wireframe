@@ -14,7 +14,7 @@ p.example {
   position: relative;
 }
 
-[id*=layouts-grid] [class*=g-item] > div {
+[id*="layouts-grid"] [class*="g-item"] > div {
   font-size: 20px;
   text-align: center;
   display: block;
@@ -24,7 +24,7 @@ p.example {
   /* height: 100%; */
 }
 
-[class^=col] {
+[class^="col"] {
   font-size: 20px;
   text-align: center;
   display: block;
@@ -41,6 +41,10 @@ p.example {
   flex-wrap: wrap;
 }
 .box-shadow > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
   width: 100px;
   height: 100px;
   border-radius: 4px;

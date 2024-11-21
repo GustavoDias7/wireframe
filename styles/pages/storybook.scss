@@ -40,6 +40,9 @@ p.example {
   flex-wrap: wrap;
 
   >* {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
     width: 100px;
     height: 100px;
     border-radius: 4px;
