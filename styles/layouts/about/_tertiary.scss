@@ -6,7 +6,7 @@
     display: block;
     width: 100%;
     background-color: $neutral-color-100;
-    @include background-image(pathImages("placeholder-2.svg"));
+    @include background-image("placeholder-2.svg");
   }
 
   .about-content {

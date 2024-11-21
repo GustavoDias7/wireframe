@@ -9,7 +9,7 @@
   border-radius: 50px;
   background-color: $primary-color-500;
 
-  @include background-image(pathImages("whatsapp-white.svg"));
+  @include background-image("whatsapp-white.svg");
   background-size: math.div($area, 1.8);
 
   &:focus,

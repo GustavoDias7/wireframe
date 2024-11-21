@@ -40,7 +40,7 @@
       flex-shrink: 0;
       @include reset-button;
       @include square(24px);
-      @include background-image(pathImages("circle-close.svg"));
+      @include background-image("circle-close.svg");
     }
 
     @include sm {

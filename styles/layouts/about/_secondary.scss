@@ -3,7 +3,7 @@
     display: block;
     width: 100%;
     min-height: 360px;
-    @include background-image(pathImages("placeholder-2.svg"));
+    @include background-image("placeholder-2.svg");
   }
 
   .about-right {

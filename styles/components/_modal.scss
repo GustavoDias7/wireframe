@@ -42,7 +42,7 @@
       cursor: pointer;
       border: none;
       background-color: $transparent-color;
-      @include background-image(pathImages("close.svg"));
+      @include background-image("close.svg");
 
       &:hover,
       &:focus {
@@ -86,7 +86,7 @@
         cursor: pointer;
         border: none;
         background-color: $transparent-color;
-        @include background-image(pathImages("close.svg"));
+        @include background-image("close.svg");
 
         &:hover,
         &:focus {
@@ -166,7 +166,7 @@
       .delete {
         @include reset-button;
         @include square(24px);
-        @include background-image(pathImages("circle-close.svg"));
+        @include background-image("circle-close.svg");
         flex-shrink: 0;
       }
     }
