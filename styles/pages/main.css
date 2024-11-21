@@ -5518,7 +5518,7 @@ textarea.f-input {
 
 .contact-bar {
   background-color: #f0f9ff;
-  padding: 8px;
+  padding: 8px 0px;
 }
 .contact-bar .container {
   display: flex;
@@ -5552,12 +5552,8 @@ textarea.f-input {
 }
 
 .contacts .contact-item {
+  padding: 16px;
   text-align: center;
-  padding: 32px;
-}
-.contacts .contact-item.dividers {
-  border-right: 2px solid #e5e5e5;
-  border-left: 2px solid #e5e5e5;
 }
 .contacts .contact-item .icon {
   width: 40px;
@@ -5570,7 +5566,7 @@ textarea.f-input {
   color: #404040;
 }
 .contacts .map {
-  margin-top: 32px;
+  margin-top: 20px;
   background-color: #fafafa;
 }
 .contacts .map iframe {
@@ -5580,13 +5576,14 @@ textarea.f-input {
 }
 @media (min-width: 768px) {
   .contacts .contact-item {
-    padding: 16px;
+    padding: 32px;
   }
   .contacts .contact-item.dividers {
-    border: none;
+    border-right: 2px solid #d4d4d4;
+    border-left: 2px solid #d4d4d4;
   }
   .contacts .map {
-    margin-top: 20px;
+    margin-top: 32px;
   }
 }
 
