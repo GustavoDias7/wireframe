@@ -1,0 +1,76 @@
+<header class="{{headerClassName}}">
+  <div class="{{containerClassName}}">
+    <div>
+      <a class="logo" href="/">
+        {% if logo_image %}
+        <img src="../../stories/assets/logo.svg" alt="Logo">
+        {% else %}
+        Logo
+        {% endif %}
+      </a>
+    </div>
+    {% if not only_logo %}
+    <div class="header-right">
+      <nav>
+        <a class="link" href="#home">Home</a>
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#products">Products</a>
+        <a class="link" href="#faq">FAQ</a>
+        <a class="link" href="#contacts">Contacts</a>
+      </nav>
+
+      {% if social_links %}
+      <div class="social-links">
+        {% if color %}
+        <a href="https://wa.me/552199999999" target="_blank" title="WhatsApp">
+          <img src="../../stories/assets/whatsapp-white.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+          <img src="../../stories/assets/instagram-white.svg" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn">
+          <img src="../../stories/assets/linkedin-white.svg" alt="LinkedIn">
+        </a>
+        {% else %}
+        <a href="https://wa.me/552199999999" target="_blank" title="WhatsApp">
+          <img src="../../stories/assets/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+          <img src="../../stories/assets/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn">
+          <img src="../../stories/assets/linkedin.svg" alt="LinkedIn">
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if cart %}
+      <a class="" href="/">
+        <span class="badge active">
+          <p class="badge-item">3</p>
+          {% if color %}
+          <img src="../../stories/assets/shopping-cart-white.svg" alt="Carrinho">
+          {% else %}
+          <img src="../../stories/assets/shopping-cart.svg" alt="Carrinho">
+          {% endif %}
+        </span>
+      </a>
+      {% endif %}
+
+      {% if button1 and button2 %}
+      <div class="buttons">
+        <a class="gn-button pm-button small" href="/">Buy now</a>
+        <a class="gn-button sc-button small" href="/">Buy now</a>
+      </div>
+      {% elif button1 %}
+      <a class="gn-button pm-button small" href="/">Buy now</a>
+      {% elif button2 %}
+      <a class="gn-button sc-button small" href="/">Buy now</a>
+      {% endif %}
+
+      <button class="menu-button">Open menu</button>
+    </div>
+    {% endif %}
+  </div>
+</header>
