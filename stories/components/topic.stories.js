@@ -2,13 +2,16 @@ import PrimaryHTML from "../../templates/components/topic/primary.html";
 import SecondaryHTML from "../../templates/components/topic/secondary.html";
 import TertiaryHTML from "../../templates/components/topic/tertiary.html";
 import QuaternaryHTML from "../../templates/components/topic/quaternary.html";
-import ejs from "../../utils/ejs.min.js";
+import OrderHTML from "../../templates/components/topic/order.html";
+import nunjucks from "nunjucks";
+nunjucks.configure({ autoescape: true });
 
 export default {
   title: "Components/Topic",
 };
 
-export const Primary = () => ejs.render(PrimaryHTML);
-export const Secondary = () => ejs.render(SecondaryHTML);
-export const Tertiary = () => ejs.render(TertiaryHTML);
-export const Quaternary = () => ejs.render(QuaternaryHTML);
+export const Primary = () => nunjucks.renderString(PrimaryHTML);
+export const Secondary = () => nunjucks.renderString(SecondaryHTML);
+export const Tertiary = () => nunjucks.renderString(TertiaryHTML);
+export const Quaternary = () => nunjucks.renderString(QuaternaryHTML);
+export const Order = () => nunjucks.renderString(OrderHTML);

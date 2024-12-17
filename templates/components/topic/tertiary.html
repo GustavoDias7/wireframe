@@ -1,18 +1,18 @@
 <div class="g-root g-no-hidden g-gap-4">
   <div class="g-row">
-    <% for (let i=0; i < 4; i++) { %>
-      <div class="g-item-12 sm:g-item-6">
-        <article class="topic tertiary">
-          <div class="topic-left">
-            <img class="icon" src="../../../stories/assets/icon-placeholder.svg" alt="Icon">
-          </div>
-          <div class="topic-right">
-            <h3 class="text-xl text-mb-1 text-align-center md:text-align-left">Lorem, ipsum dolor.</h3>
-            <p class="text-sm text-align-center md:text-align-left">Lorem ipsum dolor sit amet consectetur adipisicing.
-            </p>
-          </div>
-        </article>
-      </div>
-      <% } %>
+    {% for item in [1,2,3,4] %}
+    <div class="g-item-12 sm:g-item-6">
+      <article class="topic tertiary">
+        <div class="topic-left">
+          <img class="icon" src="../../../stories/assets/icon-placeholder.svg" alt="Icon">
+        </div>
+        <div class="topic-right">
+          <h3 class="text-xl text-mb-1 text-align-center md:text-align-left">Lorem, ipsum dolor.</h3>
+          <p class="text-sm text-align-center md:text-align-left">Lorem ipsum dolor sit amet consectetur adipisicing.
+          </p>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
   </div>
 </div>
