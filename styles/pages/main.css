@@ -1798,7 +1798,7 @@ li {
   padding: 0px 20px;
   color: #0ea5e9;
   cursor: pointer;
-  border-radius: 32px;
+  border-radius: 4px;
   border: none;
   outline: none;
   background-color: #fafafa;
@@ -1858,6 +1858,15 @@ li {
   height: 60px;
   padding: 0px 24px;
 }
+.gn-button.circular {
+  border-radius: 99px;
+}
+.gn-button.sharp {
+  border-radius: 0px;
+}
+.gn-button.rounded {
+  border-radius: 4px;
+}
 @media (min-width: 360px) {
   .gn-button.xs\:full {
     width: 100%;
@@ -1896,6 +1905,15 @@ li {
     font-size: 1.25rem;
     height: 60px;
     padding: 0px 24px;
+  }
+  .gn-button.xs\:circular {
+    border-radius: 99px;
+  }
+  .gn-button.xs\:sharp {
+    border-radius: 0px;
+  }
+  .gn-button.xs\:rounded {
+    border-radius: 4px;
   }
 }
 @media (min-width: 480px) {
@@ -1937,6 +1955,15 @@ li {
     height: 60px;
     padding: 0px 24px;
   }
+  .gn-button.sm\:circular {
+    border-radius: 99px;
+  }
+  .gn-button.sm\:sharp {
+    border-radius: 0px;
+  }
+  .gn-button.sm\:rounded {
+    border-radius: 4px;
+  }
 }
 @media (min-width: 768px) {
   .gn-button.md\:full {
@@ -1976,6 +2003,15 @@ li {
     font-size: 1.25rem;
     height: 60px;
     padding: 0px 24px;
+  }
+  .gn-button.md\:circular {
+    border-radius: 99px;
+  }
+  .gn-button.md\:sharp {
+    border-radius: 0px;
+  }
+  .gn-button.md\:rounded {
+    border-radius: 4px;
   }
 }
 @media (min-width: 1024px) {
@@ -2017,6 +2053,15 @@ li {
     height: 60px;
     padding: 0px 24px;
   }
+  .gn-button.lg\:circular {
+    border-radius: 99px;
+  }
+  .gn-button.lg\:sharp {
+    border-radius: 0px;
+  }
+  .gn-button.lg\:rounded {
+    border-radius: 4px;
+  }
 }
 @media (min-width: 1280px) {
   .gn-button.xl\:full {
@@ -2056,6 +2101,15 @@ li {
     font-size: 1.25rem;
     height: 60px;
     padding: 0px 24px;
+  }
+  .gn-button.xl\:circular {
+    border-radius: 99px;
+  }
+  .gn-button.xl\:sharp {
+    border-radius: 0px;
+  }
+  .gn-button.xl\:rounded {
+    border-radius: 4px;
   }
 }
 

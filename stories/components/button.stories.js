@@ -39,6 +39,14 @@ export default {
       control: "select",
       options: [...breakpoints],
     },
+    border: {
+      control: "select",
+      options: ["default", "circular", "sharp", "rounded"],
+    },
+    responsive_border: {
+      control: "select",
+      options: [...breakpoints],
+    },
     weight: {
       control: "select",
       options: ["default", "normal", "bold"],
@@ -68,6 +76,8 @@ export default {
     responsive_width: "null",
     align: "default",
     responsive_align: "null",
+    border: "default",
+    responsive_border: "null",
     weight: "default",
     responsive_weight: "null",
     size: "default",
@@ -91,6 +101,13 @@ export default {
         classes.push(`${args.responsive_align}:${args.align}`);
       } else {
         classes.push(args.align);
+      }
+    }
+    if (args.border !== "default") {
+      if (args.responsive_border !== "null") {
+        classes.push(`${args.responsive_border}:${args.border}`);
+      } else {
+        classes.push(args.border);
       }
     }
     if (args.weight !== "default") {
