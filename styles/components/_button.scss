@@ -1,6 +1,6 @@
 .gn-button {
-  $height: 48px;
-  $padding: 20px;
+  $height: 40px;
+  $padding: 16px;
   @include flex-center-center;
   width: fit-content;
   font-size: 1rem;
@@ -35,6 +35,17 @@
     border: 1px solid $primary-color-500;
   }
 
+  &.tt-button {
+    background-color: $neutral-color-50;
+    color: $primary-color-500;
+  }
+
+  &.qt-button {
+    background-color: transparent;
+    color: $neutral-color-50;
+    border: 1px solid $neutral-color-50;
+  }
+
   @include responsive("full",
     "fit",
     "left",
@@ -42,6 +53,7 @@
     "right",
     "normal",
     "bold",
+    "xsmall",
     "small",
     "regular",
     "large",
@@ -80,9 +92,15 @@
       border-width: 3px;
     }
 
+    @else if $class =="xsmall" {
+      font-size: 0.75rem;
+      height: $height - 16px;
+      padding: 0px $padding - 6px;
+    }
+
     @else if $class =="small" {
       font-size: 0.875rem;
-      height: $height - 12px;
+      height: $height - 8px;
       padding: 0px $padding - 4px;
     }
 
@@ -94,7 +112,7 @@
 
     @else if $class =="large" {
       font-size: 1.25rem;
-      height: $height + 12px;
+      height: $height + 8px;
       padding: 0px $padding + 4px;
     }
 

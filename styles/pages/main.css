@@ -1794,8 +1794,8 @@ li {
   justify-content: center;
   width: fit-content;
   font-size: 1rem;
-  height: 48px;
-  padding: 0px 20px;
+  height: 40px;
+  padding: 0px 16px;
   color: #0ea5e9;
   cursor: pointer;
   border-radius: 4px;
@@ -1820,6 +1820,15 @@ li {
   background-color: transparent;
   border: 1px solid #0ea5e9;
 }
+.gn-button.tt-button {
+  background-color: #fafafa;
+  color: #0ea5e9;
+}
+.gn-button.qt-button {
+  background-color: transparent;
+  color: #fafafa;
+  border: 1px solid #fafafa;
+}
 .gn-button.full {
   width: 100%;
 }
@@ -1843,20 +1852,25 @@ li {
   font-weight: 800;
   border-width: 3px;
 }
+.gn-button.xsmall {
+  font-size: 0.75rem;
+  height: 24px;
+  padding: 0px 10px;
+}
 .gn-button.small {
   font-size: 0.875rem;
-  height: 36px;
-  padding: 0px 16px;
+  height: 32px;
+  padding: 0px 12px;
 }
 .gn-button.regular {
   font-size: 1rem;
-  height: 48px;
-  padding: 0px 20px;
+  height: 40px;
+  padding: 0px 16px;
 }
 .gn-button.large {
   font-size: 1.25rem;
-  height: 60px;
-  padding: 0px 24px;
+  height: 48px;
+  padding: 0px 20px;
 }
 .gn-button.circular {
   border-radius: 99px;
@@ -1891,20 +1905,25 @@ li {
     font-weight: 800;
     border-width: 3px;
   }
+  .gn-button.xs\:xsmall {
+    font-size: 0.75rem;
+    height: 24px;
+    padding: 0px 10px;
+  }
   .gn-button.xs\:small {
     font-size: 0.875rem;
-    height: 36px;
-    padding: 0px 16px;
+    height: 32px;
+    padding: 0px 12px;
   }
   .gn-button.xs\:regular {
     font-size: 1rem;
-    height: 48px;
-    padding: 0px 20px;
+    height: 40px;
+    padding: 0px 16px;
   }
   .gn-button.xs\:large {
     font-size: 1.25rem;
-    height: 60px;
-    padding: 0px 24px;
+    height: 48px;
+    padding: 0px 20px;
   }
   .gn-button.xs\:circular {
     border-radius: 99px;
@@ -1940,20 +1959,25 @@ li {
     font-weight: 800;
     border-width: 3px;
   }
+  .gn-button.sm\:xsmall {
+    font-size: 0.75rem;
+    height: 24px;
+    padding: 0px 10px;
+  }
   .gn-button.sm\:small {
     font-size: 0.875rem;
-    height: 36px;
-    padding: 0px 16px;
+    height: 32px;
+    padding: 0px 12px;
   }
   .gn-button.sm\:regular {
     font-size: 1rem;
-    height: 48px;
-    padding: 0px 20px;
+    height: 40px;
+    padding: 0px 16px;
   }
   .gn-button.sm\:large {
     font-size: 1.25rem;
-    height: 60px;
-    padding: 0px 24px;
+    height: 48px;
+    padding: 0px 20px;
   }
   .gn-button.sm\:circular {
     border-radius: 99px;
@@ -1989,20 +2013,25 @@ li {
     font-weight: 800;
     border-width: 3px;
   }
+  .gn-button.md\:xsmall {
+    font-size: 0.75rem;
+    height: 24px;
+    padding: 0px 10px;
+  }
   .gn-button.md\:small {
     font-size: 0.875rem;
-    height: 36px;
-    padding: 0px 16px;
+    height: 32px;
+    padding: 0px 12px;
   }
   .gn-button.md\:regular {
     font-size: 1rem;
-    height: 48px;
-    padding: 0px 20px;
+    height: 40px;
+    padding: 0px 16px;
   }
   .gn-button.md\:large {
     font-size: 1.25rem;
-    height: 60px;
-    padding: 0px 24px;
+    height: 48px;
+    padding: 0px 20px;
   }
   .gn-button.md\:circular {
     border-radius: 99px;
@@ -2038,20 +2067,25 @@ li {
     font-weight: 800;
     border-width: 3px;
   }
+  .gn-button.lg\:xsmall {
+    font-size: 0.75rem;
+    height: 24px;
+    padding: 0px 10px;
+  }
   .gn-button.lg\:small {
     font-size: 0.875rem;
-    height: 36px;
-    padding: 0px 16px;
+    height: 32px;
+    padding: 0px 12px;
   }
   .gn-button.lg\:regular {
     font-size: 1rem;
-    height: 48px;
-    padding: 0px 20px;
+    height: 40px;
+    padding: 0px 16px;
   }
   .gn-button.lg\:large {
     font-size: 1.25rem;
-    height: 60px;
-    padding: 0px 24px;
+    height: 48px;
+    padding: 0px 20px;
   }
   .gn-button.lg\:circular {
     border-radius: 99px;
@@ -2087,20 +2121,25 @@ li {
     font-weight: 800;
     border-width: 3px;
   }
+  .gn-button.xl\:xsmall {
+    font-size: 0.75rem;
+    height: 24px;
+    padding: 0px 10px;
+  }
   .gn-button.xl\:small {
     font-size: 0.875rem;
-    height: 36px;
-    padding: 0px 16px;
+    height: 32px;
+    padding: 0px 12px;
   }
   .gn-button.xl\:regular {
     font-size: 1rem;
-    height: 48px;
-    padding: 0px 20px;
+    height: 40px;
+    padding: 0px 16px;
   }
   .gn-button.xl\:large {
     font-size: 1.25rem;
-    height: 60px;
-    padding: 0px 24px;
+    height: 48px;
+    padding: 0px 20px;
   }
   .gn-button.xl\:circular {
     border-radius: 99px;
@@ -4246,9 +4285,6 @@ textarea.f-input {
   }
 }
 
-.topic.quaternary {
-  color: #262626;
-}
 .topic.quaternary .icon {
   display: block;
   margin: 0px auto 4px;
@@ -5414,6 +5450,22 @@ textarea.f-input {
 }
 
 .banner {
+  background-color: #0369a1;
+  background: linear-gradient(180deg, #0369a1 0%, #0ea5e9 100%);
+  color: #fafafa;
+  padding: 32px 0px;
+}
+@media (min-width: 480px) {
+  .banner {
+    padding: 64px 0px;
+  }
+}
+.banner .image {
+  border-radius: 16px;
+  box-shadow: 0px 0px 16px 0px #262626;
+}
+
+.banner {
   background-color: #fafafa;
   padding: 32px 0px;
 }
@@ -5422,7 +5474,6 @@ textarea.f-input {
     padding: 64px 0px;
   }
 }
-
 .banner.tertirary .container > div {
   width: 100%;
   max-width: 570px;

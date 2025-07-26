@@ -86,6 +86,14 @@
   background-repeat: no-repeat;
 }
 
+@mixin background-gradient($color1: $primary-color-700,
+  $color2: $primary-color-500,
+  $orientation: linear,
+  $degrees: 180deg) {
+  background-color: $color1;
+  background: linear-gradient($degrees, $color1 0%, $color2 100%);
+}
+
 @mixin responsive($classnames...) {
   @each $classname in $classnames {
     &.#{$classname} {

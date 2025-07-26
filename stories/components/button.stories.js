@@ -17,7 +17,7 @@ export default {
     },
     size: {
       control: "select",
-      options: ["default", "small", "regular", "large"],
+      options: ["default", "xsmall", "small", "regular", "large"],
     },
     responsive_size: {
       control: "select",
