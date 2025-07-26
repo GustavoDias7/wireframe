@@ -6,6 +6,10 @@
   &.color {
     background-color: $primary-color-500;
 
+    .logo {
+      color: $neutral-color-50;
+    }
+
     nav {
       .link {
         color: $neutral-color-50;
@@ -121,6 +125,47 @@
 
     .header-right {
       gap: 24px;
+    }
+  }
+
+  &[class*="floating"] {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 1;
+    margin: 0px auto;
+    border-radius: 99px;
+
+    &~.banner {
+      padding-top: 48px + 32px + 16px;
+
+      @include sm {
+        padding-top: 64px + 64px + 16px;
+      }
+    }
+  }
+
+  @each $bp, $vl in $breakpoints {
+    @media (min-width: $vl) {
+      &.#{$bp}\:floating {
+        max-width: $vl !important;
+      }
+
+      $not-mobile: bp('sm');
+
+      @if ($vl >=$not-mobile) {
+        &[class*="floating"] {
+          max-width: $vl;
+
+          @if ($vl ==$not-mobile) {
+            left: 0px;
+            right: 0px;
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+        }
+      }
     }
   }
 }

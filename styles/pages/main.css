@@ -5212,6 +5212,9 @@ textarea.f-input {
 .header.color {
   background-color: #0ea5e9;
 }
+.header.color .logo {
+  color: #fafafa;
+}
 .header.color nav .link {
   color: #fafafa;
 }
@@ -5309,6 +5312,64 @@ textarea.f-input {
   }
   .header .header-right {
     gap: 24px;
+  }
+}
+.header[class*=floating] {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 1;
+  margin: 0px auto;
+  border-radius: 99px;
+}
+.header[class*=floating] ~ .banner {
+  padding-top: 96px;
+}
+@media (min-width: 480px) {
+  .header[class*=floating] ~ .banner {
+    padding-top: 144px;
+  }
+}
+@media (min-width: 360px) {
+  .header.xs\:floating {
+    max-width: 360px !important;
+  }
+}
+@media (min-width: 480px) {
+  .header.sm\:floating {
+    max-width: 480px !important;
+  }
+  .header[class*=floating] {
+    max-width: 480px;
+    left: 0px;
+    right: 0px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .header.md\:floating {
+    max-width: 768px !important;
+  }
+  .header[class*=floating] {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .header.lg\:floating {
+    max-width: 1024px !important;
+  }
+  .header[class*=floating] {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .header.xl\:floating {
+    max-width: 1280px !important;
+  }
+  .header[class*=floating] {
+    max-width: 1280px;
   }
 }
 

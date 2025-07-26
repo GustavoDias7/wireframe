@@ -13,6 +13,7 @@ export default {
     only_logo: { control: "boolean" },
     between: { control: "boolean" },
     color: { control: "boolean" },
+    floating: { control: "boolean" },
   },
 
   render(args) {
@@ -21,6 +22,7 @@ export default {
 
     if (args.between) containerClasses.push("between");
     if (args.color) headerClasses.push("color");
+    if (args.floating) headerClasses.push("floating");
 
     const headerClassName = headerClasses.join(" ");
     const containerClassName = containerClasses.join(" ");
@@ -41,5 +43,6 @@ export const Header = {
     only_logo: false,
     between: true,
     color: false,
+    floating: false,
   },
 };
