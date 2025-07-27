@@ -1,11 +1,11 @@
 /* transition */
 /* border */
 /* box-shadow */
-p.example {
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #777;
+  background-color: #737373;
   height: 32px;
   margin-bottom: 16px;
 }

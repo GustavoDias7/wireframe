@@ -1,6 +1,7 @@
 import AllContainers from "../../templates/layouts/container/all.html";
 import CustomContainer from "../../templates/layouts/container/custom.html";
-import ejs from "../../utils/ejs.min.js";
+import nunjucks from "nunjucks";
+nunjucks.configure({ autoescape: true });
 
 const breakpoints = {
   xs: 360,
@@ -25,11 +26,12 @@ export default {
 
 export const custom_container = {
   render: ({ breakpoint }) => {
-    return ejs.render(CustomContainer, {
+    return nunjucks.renderString(CustomContainer, {
       breakpoint,
       px: breakpoints[breakpoint],
     });
   },
 };
 
-export const all_containers = () => ejs.render(AllContainers, { breakpoints });
+export const all_containers = () =>
+  nunjucks.renderString(AllContainers, { breakpoints });
