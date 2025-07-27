@@ -1,6 +1,6 @@
 @import "../themes/theme";
 
-.container {
+[id*="story--layouts-container"] .container {
   display: flex;
   align-items: center;
   justify-content: center;

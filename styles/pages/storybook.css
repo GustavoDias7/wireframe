@@ -1,7 +1,7 @@
 /* transition */
 /* border */
 /* box-shadow */
-.container {
+[id*=story--layouts-container] .container {
   display: flex;
   align-items: center;
   justify-content: center;

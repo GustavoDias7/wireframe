@@ -1,9 +1,9 @@
 <div class="g-root g-gap-2 sm:g-gap-4">
   <div class="g-row">
-    <% for (let i=0; i < 2; i++) { %>
-      <div class="g-item-12 sm:g-item-6">
-        <div>g-item-6</div>
-      </div>
-      <% } %>
+    {% for element in elements %}
+    <div class="{{itemClassName}}">
+      <div>g-item-{{columns}}</div>
+    </div>
+    {% endfor %}
   </div>
 </div>
