@@ -4420,6 +4420,151 @@ textarea.f-input {
 .aspect-ratio.aspect-16-9.invert {
   padding-top: 177.77%;
 }
+@media (min-width: 360px) {
+  .aspect-ratio.xs\:aspect-1-1 {
+    padding-top: 100%;
+  }
+  .aspect-ratio.xs\:aspect-3-2 {
+    padding-top: 66.66%;
+  }
+  .aspect-ratio.xs\:aspect-3-2.invert {
+    padding-top: 150%;
+  }
+  .aspect-ratio.xs\:aspect-4-3 {
+    padding-top: 75%;
+  }
+  .aspect-ratio.xs\:aspect-4-3.invert {
+    padding-top: 133.33%;
+  }
+  .aspect-ratio.xs\:aspect-8-5 {
+    padding-top: 62.5%;
+  }
+  .aspect-ratio.xs\:aspect-8-5.invert {
+    padding-top: 160%;
+  }
+  .aspect-ratio.xs\:aspect-16-9 {
+    padding-top: 56.25%;
+  }
+  .aspect-ratio.xs\:aspect-16-9.invert {
+    padding-top: 177.77%;
+  }
+}
+@media (min-width: 480px) {
+  .aspect-ratio.sm\:aspect-1-1 {
+    padding-top: 100%;
+  }
+  .aspect-ratio.sm\:aspect-3-2 {
+    padding-top: 66.66%;
+  }
+  .aspect-ratio.sm\:aspect-3-2.invert {
+    padding-top: 150%;
+  }
+  .aspect-ratio.sm\:aspect-4-3 {
+    padding-top: 75%;
+  }
+  .aspect-ratio.sm\:aspect-4-3.invert {
+    padding-top: 133.33%;
+  }
+  .aspect-ratio.sm\:aspect-8-5 {
+    padding-top: 62.5%;
+  }
+  .aspect-ratio.sm\:aspect-8-5.invert {
+    padding-top: 160%;
+  }
+  .aspect-ratio.sm\:aspect-16-9 {
+    padding-top: 56.25%;
+  }
+  .aspect-ratio.sm\:aspect-16-9.invert {
+    padding-top: 177.77%;
+  }
+}
+@media (min-width: 768px) {
+  .aspect-ratio.md\:aspect-1-1 {
+    padding-top: 100%;
+  }
+  .aspect-ratio.md\:aspect-3-2 {
+    padding-top: 66.66%;
+  }
+  .aspect-ratio.md\:aspect-3-2.invert {
+    padding-top: 150%;
+  }
+  .aspect-ratio.md\:aspect-4-3 {
+    padding-top: 75%;
+  }
+  .aspect-ratio.md\:aspect-4-3.invert {
+    padding-top: 133.33%;
+  }
+  .aspect-ratio.md\:aspect-8-5 {
+    padding-top: 62.5%;
+  }
+  .aspect-ratio.md\:aspect-8-5.invert {
+    padding-top: 160%;
+  }
+  .aspect-ratio.md\:aspect-16-9 {
+    padding-top: 56.25%;
+  }
+  .aspect-ratio.md\:aspect-16-9.invert {
+    padding-top: 177.77%;
+  }
+}
+@media (min-width: 1024px) {
+  .aspect-ratio.lg\:aspect-1-1 {
+    padding-top: 100%;
+  }
+  .aspect-ratio.lg\:aspect-3-2 {
+    padding-top: 66.66%;
+  }
+  .aspect-ratio.lg\:aspect-3-2.invert {
+    padding-top: 150%;
+  }
+  .aspect-ratio.lg\:aspect-4-3 {
+    padding-top: 75%;
+  }
+  .aspect-ratio.lg\:aspect-4-3.invert {
+    padding-top: 133.33%;
+  }
+  .aspect-ratio.lg\:aspect-8-5 {
+    padding-top: 62.5%;
+  }
+  .aspect-ratio.lg\:aspect-8-5.invert {
+    padding-top: 160%;
+  }
+  .aspect-ratio.lg\:aspect-16-9 {
+    padding-top: 56.25%;
+  }
+  .aspect-ratio.lg\:aspect-16-9.invert {
+    padding-top: 177.77%;
+  }
+}
+@media (min-width: 1280px) {
+  .aspect-ratio.xl\:aspect-1-1 {
+    padding-top: 100%;
+  }
+  .aspect-ratio.xl\:aspect-3-2 {
+    padding-top: 66.66%;
+  }
+  .aspect-ratio.xl\:aspect-3-2.invert {
+    padding-top: 150%;
+  }
+  .aspect-ratio.xl\:aspect-4-3 {
+    padding-top: 75%;
+  }
+  .aspect-ratio.xl\:aspect-4-3.invert {
+    padding-top: 133.33%;
+  }
+  .aspect-ratio.xl\:aspect-8-5 {
+    padding-top: 62.5%;
+  }
+  .aspect-ratio.xl\:aspect-8-5.invert {
+    padding-top: 160%;
+  }
+  .aspect-ratio.xl\:aspect-16-9 {
+    padding-top: 56.25%;
+  }
+  .aspect-ratio.xl\:aspect-16-9.invert {
+    padding-top: 177.77%;
+  }
+}
 .aspect-ratio > * {
   position: absolute;
   top: 0;

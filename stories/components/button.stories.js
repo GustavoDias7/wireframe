@@ -1,8 +1,7 @@
 import Button from "../../templates/components/button.html";
 import nunjucks from "nunjucks";
+import breakpoints from "../../utils/breakpoints";
 nunjucks.configure({ autoescape: true });
-
-const breakpoints = ["null", "xs", "sm", "md", "lg", "xl"];
 
 export default {
   title: "Components/Button",
