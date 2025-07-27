@@ -22,7 +22,7 @@
     iframe {
       width: 100%;
       height: 312px;
-      box-shadow: $box-shadow-300;
+      @include box-shadow-300;
     }
   }
 

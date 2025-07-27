@@ -1,7 +1,7 @@
 .header {
   position: relative;
   background-color: $neutral-color-50;
-  box-shadow: $box-shadow-200;
+  @include box-shadow-200;
 
   &.color {
     background-color: $primary-color-500;

@@ -7,7 +7,7 @@
 
   article {
     padding: 1.25rem;
-    box-shadow: $box-shadow-300;
+    @include box-shadow-300;
 
     @include md {
       padding: 1.5rem;

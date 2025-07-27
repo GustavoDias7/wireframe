@@ -19,7 +19,7 @@
     margin-right: 32px;
     margin-bottom: 32px;
 
-    box-shadow: $box-shadow-200;
+    @include box-shadow-200;
     background-color: $neutral-color-50;
   }
 

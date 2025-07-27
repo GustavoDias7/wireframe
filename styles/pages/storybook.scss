@@ -58,21 +58,21 @@ p.example {
 }
 
 .box-shadow-100 {
-  box-shadow: $box-shadow-100;
+  @include box-shadow-100;
 }
 
 .box-shadow-200 {
-  box-shadow: $box-shadow-200;
+  @include box-shadow-200;
 }
 
 .box-shadow-300 {
-  box-shadow: $box-shadow-300;
+  @include box-shadow-300;
 }
 
 .box-shadow-400 {
-  box-shadow: $box-shadow-400;
+  @include box-shadow-400;
 }
 
 .box-shadow-500 {
-  box-shadow: $box-shadow-500;
+  @include box-shadow-500;
 }

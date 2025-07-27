@@ -1,5 +1,5 @@
 .topic.tertiary {
-  box-shadow: $box-shadow-200;
+  @include box-shadow-200;
   border-radius: 4px;
   padding: 32px;
   height: 100%;

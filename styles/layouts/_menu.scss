@@ -8,7 +8,7 @@
   @include max-width($width);
   height: 100vh;
   background-color: $neutral-color-50;
-  box-shadow: $box-shadow-200;
+  @include box-shadow-200;
 
   &.active {
     top: 0px;
