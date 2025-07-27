@@ -8,7 +8,7 @@ export default {
   argTypes: {
     variant: {
       control: "select",
-      options: ["default", "pm-button", "sc-button"],
+      options: ["default", "pm-button", "sc-button", "tt-button", "qt-button"],
     },
     tag: {
       control: "select",
@@ -51,14 +51,6 @@ export default {
       options: ["default", "normal", "bold"],
     },
     responsive_weight: {
-      control: "select",
-      options: [...breakpoints],
-    },
-    circle: {
-      control: "select",
-      options: ["circle-small", "circle-regular", "circle-large"],
-    },
-    responsive_circle: {
       control: "select",
       options: [...breakpoints],
     },
@@ -126,8 +118,14 @@ export default {
 
     const className = classes.join(" ");
     const disabled = args.disabled && args.tag !== "a" ? "disabled" : "";
+    const label = args.label === "" ? "Button Label" : args.label;
 
-    return nunjucks.renderString(Button, { ...args, className, disabled });
+    return nunjucks.renderString(Button, {
+      ...args,
+      className,
+      disabled,
+      label,
+    });
   },
 };
 
