@@ -5449,41 +5449,56 @@ textarea.f-input {
   }
 }
 
-.banner {
+.banner.primary {
   background-color: #0369a1;
   background: linear-gradient(180deg, #0369a1 0%, #0ea5e9 100%);
   color: #fafafa;
   padding: 32px 0px;
 }
+.banner.primary.light {
+  background: #fafafa;
+  color: #0ea5e9;
+}
 @media (min-width: 480px) {
-  .banner {
+  .banner.primary {
     padding: 64px 0px;
   }
 }
-.banner .image {
+.banner.primary .image {
   border-radius: 16px;
   box-shadow: 0px 0px 16px 0px #262626;
 }
 
-.banner {
-  background-color: #fafafa;
+.banner.secondary {
+  background-color: #0369a1;
+  background: linear-gradient(180deg, #0369a1 0%, #0ea5e9 100%);
+  color: #fafafa;
   padding: 32px 0px;
 }
+.banner.secondary.light {
+  background: #fafafa;
+  color: #0ea5e9;
+}
+.banner.secondary.light hr {
+  border-color: #0ea5e9;
+}
 @media (min-width: 480px) {
-  .banner {
+  .banner.secondary {
     padding: 64px 0px;
   }
 }
-.banner.tertirary .container > div {
-  width: 100%;
-  max-width: 570px;
-  margin: 0px auto;
-}
-.banner.tertirary .main-icon {
+.banner.secondary .image {
   width: 100%;
   max-width: 312px;
   margin: 0px auto;
-  margin-bottom: 1rem;
+}
+.banner.secondary hr {
+  border: none;
+  border-top: 2px solid #fafafa;
+  width: 100%;
+  max-width: 80px;
+  margin: 0px auto;
+  margin-bottom: 16px;
 }
 
 .menu {

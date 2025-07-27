@@ -1,7 +1,12 @@
-.banner {
+.banner.primary {
   @include background-gradient($color1: $primary-color-700, $color2: $primary-color-500);
   color: $neutral-color-50;
   padding: 32px 0px;
+
+  &.light {
+    background: $neutral-color-50;
+    color: $primary-color-500;
+  }
 
   @include sm {
     padding: 64px 0px;

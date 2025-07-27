@@ -1,0 +1,30 @@
+.banner.secondary {
+  @include background-gradient($color1: $primary-color-700, $color2: $primary-color-500);
+  color: $neutral-color-50;
+
+  &.light {
+    background: $neutral-color-50;
+    color: $primary-color-500;
+
+    hr {
+      border-color: $primary-color-500;
+    }
+  }
+
+  padding: 32px 0px;
+
+  @include sm {
+    padding: 64px 0px;
+  }
+
+  .image {
+    @include max-width(312px, true);
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid $neutral-color-50;
+    @include max-width(80px, true);
+    margin-bottom: 16px;
+  }
+}

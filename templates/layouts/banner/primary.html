@@ -1,4 +1,4 @@
-<section class="banner">
+<section class="banner primary{{ " light" if light else "" }}">
   <div class="container md:container">
     <div class="g-root g-no-hidden g-gap-8">
       <div class="g-row{{ "" if invert else " g-wrap-reverse" }}">
@@ -31,18 +31,20 @@
             <div class="g-root g-gap-2 sm:g-gap-4 text-mb-5">
               <div class="g-row">
                 <div class="g-item-12 sm:g-item-6">
-                  <div><a class="gn-button tt-button full" href="/">{{button1}}</a></div>
+                  <div><a class="gn-button {{ " pm-button" if light else "tt-button" }} full" href="/">{{button1}}</a>
+                  </div>
                 </div>
                 <div class="g-item-12 sm:g-item-6">
-                  <div><a class="gn-button qt-button full" href="/">{{button2}}</a></div>
+                  <div><a class="gn-button {{ " sc-button" if light else "qt-button" }} full" href="/">{{button2}}</a>
+                  </div>
                 </div>
               </div>
             </div>
             {% elseif button1 or button2 %}
             {% if button1 %}
-            <a class="gn-button tt-button full text-mb-5" href="/">{{button1}}</a>
+            <a class="gn-button {{ " pm-button" if light else "tt-button" }} full text-mb-5" href="/">{{button1}}</a>
             {% else %}
-            <a class="gn-button qt-button full text-mb-5" href="/">{{button2}}</a>
+            <a class="gn-button {{ " sc-button" if light else "qt-button" }} full text-mb-5" href="/">{{button2}}</a>
             {% endif %}
             {% endif %}
 
