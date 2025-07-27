@@ -4588,7 +4588,7 @@ textarea.f-input {
 .counter {
   display: flex;
   align-items: center;
-  height: 48px;
+  height: 40px;
 }
 .counter.color .counter-button {
   border: none;
@@ -4601,8 +4601,8 @@ textarea.f-input {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  border-radius: 8px;
+  width: 40px;
+  border-radius: 4px;
   font-size: 1.5rem;
   padding: 0;
   height: 100%;
@@ -4657,9 +4657,9 @@ textarea.f-input {
   cursor: pointer;
   border: 1px solid #a3a3a3;
   outline: none;
-  width: 48px;
+  width: 40px;
   height: 100%;
-  font-size: 20px;
+  font-size: 1rem;
   text-align: center;
 }
 .counter.small {
@@ -4667,7 +4667,7 @@ textarea.f-input {
 }
 .counter.small .counter-button {
   width: 32px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .counter.small .counter-button .sign {
   width: 10px;
@@ -4681,14 +4681,14 @@ textarea.f-input {
 }
 .counter.small .counter-input {
   width: 32px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .counter.regular {
-  height: 48px;
-  border-radius: 8px;
+  height: 40px;
+  border-radius: 4px;
 }
 .counter.regular .counter-button {
-  width: 48px;
+  width: 40px;
 }
 .counter.regular .counter-button .sign {
   width: 12px;
@@ -4701,15 +4701,15 @@ textarea.f-input {
   height: 12px;
 }
 .counter.regular .counter-input {
-  width: 48px;
-  font-size: 20px;
+  width: 40px;
+  font-size: 1rem;
 }
 .counter.large {
-  height: 64px;
+  height: 48px;
 }
 .counter.large .counter-button {
-  width: 64px;
-  border-radius: 10px;
+  width: 48px;
+  border-radius: 4px;
 }
 .counter.large .counter-button .sign {
   width: 14px;
@@ -4722,8 +4722,8 @@ textarea.f-input {
   height: 14px;
 }
 .counter.large .counter-input {
-  width: 64px;
-  font-size: 32px;
+  width: 48px;
+  font-size: 1.25rem;
 }
 @media (min-width: 360px) {
   .counter.xs\:small {
@@ -4731,7 +4731,7 @@ textarea.f-input {
   }
   .counter.xs\:small .counter-button {
     width: 32px;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   .counter.xs\:small .counter-button .sign {
     width: 10px;
@@ -4745,14 +4745,14 @@ textarea.f-input {
   }
   .counter.xs\:small .counter-input {
     width: 32px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .counter.xs\:regular {
-    height: 48px;
-    border-radius: 8px;
+    height: 40px;
+    border-radius: 4px;
   }
   .counter.xs\:regular .counter-button {
-    width: 48px;
+    width: 40px;
   }
   .counter.xs\:regular .counter-button .sign {
     width: 12px;
@@ -4765,15 +4765,15 @@ textarea.f-input {
     height: 12px;
   }
   .counter.xs\:regular .counter-input {
-    width: 48px;
-    font-size: 20px;
+    width: 40px;
+    font-size: 1rem;
   }
   .counter.xs\:large {
-    height: 64px;
+    height: 48px;
   }
   .counter.xs\:large .counter-button {
-    width: 64px;
-    border-radius: 10px;
+    width: 48px;
+    border-radius: 4px;
   }
   .counter.xs\:large .counter-button .sign {
     width: 14px;
@@ -4786,8 +4786,8 @@ textarea.f-input {
     height: 14px;
   }
   .counter.xs\:large .counter-input {
-    width: 64px;
-    font-size: 32px;
+    width: 48px;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 480px) {
@@ -4796,7 +4796,7 @@ textarea.f-input {
   }
   .counter.sm\:small .counter-button {
     width: 32px;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   .counter.sm\:small .counter-button .sign {
     width: 10px;
@@ -4810,14 +4810,14 @@ textarea.f-input {
   }
   .counter.sm\:small .counter-input {
     width: 32px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .counter.sm\:regular {
-    height: 48px;
-    border-radius: 8px;
+    height: 40px;
+    border-radius: 4px;
   }
   .counter.sm\:regular .counter-button {
-    width: 48px;
+    width: 40px;
   }
   .counter.sm\:regular .counter-button .sign {
     width: 12px;
@@ -4830,15 +4830,15 @@ textarea.f-input {
     height: 12px;
   }
   .counter.sm\:regular .counter-input {
-    width: 48px;
-    font-size: 20px;
+    width: 40px;
+    font-size: 1rem;
   }
   .counter.sm\:large {
-    height: 64px;
+    height: 48px;
   }
   .counter.sm\:large .counter-button {
-    width: 64px;
-    border-radius: 10px;
+    width: 48px;
+    border-radius: 4px;
   }
   .counter.sm\:large .counter-button .sign {
     width: 14px;
@@ -4851,8 +4851,8 @@ textarea.f-input {
     height: 14px;
   }
   .counter.sm\:large .counter-input {
-    width: 64px;
-    font-size: 32px;
+    width: 48px;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 768px) {
@@ -4861,7 +4861,7 @@ textarea.f-input {
   }
   .counter.md\:small .counter-button {
     width: 32px;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   .counter.md\:small .counter-button .sign {
     width: 10px;
@@ -4875,14 +4875,14 @@ textarea.f-input {
   }
   .counter.md\:small .counter-input {
     width: 32px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .counter.md\:regular {
-    height: 48px;
-    border-radius: 8px;
+    height: 40px;
+    border-radius: 4px;
   }
   .counter.md\:regular .counter-button {
-    width: 48px;
+    width: 40px;
   }
   .counter.md\:regular .counter-button .sign {
     width: 12px;
@@ -4895,15 +4895,15 @@ textarea.f-input {
     height: 12px;
   }
   .counter.md\:regular .counter-input {
-    width: 48px;
-    font-size: 20px;
+    width: 40px;
+    font-size: 1rem;
   }
   .counter.md\:large {
-    height: 64px;
+    height: 48px;
   }
   .counter.md\:large .counter-button {
-    width: 64px;
-    border-radius: 10px;
+    width: 48px;
+    border-radius: 4px;
   }
   .counter.md\:large .counter-button .sign {
     width: 14px;
@@ -4916,8 +4916,8 @@ textarea.f-input {
     height: 14px;
   }
   .counter.md\:large .counter-input {
-    width: 64px;
-    font-size: 32px;
+    width: 48px;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 1024px) {
@@ -4926,7 +4926,7 @@ textarea.f-input {
   }
   .counter.lg\:small .counter-button {
     width: 32px;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   .counter.lg\:small .counter-button .sign {
     width: 10px;
@@ -4940,14 +4940,14 @@ textarea.f-input {
   }
   .counter.lg\:small .counter-input {
     width: 32px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .counter.lg\:regular {
-    height: 48px;
-    border-radius: 8px;
+    height: 40px;
+    border-radius: 4px;
   }
   .counter.lg\:regular .counter-button {
-    width: 48px;
+    width: 40px;
   }
   .counter.lg\:regular .counter-button .sign {
     width: 12px;
@@ -4960,15 +4960,15 @@ textarea.f-input {
     height: 12px;
   }
   .counter.lg\:regular .counter-input {
-    width: 48px;
-    font-size: 20px;
+    width: 40px;
+    font-size: 1rem;
   }
   .counter.lg\:large {
-    height: 64px;
+    height: 48px;
   }
   .counter.lg\:large .counter-button {
-    width: 64px;
-    border-radius: 10px;
+    width: 48px;
+    border-radius: 4px;
   }
   .counter.lg\:large .counter-button .sign {
     width: 14px;
@@ -4981,8 +4981,8 @@ textarea.f-input {
     height: 14px;
   }
   .counter.lg\:large .counter-input {
-    width: 64px;
-    font-size: 32px;
+    width: 48px;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 1280px) {
@@ -4991,7 +4991,7 @@ textarea.f-input {
   }
   .counter.xl\:small .counter-button {
     width: 32px;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   .counter.xl\:small .counter-button .sign {
     width: 10px;
@@ -5005,14 +5005,14 @@ textarea.f-input {
   }
   .counter.xl\:small .counter-input {
     width: 32px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .counter.xl\:regular {
-    height: 48px;
-    border-radius: 8px;
+    height: 40px;
+    border-radius: 4px;
   }
   .counter.xl\:regular .counter-button {
-    width: 48px;
+    width: 40px;
   }
   .counter.xl\:regular .counter-button .sign {
     width: 12px;
@@ -5025,15 +5025,15 @@ textarea.f-input {
     height: 12px;
   }
   .counter.xl\:regular .counter-input {
-    width: 48px;
-    font-size: 20px;
+    width: 40px;
+    font-size: 1rem;
   }
   .counter.xl\:large {
-    height: 64px;
+    height: 48px;
   }
   .counter.xl\:large .counter-button {
-    width: 64px;
-    border-radius: 10px;
+    width: 48px;
+    border-radius: 4px;
   }
   .counter.xl\:large .counter-button .sign {
     width: 14px;
@@ -5046,8 +5046,8 @@ textarea.f-input {
     height: 14px;
   }
   .counter.xl\:large .counter-input {
-    width: 64px;
-    font-size: 32px;
+    width: 48px;
+    font-size: 1.25rem;
   }
 }
 
