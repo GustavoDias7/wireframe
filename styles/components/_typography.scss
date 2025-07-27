@@ -195,19 +195,3 @@
     }
   }
 }
-
-@for $i from 0 through 12 {
-  .text-mb-#{$i} {
-    margin-bottom: $i * 4px;
-  }
-}
-
-@each $bp, $vl in $breakpoints {
-  @media (min-width: $vl) {
-    @for $i from 0 through 12 {
-      .#{$bp}\:text-mb-#{$i} {
-        margin-bottom: $i * 4px;
-      }
-    }
-  }
-}

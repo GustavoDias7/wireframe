@@ -1,0 +1,15 @@
+@for $i from 0 through 12 {
+  .mb-#{$i} {
+    margin-bottom: $i * 4px;
+  }
+}
+
+@each $bp, $vl in $breakpoints {
+  @media (min-width: $vl) {
+    @for $i from 0 through 12 {
+      .#{$bp}\:mb-#{$i} {
+        margin-bottom: $i * 4px;
+      }
+    }
+  }
+}

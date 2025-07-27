@@ -20,19 +20,19 @@ const sizes = [
 ];
 
 const marginBottom = [
-  "text-mb-0",
-  "text-mb-1",
-  "text-mb-2",
-  "text-mb-3",
-  "text-mb-4",
-  "text-mb-5",
-  "text-mb-6",
-  "text-mb-7",
-  "text-mb-8",
-  "text-mb-9",
-  "text-mb-10",
-  "text-mb-11",
-  "text-mb-12",
+  "mb-0",
+  "mb-1",
+  "mb-2",
+  "mb-3",
+  "mb-4",
+  "mb-5",
+  "mb-6",
+  "mb-7",
+  "mb-8",
+  "mb-9",
+  "mb-10",
+  "mb-11",
+  "mb-12",
 ];
 
 export default {
