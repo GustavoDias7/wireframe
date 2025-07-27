@@ -6115,3 +6115,14 @@ textarea.f-input {
     margin-bottom: 24px;
   }
 }
+
+.section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+@media (min-width: 480px) {
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
