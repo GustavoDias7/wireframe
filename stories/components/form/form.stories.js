@@ -69,13 +69,20 @@ export const BasicFields = {
   render: (args) => {
     const formElement = form({
       fields: [
-        { name: "name", id: "name", label: "Default", type: "text" },
+        {
+          name: "name",
+          id: "name",
+          label: "Default",
+          type: "text",
+          size: "default",
+        },
         {
           name: "name",
           id: "name",
           variant: "filled",
           label: "Filled",
           type: "text",
+          size: "default",
         },
         {
           name: "name",
@@ -83,6 +90,7 @@ export const BasicFields = {
           variant: "outline",
           label: "Outline",
           type: "text",
+          size: "default",
         },
       ],
     });
@@ -103,6 +111,7 @@ export const ErrorFields = {
           label: "Default",
           type: "text",
           errorMessage: "Error message",
+          size: "default",
         },
         {
           name: "name",
@@ -111,6 +120,7 @@ export const ErrorFields = {
           label: "Filled",
           type: "text",
           errorMessage: "Error message",
+          size: "default",
         },
         {
           name: "name",
@@ -119,6 +129,7 @@ export const ErrorFields = {
           label: "Outline",
           type: "text",
           errorMessage: "Error message",
+          size: "default",
         },
       ],
     });
@@ -139,6 +150,7 @@ export const ValidFields = {
           label: "Default",
           type: "text",
           valid: true,
+          size: "default",
         },
         {
           name: "name",
@@ -147,6 +159,7 @@ export const ValidFields = {
           label: "Filled",
           type: "text",
           valid: true,
+          size: "default",
         },
         {
           name: "name",
@@ -155,6 +168,7 @@ export const ValidFields = {
           label: "Outline",
           type: "text",
           valid: true,
+          size: "default",
         },
       ],
     });
@@ -175,6 +189,7 @@ export const DisabledFields = {
           label: "Default",
           type: "text",
           disabled: true,
+          size: "default",
         },
         {
           name: "name",
@@ -183,6 +198,7 @@ export const DisabledFields = {
           label: "Filled",
           type: "text",
           disabled: true,
+          size: "default",
         },
         {
           name: "name",
@@ -191,6 +207,7 @@ export const DisabledFields = {
           label: "Outline",
           type: "text",
           disabled: true,
+          size: "default",
         },
       ],
     });
@@ -211,6 +228,7 @@ export const Checkbox = {
           label: "Disabled",
           type: "checkbox",
           disabled: true,
+          size: "default",
         },
       ],
     });
@@ -254,13 +272,20 @@ export const Textarea = {
   render: (args) => {
     const formElement = form({
       fields: [
-        { name: "name", id: "name", label: "Default", tag: "textarea" },
+        {
+          name: "name",
+          id: "name",
+          label: "Default",
+          tag: "textarea",
+          size: "default",
+        },
         {
           name: "name",
           id: "name",
           variant: "filled",
           label: "Filled",
           tag: "textarea",
+          size: "default",
         },
         {
           name: "name",
@@ -268,6 +293,7 @@ export const Textarea = {
           variant: "outline",
           label: "Outline",
           tag: "textarea",
+          size: "default",
         },
       ],
     });
@@ -288,6 +314,7 @@ export const ErrorTextarea = {
           label: "Default",
           tag: "textarea",
           errorMessage: "Error message",
+          size: "default",
         },
         {
           name: "name",
@@ -296,6 +323,7 @@ export const ErrorTextarea = {
           label: "Filled",
           tag: "textarea",
           errorMessage: "Error message",
+          size: "default",
         },
         {
           name: "name",
@@ -304,6 +332,7 @@ export const ErrorTextarea = {
           label: "Outline",
           tag: "textarea",
           errorMessage: "Error message",
+          size: "default",
         },
       ],
     });
@@ -324,6 +353,7 @@ export const ValidTextarea = {
           label: "Default",
           tag: "textarea",
           valid: true,
+          size: "default",
         },
         {
           name: "name",
@@ -332,6 +362,7 @@ export const ValidTextarea = {
           label: "Filled",
           tag: "textarea",
           valid: true,
+          size: "default",
         },
         {
           name: "name",
@@ -340,6 +371,7 @@ export const ValidTextarea = {
           label: "Outline",
           tag: "textarea",
           valid: true,
+          size: "default",
         },
       ],
     });
@@ -360,6 +392,7 @@ export const DisabledTextarea = {
           label: "Default",
           tag: "textarea",
           disabled: true,
+          size: "default",
         },
         {
           name: "name",
@@ -368,6 +401,7 @@ export const DisabledTextarea = {
           label: "Filled",
           tag: "textarea",
           disabled: true,
+          size: "default",
         },
         {
           name: "name",
@@ -376,6 +410,7 @@ export const DisabledTextarea = {
           label: "Outline",
           tag: "textarea",
           disabled: true,
+          size: "default",
         },
       ],
     });
@@ -396,6 +431,7 @@ export const RightElement = {
           label: "Default",
           type: "text",
           rightElement: true,
+          size: "default",
         },
         {
           name: "name",
@@ -404,6 +440,7 @@ export const RightElement = {
           label: "Filled",
           type: "text",
           rightElement: true,
+          size: "default",
         },
         {
           name: "name",
@@ -412,6 +449,7 @@ export const RightElement = {
           label: "Outline",
           type: "text",
           rightElement: true,
+          size: "default",
         },
       ],
     });
@@ -433,6 +471,7 @@ export const ErrorRightElement = {
           type: "text",
           rightElement: true,
           errorMessage: "Error message",
+          size: "default",
         },
         {
           name: "name",
@@ -442,6 +481,7 @@ export const ErrorRightElement = {
           type: "text",
           rightElement: true,
           errorMessage: "Error message",
+          size: "default",
         },
         {
           name: "name",
@@ -451,6 +491,7 @@ export const ErrorRightElement = {
           type: "text",
           rightElement: true,
           errorMessage: "Error message",
+          size: "default",
         },
       ],
     });
@@ -472,6 +513,7 @@ export const Select = {
           label: "Select an option",
           type: "text",
           tag: "select",
+          size: "default",
           options: [
             { value: "option_1", text: "Option 1" },
             { value: "option_2", text: "Option 2" },
@@ -485,6 +527,7 @@ export const Select = {
           type: "text",
           tag: "select",
           errorMessage: "Error select",
+          size: "default",
           options: [
             { value: "option_1", text: "Option 1" },
             { value: "option_2", text: "Option 2" },
@@ -498,6 +541,7 @@ export const Select = {
           type: "text",
           tag: "select",
           valid: true,
+          size: "default",
           options: [
             { value: "option_1", text: "Option 1" },
             { value: "option_2", text: "Option 2" },
@@ -511,6 +555,7 @@ export const Select = {
           type: "text",
           tag: "select",
           disabled: true,
+          size: "default",
           options: [
             { value: "option_1", text: "Option 1" },
             { value: "option_2", text: "Option 2" },
@@ -535,6 +580,7 @@ export const SearchFields = {
           id: "search",
           type: "search",
           placeholder: "Search",
+          size: "default",
         },
       ],
     });
@@ -554,6 +600,7 @@ export const File = {
           id: "myfile",
           type: "file",
           label: "Select file",
+          size: "default",
         },
       ],
     });

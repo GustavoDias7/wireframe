@@ -32,7 +32,7 @@ $f-padding-filled-large: (
 );
 
 // dimentions
-$f-input-height: 48px;
+$f-input-height: 40px;
 $f-input-height-small: $f-input-height - 8px;
 $f-input-height-large: $f-input-height + 8px;
 $f-width: 312px;
@@ -43,9 +43,9 @@ $align-label-small: math.div($f-input-height-small, 2) - math.div($f-line-height
 $align-label-large: math.div($f-input-height-large, 2) - math.div($f-line-height-large, 2);
 
 // borders
-$f-border-radius: 8px;
-$f-border-radius-small: $f-border-radius - 2px;
-$f-border-radius-large: $f-border-radius + 2px;
+$f-border-radius: 4px;
+$f-border-radius-small: $f-border-radius;
+$f-border-radius-large: $f-border-radius;
 $f-primary-border-width: 1px;
 $f-primary-border: $f-primary-border-width solid;
 
