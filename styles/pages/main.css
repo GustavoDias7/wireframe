@@ -5385,6 +5385,40 @@ textarea.f-input {
   cursor: pointer;
 }
 
+.skeleton {
+  -webkit-animation: animation-c7515d 2s ease-in-out 0.5s infinite;
+  animation: animation-c7515d 2s ease-in-out 0.5s infinite;
+  background-color: #d4d4d4;
+}
+.skeleton.circular {
+  border-radius: 50%;
+}
+.skeleton.rounded {
+  border-radius: 8px;
+}
+
+@-webkit-keyframes animation-c7515d {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation-c7515d {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   position: relative;
   background-color: #fafafa;

@@ -1,0 +1,41 @@
+.skeleton {
+  -webkit-animation: animation-c7515d 2s ease-in-out 0.5s infinite;
+  animation: animation-c7515d 2s ease-in-out 0.5s infinite;
+  background-color: $neutral-color-300;
+
+  &.circular {
+    border-radius: 50%;
+  }
+
+  &.rounded {
+    border-radius: 8px;
+  }
+}
+
+@-webkit-keyframes animation-c7515d {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-c7515d {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
