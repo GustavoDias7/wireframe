@@ -1,4 +1,4 @@
-<section class="banner secondary{{ " light" if light else "" }}">
+<section class="banner secondary{{ ' light' if light else '' }}">
   <div class="container sm:container">
     <div>
       {% if image %}
@@ -21,12 +21,12 @@
         <div class="g-row gx-center">
           {% if button1 %}
           <div class="g-item-12 sm:g-item-4">
-            <div><a class="gn-button {{ " pm-button" if light else "tt-button" }} full" href="/">{{button1}}</a></div>
+            <div><a class="gn-button {{ ' pm-button' if light else 'tt-button' }} full" href="/">{{button1}}</a></div>
           </div>
           {% endif %}
           {% if button2 %}
           <div class="g-item-12 sm:g-item-4">
-            <div><a class="gn-button {{ " sc-button" if light else "qt-button" }} full" href="/">{{button2}}</a></div>
+            <div><a class="gn-button {{ ' sc-button' if light else 'qt-button' }} full" href="/">{{button2}}</a></div>
           </div>
           {% endif %}
         </div>
