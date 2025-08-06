@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006",
-    "build-storybook": "NODE_OPTIONS='--openssl-legacy-provider' build-storybook",
+    "build-storybook": "build-storybook",
     "compile:scss": "sass -w --no-source-map ./styles/pages/:./styles/pages/",
     "watch:scss": "nodemon -e scss -x \"yarn compile:scss\"",
     "watch": "concurrently \"yarn watch:scss\" \"yarn storybook\""
