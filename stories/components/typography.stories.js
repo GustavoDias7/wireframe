@@ -76,9 +76,9 @@ export default {
       control: "select",
       options: [
         "null",
-        "text-align-center",
-        "text-align-left",
-        "text-align-right",
+        "text-center",
+        "text-left",
+        "text-right",
       ],
     },
     marginBottom: {

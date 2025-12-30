@@ -16,20 +16,13 @@
     .modal-content {
       @include flex-center-center;
       position: relative;
-      @include max-width(352px);
-      min-height: 312px;
+      @include max-width(360px);
+      min-height: 360px;
       max-height: 400px;
       padding: 20px;
-      margin: 16px;
-      border-radius: 16px;
+      margin: 20px;
+      border-radius: 8px;
       background-color: $neutral-color-50;
-
-      text-align: center;
-
-      h2 {
-        margin-bottom: 16px;
-        font-size: 24px;
-      }
     }
 
     .modal-close {
@@ -53,8 +46,10 @@
   }
 
   &.secondary {
+    $content-width: 480px;
+    $content-width-sm: 320px;
+
     .modal-content {
-      $content-width: 480px;
 
       position: absolute;
       top: 0px;
@@ -67,19 +62,30 @@
       flex-direction: column;
       @include max-width($content-width);
       height: 100vh;
-      padding: 20px;
+      padding: 32px;
       background-color: $neutral-color-50;
     }
 
-    &.active .modal-content {
-      transform: translateX(-480px);
+    &.small .modal-content {
+      right: -$content-width-sm;
+      @include max-width($content-width-sm);
     }
 
-    $section-margin-bottom: 20px;
+    &.active .modal-content {
+      transform: translateX(-$content-width);
+    }
+
+    &.small.active .modal-content {
+      transform: translateX(-$content-width-sm);
+    }
+
+    $section-margin-bottom: 16px;
 
     .modal-header {
       @include flex-center-between;
+      padding-bottom: $section-margin-bottom;
       margin-bottom: $section-margin-bottom;
+      border-bottom: 1px solid $neutral-color-300;
 
       .modal-close {
         @include square(20px);
@@ -99,6 +105,41 @@
     .modal-body {
       overflow-y: auto;
       margin-bottom: $section-margin-bottom;
+    }
+
+    .modal-footer {
+      margin-top: auto;
+    }
+  }
+
+  &.menu {
+    nav .link {
+      display: block;
+      color: $primary-color-500;
+      padding: 12px 16px;
+      border-bottom: 1px solid $neutral-color-200;
+
+      &:last-of-type {
+        border-bottom: unset;
+      }
+
+      svg {
+        position: relative;
+        @include square(12px);
+        margin-right: 12px;
+        left: 0px;
+
+        path {
+          fill: $primary-color-500;
+        }
+
+        transition: left $primary-transition;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        left: 6px;
+      }
     }
   }
 
@@ -174,10 +215,6 @@
     hr {
       border: none;
       border-top: 1px solid $neutral-color-400;
-    }
-
-    .modal-footer {
-      margin-top: auto;
     }
 
     .cart-total {

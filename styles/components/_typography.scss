@@ -132,65 +132,210 @@
   }
 }
 
-.text-color-light {
+.text-neutral-50 {
   color: $neutral-color-50;
 }
 
-.text-color-dark {
+.text-neutral-100 {
+  color: $neutral-color-100;
+}
+
+.text-neutral-200 {
+  color: $neutral-color-200;
+}
+
+.text-neutral-300 {
+  color: $neutral-color-300;
+}
+
+.text-neutral-400 {
+  color: $neutral-color-400;
+}
+
+.text-neutral-500 {
+  color: $neutral-color-500;
+}
+
+.text-neutral-600 {
+  color: $neutral-color-600;
+}
+
+.text-neutral-700 {
+  color: $neutral-color-700;
+}
+
+.text-neutral-800 {
+  color: $neutral-color-800;
+}
+
+.text-neutral-900 {
   color: $neutral-color-900;
 }
 
-.text-color-primary {
+.text-neutral-950 {
+  color: $neutral-color-950;
+}
+
+.text-primary-50 {
+  color: $primary-color-50;
+}
+
+.text-primary-100 {
+  color: $primary-color-100;
+}
+
+.text-primary-200 {
+  color: $primary-color-200;
+}
+
+.text-primary-300 {
+  color: $primary-color-300;
+}
+
+.text-primary-400 {
+  color: $primary-color-400;
+}
+
+.text-primary-500 {
   color: $primary-color-500;
 }
 
-.text-color-secondary {
-  color: $indigo-color-500;
+.text-primary-600 {
+  color: $primary-color-600;
+}
+
+.text-primary-700 {
+  color: $primary-color-700;
+}
+
+.text-primary-800 {
+  color: $primary-color-800;
+}
+
+.text-primary-900 {
+  color: $primary-color-900;
+}
+
+.text-primary-950 {
+  color: $primary-color-950;
 }
 
 @each $bp, $vl in $breakpoints {
   @media (min-width: $vl) {
-    .#{$bp}\:text-color-light {
+
+    .#{$bp}\:text-neutral-50 {
       color: $neutral-color-50;
     }
 
-    .#{$bp}\:text-color-dark {
+    .#{$bp}\:text-neutral-100 {
+      color: $neutral-color-100;
+    }
+
+    .#{$bp}\:text-neutral-200 {
+      color: $neutral-color-200;
+    }
+
+    .#{$bp}\:text-neutral-300 {
+      color: $neutral-color-300;
+    }
+
+    .#{$bp}\:text-neutral-400 {
+      color: $neutral-color-400;
+    }
+
+    .#{$bp}\:text-neutral-500 {
+      color: $neutral-color-500;
+    }
+
+    .#{$bp}\:text-neutral-600 {
+      color: $neutral-color-600;
+    }
+
+    .#{$bp}\:text-neutral-700 {
+      color: $neutral-color-700;
+    }
+
+    .#{$bp}\:text-neutral-800 {
+      color: $neutral-color-800;
+    }
+
+    .#{$bp}\:text-neutral-900 {
       color: $neutral-color-900;
     }
 
-    .#{$bp}\:text-color-primary {
+    .#{$bp}\:text-neutral-950 {
+      color: $neutral-color-950;
+    }
+
+    .#{$bp}\:text-primary-50 {
+      color: $primary-color-50;
+    }
+
+    .#{$bp}\:text-primary-100 {
+      color: $primary-color-100;
+    }
+
+    .#{$bp}\:text-primary-200 {
+      color: $primary-color-200;
+    }
+
+    .#{$bp}\:text-primary-300 {
+      color: $primary-color-300;
+    }
+
+    .#{$bp}\:text-primary-400 {
+      color: $primary-color-400;
+    }
+
+    .#{$bp}\:text-primary-500 {
       color: $primary-color-500;
     }
 
-    .#{$bp}\:text-color-secondary {
-      color: $indigo-color-600;
+    .#{$bp}\:text-primary-600 {
+      color: $primary-color-600;
+    }
+
+    .#{$bp}\:text-primary-700 {
+      color: $primary-color-700;
+    }
+
+    .#{$bp}\:text-primary-800 {
+      color: $primary-color-800;
+    }
+
+    .#{$bp}\:text-primary-900 {
+      color: $primary-color-900;
+    }
+
+    .#{$bp}\:text-primary-950 {
+      color: $primary-color-950;
     }
   }
 }
 
-.text-align-center {
+.text-center {
   text-align: center;
 }
 
-.text-align-left {
+.text-left {
   text-align: left;
 }
 
-.text-align-right {
+.text-right {
   text-align: right;
 }
 
 @each $bp, $vl in $breakpoints {
   @media (min-width: $vl) {
-    .#{$bp}\:text-align-center {
+    .#{$bp}\:text-center {
       text-align: center;
     }
 
-    .#{$bp}\:text-align-left {
+    .#{$bp}\:text-left {
       text-align: left;
     }
 
-    .#{$bp}\:text-align-right {
+    .#{$bp}\:text-right {
       text-align: right;
     }
   }
