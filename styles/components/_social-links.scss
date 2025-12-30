@@ -23,7 +23,8 @@
     }
   }
 
-  img {
+  img,
+  svg {
     @include square(20px);
     font-size: 12px;
     transition: 0.3s;
@@ -32,5 +33,9 @@
     &:focus {
       opacity: 0.6;
     }
+  }
+
+  svg path {
+    fill: $primary-color-500;
   }
 }

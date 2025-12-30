@@ -9,23 +9,23 @@ $secondary-transition: 0.6s ease 0.2s;
 $primary-border: 1px solid $primary-color-500;
 
 /* box-shadow */
-@mixin box-shadow-100($color: $neutral-color-400) {
+@mixin box-shadow-100($color: $neutral-color-300) {
   box-shadow: 0px 0px 4px 0px $color;
 }
 
-@mixin box-shadow-200($color: $neutral-color-400) {
+@mixin box-shadow-200($color: $neutral-color-300) {
   box-shadow: 0px 0px 6px 0px $color;
 }
 
-@mixin box-shadow-300($color: $neutral-color-400) {
+@mixin box-shadow-300($color: $neutral-color-300) {
   box-shadow: 0px 0px 10px 0px $color;
 }
 
-@mixin box-shadow-400($color: $neutral-color-400) {
+@mixin box-shadow-400($color: $neutral-color-300) {
   box-shadow: 0px 0px 16px 0px $color;
 }
 
-@mixin box-shadow-500($color: $neutral-color-400) {
+@mixin box-shadow-500($color: $neutral-color-300) {
   box-shadow: 0px 0px 20px 0px $color;
 }
 

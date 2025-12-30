@@ -1,7 +1,7 @@
 .header {
   position: relative;
   background-color: $neutral-color-50;
-  @include box-shadow-200;
+  @include box-shadow-300;
 
   &.color {
     background-color: $primary-color-500;
@@ -51,6 +51,7 @@
 
     img {
       display: block;
+      width: auto;
       height: 24px;
     }
   }
@@ -86,11 +87,7 @@
   @include md {
     .container {
       height: 64px;
-      justify-content: flex-start;
-
-      &.between {
-        justify-content: space-between;
-      }
+      justify-content: space-between;
     }
 
     .logo {

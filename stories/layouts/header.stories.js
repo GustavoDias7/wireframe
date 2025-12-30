@@ -11,7 +11,6 @@ export default {
     cart: { control: "boolean" },
     social_links: { control: "boolean" },
     only_logo: { control: "boolean" },
-    between: { control: "boolean" },
     color: { control: "boolean" },
     floating: { control: "boolean" },
   },
@@ -20,7 +19,6 @@ export default {
     const headerClasses = ["header"];
     const containerClasses = ["container", "md:container"];
 
-    if (args.between) containerClasses.push("between");
     if (args.color) headerClasses.push("color");
     if (args.floating) headerClasses.push("floating");
 
@@ -41,7 +39,6 @@ export const Header = {
     cart: false,
     social_links: false,
     only_logo: false,
-    between: true,
     color: false,
     floating: false,
   },
