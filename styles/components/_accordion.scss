@@ -8,11 +8,18 @@
   -ms-user-select: none;
   user-select: none;
   text-align: left;
-  background-color: transparent;
+  background-color: $neutral-color-50;
+  border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 
   &.primary {
-    margin-bottom: 10px;
-    border: 2px solid $primary-color-500;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    @include box-shadow-300;
 
     &:last-child {
       margin-bottom: 0px;
@@ -21,7 +28,7 @@
 
   &.secondary {
     border: none;
-    border-bottom: 1px solid $primary-color-500;
+    border-bottom: 1px solid $neutral-color-300;
 
     &:last-child {
       border-bottom: none;
@@ -41,6 +48,8 @@
 
     .arrow {
       @include square(18px);
+      min-width: 18px;
+      min-height: 18px;
       margin-left: 20px;
       background-image: url(pathImages("arrow.svg"));
       background-repeat: no-repeat;
@@ -48,12 +57,6 @@
       background-position: center;
       transition: $primary-transition;
     }
-  }
-
-  &.active .label h3,
-  &:focus .label h3,
-  &:hover .label h3 {
-    color: $primary-color-500
   }
 
   &.active .arrow {
