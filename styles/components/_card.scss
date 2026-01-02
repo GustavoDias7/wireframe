@@ -1,12 +1,24 @@
-.card.secondary {
+.card {
   position: relative;
   @include max-width(272px);
   color: $neutral-color-700;
   background-color: $neutral-color-50;
   @include box-shadow-200;
+  border-radius: 8px;
 
   >a {
     font-size: 0;
+  }
+
+  .icon {
+    @include square(80px);
+    margin: 0px auto 16px;
+
+    img,
+    svg {
+
+      border-radius: 80px;
+    }
   }
 
   .cart-count {
@@ -39,7 +51,7 @@
     }
   }
 
-  .description {
+  >div {
     padding: 16px;
   }
 
@@ -54,9 +66,5 @@
       background-color: $primary-color-500;
       border-radius: 4px;
     }
-  }
-
-  .gn-button.sc-button {
-    margin-top: 8px;
   }
 }

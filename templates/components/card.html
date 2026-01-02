@@ -1,0 +1,56 @@
+<article class="card">
+  {% if cart_counter %}
+  <p class="cart-count active">0</p>
+  {% endif %}
+
+  {% if not icon or price %}
+  <a href="/">
+    <figure class="{{imageClassName}}">
+      <img src="../../stories/assets/placeholder-1.svg" alt="Card Image">
+    </figure>
+  </a>
+  {% endif %}
+
+  <div>
+    {% if icon and not price %}
+    <div class="icon">
+      <figure class="{{imageClassName}}">
+        <img src="../../stories/assets/placeholder-1.svg" alt="Card Image">
+      </figure>
+    </div>
+    {% endif %}
+
+    {% if title %}
+    <h3 class="text-xl{% if not subtitle %} mb-3{% endif %}{% if text_center %} text-center{% endif %}">
+      <a href="" class="text-primary-900">
+        {{title}}
+      </a>
+    </h3>
+    {% endif %}
+
+    {% if subtitle and not price %}
+    <p class="text-base text-neutral-600 mb-3{% if text_center %} text-center{% endif %}">{{subtitle}}</p>
+    {% endif %}
+
+    {% if price %}
+    <p class="price text-lg mb-1">
+      {{fprice}}
+      {% if discount %}
+      <span class="discount text-sm">{{fdiscount}}</span>
+      {% endif %}
+    </p>
+    {% endif %}
+
+    {% if description %}
+    <p class="text-sm text-neutral-600 {% if link_label %}mb-3{% endif %}{% if text_center %} text-center{% endif %}">
+      {{description}}
+    </p>
+    {% endif %}
+
+    {% if link_label %}
+    <button class="gn-button pm-button small full" type="button">
+      {{link_label}}
+    </button>
+    {% endif %}
+  </div>
+</article>

@@ -4404,54 +4404,28 @@ textarea.f-input {
   transform: scale(1);
 }
 
-.card.primary {
-  width: 100%;
-  max-width: 272px;
-  color: #404040;
-  background-color: #fafafa;
-  box-shadow: 0px 0px 6px 0px #d4d4d4;
-}
-.card.primary .img {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-}
-.card.primary .img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.card.primary .description {
-  padding: 16px 32px;
-}
-.card.primary .title {
-  font-size: 1.25rem;
-  margin-bottom: 16px;
-}
-.card.primary .gn-button,
-.card.primary .subtitle,
-.card.primary .price {
-  margin-bottom: 16px;
-}
-.card.primary .link {
-  color: #0ea5e9;
-}
-
-.card.secondary {
+.card {
   position: relative;
   width: 100%;
   max-width: 272px;
   color: #404040;
   background-color: #fafafa;
   box-shadow: 0px 0px 6px 0px #d4d4d4;
+  border-radius: 8px;
 }
-.card.secondary > a {
+.card > a {
   font-size: 0;
 }
-.card.secondary .cart-count {
+.card .icon {
+  width: 80px;
+  height: 80px;
+  margin: 0px auto 16px;
+}
+.card .icon img,
+.card .icon svg {
+  border-radius: 80px;
+}
+.card .cart-count {
   user-select: none;
   display: flex;
   align-items: center;
@@ -4474,69 +4448,24 @@ textarea.f-input {
   transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
   text-align: center;
 }
-.card.secondary .cart-count.active {
+.card .cart-count.active {
   opacity: 1;
   transform: scale(1);
 }
-.card.secondary .description {
+.card > div {
   padding: 16px;
 }
-.card.secondary .price {
+.card .price {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.card.secondary .price .discount {
+.card .price .discount {
   user-select: none;
   padding: 2px 4px;
   color: #fafafa;
   background-color: #0ea5e9;
   border-radius: 4px;
-}
-.card.secondary .gn-button.sc-button {
-  margin-top: 8px;
-}
-
-.card.tertiary {
-  width: 100%;
-  max-width: 272px;
-  padding: 32px;
-  text-align: center;
-  color: #404040;
-  background-color: #fafafa;
-  border-radius: 8px;
-}
-.card.tertiary .icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 16px;
-}
-.card.tertiary .title {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-.card.tertiary .gn-button {
-  margin-bottom: 16px;
-}
-.card.tertiary .subtitle {
-  margin-bottom: 16px;
-}
-.card.tertiary .link {
-  color: #0ea5e9;
-}
-
-.card.quaternary {
-  width: 100%;
-  max-width: 272px;
-  padding: 32px;
-  text-align: center;
-  color: #404040;
-  box-shadow: 0px 0px 6px 0px #d4d4d4;
-  border-radius: 8px;
-}
-.card.quaternary .icon {
-  width: 96px;
-  height: 96px;
 }
 
 .topic.primary {
